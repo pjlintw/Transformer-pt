@@ -1,0 +1,11 @@
+name: transformer-pt
+
+dependencies:
+    - python=3.8
+    - pip=20.3.3
+    - pip:
+        - datasets==1.4.1 
+        - torch==1.8.0
+        - torchtext==0.9.0
+        - ipython==7.22.0
+
