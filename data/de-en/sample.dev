@@ -1,0 +1,1000 @@
+4497	t - zeitzoneneinstellung des rechners , z.b . `` est '' oder `` mdt ``	example : +0200
+33643	wenn sie microsoft visual studio besitzen , können sie auch den source code von php selbst kompilieren .	if you have microsoft visual studio , you can also build php from the original source code .
+23001	inhalt der sample.ini	contents of sample.ini
+5456	dbx_cmp_desc - absteigende reihenfolge	dbx_cmp_desc - descending order
+33319	aktiviert die unterstützung für system v semaphore unterstützung .	include cybercash support .
+3488	das bild muss im jpeg-format vorliegen .	the format of the image has to be jpeg .
+24094	pfpro_cleanup ( ) veranlasst eine saubere schliessung der payflow pro-bibliothek .	pfpro_cleanup ( ) is used to shutdown the payflow pro library cleanly .
+1388	es existieren folgende direktiven um safe mode zu konfigurieren :	security and safe mode configuration directives
+38287	bei php können beim kompilieren die konfigurationsoption -- enable-force-cgi-redirect und zur laufzeit die konfigurationsdirektiven doc_root und user_dir bei php können beim kompilieren die konfigurationsoption -- enable-force-cgi-redirect und zur laufzeit die konfigurationsdirektiven doc_root und user_dir benutzt werden , um diesen angriff zu verhindern , falls der verzeichnisbaum des servers verzeichnisse mit zugriffsbeschränkungen beinhaltet .	in php , compile-time configuration option -- enable-force-cgi-redirect and runtime configuration directives doc_root and user_dir can be used to prevent this attack , if the server document tree has any directories with access restrictions .
+34157	konstanten können nur über die funktion define ( ) definiert werden , nicht durch einfache zuweisung ;	constants may only be defined using the define ( ) function , not by simple assignment ;
+26616	siehe auch sem_get ( ) und sem_acquire ( ) .	this function does not work on windows systems .
+23707	auf pdf_save ( ) sollte immer die funktion pdf_restore ( ) folgen , um die ürsprüngliche umgebung wieder herzustellen .	save the current graphics state .
+34217	php fasst den begriff ´ausdruck´ aber noch viel weiter , wie es auch andere programmiersprachen tun .	however , php takes expressions much further , in the same way many other languages do .
+26405	beispiel 12-2 .	example 12-2 .
+7964	der dateizeiger muss gültig sein , und auf eine mittels fopen ( ) , popen ( ) , oder fsockopen ( ) erfolgreich geöffnete datei zeigen .	the file pointer must be valid , and must point to a file successfully opened by fopen ( ) , popen ( ) , or fsockopen ( ) .
+35964	wenn sie nicht aus frankreich sind werden sie mit diesen funktionen nichts anfangen können .	if you are foreign in france , these functions will not be useful for you .
+35391	siehe dateiuploads mit post für informationen über den inhalt der $ http_post_files .	analogous to the old $ http_env_vars array ( which is still available , but deprecated ) .
+9078	eine liste aller umgebungsvariablen wird mit phpinfo ( ) eine liste aller umgebungsvariablen wird mit phpinfo ( ) angezeigt .	note :
+8509	wenn die erhaltene errno 0 ist und die funktion false / falsch zurück gibt , ist dies ein hinweis , dass der fehler vor dem connect ( ) -aufruf geschah .	this is most likely due to a problem initializing the socket .
+25088	öffnet eine verbindung zu einem prozess , der durch die anweisung command ausgeführt wurde .	opens a pipe to a process executed by forking the command given by command .
+38498	wenn php root hat : $ username = `` .. / etc / '' ; $ homedir = `` / home / .. / etc / '' ; $ file_to_delete = `` passwd '' ; unlink ( `` / home / .. / etc / passwd '' ) ; echo `` / home / .. / etc / passwd wurde gelöscht ! `` ; ?	if php has root access : $ username = `` .. / etc / '' ; $ homedir = `` / home / .. / etc / '' ; $ file_to_delete = `` passwd '' ; unlink ( `` / home / .. / etc / passwd '' ) ; echo `` / home / .. / etc / passwd has been deleted ! `` ; ?
+24856	pg_put_line ( ) sendet eine null-terminierte zeichenkette an den postgresql-server .	pg_put_line ( ) sends a null-terminated string to the postgresql backend server .
+3417	siehe auch : cpdf_moveto ( ) , cpdf_rmoveto ( ) , cpdf_rlineto ( ) und cpdf_lineto ( ) .	see also cpdf_moveto ( ) , cpdf_rmoveto ( ) , cpdf_rlineto ( ) , cpdf_lineto ( ) .
+13138	old - die nachricht ist nicht neu	old - match old messages
+8377	wenn sie probleme mit dem lesen oder schreiben von dateien haben und php als servermodul benutzen , stellen sie zunächst sicher , dass die dateien und verzeichnisse die sie benutzen wollen auch für den server-prozess zugänglich sind ( rechtevergabe ) .	if you are experiencing problems with reading and writing to files and you ' re using the server module version of php , remember to make sure that the files and directories you 're using are accessible to the server process .
+26788	anzahl von ergebnis-spalten im ausgabesatz ( oder null bei `` immediate `` abfragen )	number of columns in result set ( or zero if this was an `` immediate `` query )
+18730	mysql_fetch_lengths ( ) speichert die länge jedes ergebnisfelds in dem mit mysql_fetch_row ( ) , mysql_fetch_array ( ) und mysql_fetch_object ( ) zuletzt geholten datensatz in einem array , dessen offset bei 0 beginnt .	mysql_fetch_lengths ( ) stores the lengths of each result column in the last row returned by mysql_fetch_row ( ) , mysql_fetch_array ( ) , and mysql_fetch_object ( ) in an array , starting at offset 0 .
+27518	bedingte funktionen	conditional functions
+29121	beispiel für variablenfunktionen	variable function example
+700	verbesserte syntax-highlighter	improved syntax highlighter
+28013	socket_read ( ) gibt bei erfolg die daten als string zurück oder false , falls ein fehler aufgetreten ist .	socket_read ( ) returns the data as a string on success , or false on error .
+27228	die funktion session_unset ( ) löscht alle session-variablen , die gegenwärtig registriert sind .	the session_unset ( ) function frees all session variables currently registered .
+2590	weitere informationen sind in der bzip2 dokumentation zu finden .	see the bzip2 documentation for more information about this feature .
+25910	pspell_config_personal ( ) sollte auf die konfiguration angewendet werden , bevor pspell_new_config ( ) aufgerufen wird .	pspell_config_personal ( ) should be used on a config before calling pspell_new_config ( ) .
+13343	stellen sie außerdem sicher , dass sie einen gültigen include_path gesetzt haben .	be sure to have an appropriate include_path setting as well .
+27158	diese funktion wirkt sich nur für die dauer des scripts aus .	the effect of this function only lasts for the duration of the script .
+743	die daten werden wie browser wie gewünscht ausgegeben , da der browser die html-escapten symbole interpretiert .	the data is shown in the browser as intended , because the browser will interpret the html escaped symbols .
+4145	auf systemen , wo die crypt ( ) -funktion meherere verschlüsselungen unterstützt , werden die folgenden konstanten auf 0 oder 1 gesetzt , je nachdem , ob der entsprechende typ verfügbar ist :	crypt_md5 - md5 encryption with a twelve character salt starting with $ 1 $
+12621	imap_body ( ) liefert den körper der nachricht mit der nummer msg_number im aktuellen postfach .	the optional flags are a bit mask with one or more of the following :
+33135	sie können selbst .html einbinden .	the above statement is correct for the steps shown above .
+11161	intern werden diese felder durch die c-funktion strftime ( ) formatiert .	sets the format of timestamp , date or time type columns returned from queries .
+37322	um postgresql benutzen zu können , brauchen sie mindestens eine version 6.5 oder später , um alle leistungsmerkmale des postgresql-moduls nutzen zu können , müssen sie eine version ab 7.0 haben .	postgresql supports many character encoding including multibyte character encoding .
+953	in php können code-blöcke entweder mit `` ? '' oder mit `` ? \n '' enden ( \n steht für zeilenumbruch ) .	in php , the ending for a block of code is either `` ? '' or `` ? \n '' ( where \n means a newline ) .
+9941	der microsoft internet explorer 4.01 hat einen bug , der diese funktionalität verhindert , und es gibt keinen workaround .	there is no workaround .
+3405	siehe auch : cpdf_show_xy ( ) , cpdf_text ( ) , cpdf_set_leading ( ) und cpdf_set_text_pos ( ) .	see also cpdf_show_xy ( ) , cpdf_text ( ) , cpdf_set_leading ( ) , cpdf_set_text_pos ( ) .
+26697	elemente des arrays sind :	elements of the array are :
+26915	sesam_seek_next ) und den scrolling offset , der entweder einmal durch sesam_seek_row ( ) oder bei jedem lesen einer zeile mit sesam_fetch_row ( ) .	sesam_seek_next ) and the scrolling offset which can either be set once by sesam_seek_row ( ) or each time when fetching a row using sesam_fetch_row ( ) .
+1827	beispiel 1. array_key_exists ( )	example 1. array_key_exists ( ) example
+28692	% g - das vierstellige jahr entsprechend der iso wochennummer ( siehe % v ) .	% i - hour as a decimal number using a 12-hour clock ( range 01 to 12 )
+7930	die funktion fdf_set_value ( ) setzt den wert value eines feldes fieldname .	the fdf_set_value ( ) function sets the value for a field named fieldname .
+19111	beachten sie auch , dass die angabe eines numerischen offsets für ein feld sehr viel schneller ist als die angabe eines feldnamens oder tabellenname.feldname .	also , note that specifying a numeric offset for the field argument is much quicker than specifying a fieldname or tablename.fieldname argument .
+9153	z.zt . unterstützt dies die verschiedenen jpg z.zt . unterstützt dies die verschiedenen jpg app-markierungen per assoziativem array .	? php $ size = getimagesize ( $ filename ) ; $ fp=fopen ( $ filename , `` rb '' ) ; if ( $ size $ fp ) { header ( `` content-type : { $ size [ 'mime ' ] } '' ) ; fpassthru ( $ fp ) ; exit ; } else { / / error } ?
+20679	der interne zeiger wird um ein element vorgerückt , bevor das element zurückgegeben wird , d.h. es wird das nächste element zurückgegeben , und der interne zeiger um eins erhöht .	that means it returns the next array element and advances the internal array pointer by one .
+37527	stand-alone-betrieb ist nicht möglich .	required for using sesam functions .
+37622	auch bei darauffolgenden zugriffen werden sie nicht vom session-modul definiert , außer der benutzer definiert sie später .	please note when working with sessions that a record of a session is not created until a variable has been registered using the session_register ( ) function or by adding a new key to the $ _session superglobal array .
+25975	pspell_new ( ) öffnet ein neues wörterbuch und gibt die kennung des wörterbuch-links für die verwendung in anderen pspell-funktionen zurück .	pspell_new ( ) opens up a new dictionary and returns the dictionary link identifier for use in other pspell functions .
+36612	meldungen von problem - aber auch von erfolgserlebnissen - bei der verendung mit anderen servlet engines werden dankbar aufgenommen .	bug reports , success stories and / or patches required to get this code to run on other engines would be appreciated .
+9927	es gibt eine anzahl optionen , welche die benutzer in deren browser einstellen können , um das standardmäßige verhalten bezüglich des caching zu verändern .	there are a number of options that users may be able to set for their browser that change its default caching behavior .
+13692	disconnect ( siehe ingres_close ( ) )	disconnect ( see ingres_close ( ) )
+39322	beispiel 38-1 shows a small demonstration of calling a user function .	example 38-1 shows a small demonstration of calling a user function .
+24597	falls mehrere fehler innerhalb einer internen postgresql-funktion auftreten , wird möglicherweise keine passende fehlermeldung angezeigt .	it may not return appropriate error message , if multiple errors are occured inside a postgresql module function .
+37754	wenn register_globals aktiviert ist , dann referenzieren die globalen variablen und die einträge von $ _session für session-variablen , die in vorherigen instanzen der session registriert wurden , automatisch den selben wert .	if register_globals is enabled , then the global variables and the $ _session entries will automatically reference the same values which were registered in the prior session instance .
+36957	erlaubt leerzeichen nach funktionsnamen	constant
+26854	`` string ''	string
+1386	safe mode ist der versuch , sicherheitsprobleme bei gemeinsam genutzten servern zu lösen .	the php safe mode is an attempt to solve the shared-server security problem .
+37320	postgresql bietet sql92 / sql99 sprachunterstützung , transaktionen und ein erweiterbares typkonzept .	it provides sql92 / sql99 language support , transaction integrity and type extensibility .
+17822	msql ( ) wählt eine datenbank aus und führt auf ihr eine abfrage aus .	msql ( ) selects a database and executes a query on it .
+27120	für jeden namen registriert session_register ( ) die globale variable mit diesem namen in der aktuellen session .	if you want your script to work regardless of register_globals , you need to use the $ _session array .
+30994	die vergleichsfunktion wird vom benutzer definiert .	the comparison function is user-defined .
+22473	die struktur der zurückgegeben daten ist bis jetzt ( absichtlich ) nicht dokumentiert , da es noch vorbehaltliche änderungen geben wird	the structure of the returned data is ( deliberately ) not yet documented , as it is still subject to change .
+3082	liefert den wert der eigenschaft property der mittels com_object referenzierten com komponente .	returns the value of the property of the com component referenced by com_object .
+24874	details über einen aufgetretenen fehler können mit der funktion pg_last_error ( ) abgefragt werden , sofern die verbindung geöffnet ist . pg_last_error ( ) sendet einen sql-befehl an die durch connection bezeichnete datenbank . connection muss eine gültige verbindungskennung sein , die von pg_connect ( ) oder pg_pconnect ( ) zurückgegeben wurde .	the connection must be a valid connection that was returned by pg_connect ( ) or pg_pconnect ( ) .
+13317	ist der dritte parameter strict auf true gesetzt , prüft in_array ( ) auch die typen von needle in haystack .	if the third parameter strict is set to true then the in_array ( ) function will also check the types of the needle in the haystack .
+256	es folgt eine if -struktur mit elseif und else im alternativen format :	the following is an if structure with elseif and else in the alternative format :
+3233	sie gibt true zurück , wenn der kopiervorgang erfolgreich war , andernfalls false .	returns true if the copy succeeded , false otherwise .
+36228	die wesentlichen unterschiede liegen in der übertragung der daten nach absenden des formulars ( dies ist das eigentliche form data format ) , sowie in dem format des dokuments welches das formular enthält ( pdf ) .	the difference is basically the format how data is transmitted to the server when the submit button is pressed ( this is actually the form data format ) and the format of the form itself ( which is the portable document format , pdf ) .
+33926	serverseitige skripte .	server-side scripting .
+34209	funktionen sind ausdrücke mit dem wert ihres rückgabewertes .	functions are expressions with the value of their return value .
+4043	seien sie gewarnt und verwenden sie diese funktion auf eigenes risiko .	use this function at your own risk .
+36096	oracle ( oci8 ) ( verfügbar seit php 4.3.0 ) .	oracle ( oci8 ) ( available from php 4.3.0 ) .
+13270	( siehe rfc2152 für utf-7 und rfc2060 , abschnitt 5.1.3 für modifiziertes utf-7 )	the modified utf-7 encoding is defined in rfc 2060 , section 5.1.3 ( original utf-7 was defned in rfc1642 ) .
+4470	auf windows-betribssytemen liegt ist dieser bereich beschränkt auf 01-01-1970 bis 19-01-2038 .	to generate a timestamp from a string representation of the date , you may be able to use strtotime ( ) .
+27037	session_encode ( ) gibt eine zeichenkette mit dem kodierten inhalt der aktuellen session zurück .	see also session_decode ( )
+4253	siehe auch ctype_digit ( ) .	see also ctype_digit ( ) .
+33167	um das source code highlighting feature verwenden zu können , erstellen sie einfach eine php skriptdatei , und fügen diesen code ein : ? php show_source ( `` original_php_script.php '' ) ; ? .	if you chose to configure apache to use php as a cgi binary , you will need to use the show_source ( ) function .
+2119	das heißt nicht , dass der schlüssel des ersten zugehörigen wertes aus dem unsortierten array behalten wird .	it does not mean that the key of the first related value from the unsorted array will be kept .
+883	php / fi 2.0 wird nicht mehr unterstützt .	php / fi 2.0 is no longer supported .
+33199	in diesem beispiel nehmen wir an , dass caudium in / opt / caudium / server / installiert ist .	for the sake of this example we assume that caudium is installed in / opt / caudium / server / .
+27201	verwendet ein benutzer ob_gzhandler oder ähnliches mit ob_start ( ) , ist die reihenfolge der augaberoutine wichtig für eine korrekte ausgabe .	if a user uses ob_gzhandler or like with ob_start ( ) , the order of output handler is important for proper output .
+36451	ifx_textasvarchar ( 1 ) : gibt text-felder so zurück , als wären es varchar felder , so dass sie keine blob-id für select abfragen brauchen .	ifx_textasvarchar ( 1 ) : return text columns as if they were varchar columns , so that you do n't need to use blob id 's for select queries .
+38494	? php / / löschen einer datei aus dem heimatverzeichnis des users $ username = $ _post [ 'user_submitted_name ' ] ; $ homedir = `` / home / $ username '' ; $ file_to_delete = `` $ userfile '' ; unlink ( `` $ homedir / $ userfile '' ) ; echo `` $ file_to_delete wurde gelöscht ! `` ; ?	? php / / remove a file from the user ' s home directory $ username = $ _post [ 'user_submitted_name ' ] ; $ homedir = `` / home / $ username '' ; $ file_to_delete = `` $ userfile '' ; unlink ( `` $ homedir / $ userfile '' ) ; echo `` $ file_to_delete has been deleted ! `` ; ?
+31339	sollte ein fehler auftreten , wird keine fehlermeldung ausgegeben , eine ispell-konvertierung kann dann jedoch natürlich auch nicht stattfinden .	in case of errors , e.g . if spellserver is not running or invalid host indicated , there are no messages returned and ispell conversion does not work .
+7122	ist anaus false muss der benutzer die änderungen über fbsql_commit ( ) schreiben ( commit ) oder über fbsql_rollback ( ) die datentransaktion rückgängig machen ( rollback ) .	with onoff set to false the user must commit or rollback the transaction using either fbsql_commit ( ) or fbsql_rollback ( ) .
+5460	beispiel 1. dbx_compare ( )	example 1. dbx_compare ( ) example
+38183	verbindung zu einem kalenderserver herstellen .	swfbutton
+37899	php ermöglicht es shockwave flash dateien mit paul haeberli 's libswf modul zu erzeugen .	note :
+3169	reduziert den referenzzähler der komponente .	decreases the components reference counter .
+34689	true wenn sowohl $ a als auch $ b true ist .	true if both $ a and $ b are true .
+29164	beispiel 3. swfaction ( ) example	example 3. swfaction ( ) example
+8392	eventuell müssen sie rewind ( ) aufrufen , um den dateizeiger auf den beginn der datei zurückzusetzen , wenn sie bereits daten in die datei geschrieben haben .	you may need to call rewind ( ) you may need to call rewind ( ) to reset the file pointer to the beginning of the file if you have already written data to the file .
+24601	siehe auch pg_result_error ( ) .	see also pg_result_error ( ) .
+25821	bitte beachten sie , dass diese funktion nicht funktioniert , wenn sie nicht pspell .11.2 und aspell .32.5 oder höher haben .	please , note that this function will not work unless you have pspell .11.2 and aspell .32.5 or later .
+39133	mehr informationen darüber sie auf der manual-seite über autoglobals .	see the related manual page on autoglobals for more information .
+10063	sofern sie eine vollständige umsetzung der html-zeichen benötigen , sollten sie statt dessen htmlentities ( ) verwenden .	this function is useful in preventing user-supplied text from containing html markup , such as in a message board or guest book application .
+51	sie sollten generell immer einen mirror in ihrer nähe verwenden .	for best performance , you should choose the mirror site closest to you .
+31361	deklariert mnogosearch sessionparameter .	defines mnogosearch session parameters .
+33497	* # addtype application / x-httpd-php .php * # addtype application / x-httpd-php-source .phps	# addtype application / x-httpd-php .php # addtype application / x-httpd-php-source .phps
+5799	`` mode '' - modus	`` mode '' - mode
+35654	php läßt sich in html einbinden .	hypertext preprocessor `` is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into html .
+39596	beispiel 29-1 .	example 29-1 .
+37566	unterschiedliche sql-ausprägungen sind nie 100-prozentig kompatibel .	no two sql dialects are ever 100 % compatible .
+79	dieses handbuch versucht nicht , vorschriften über generelle programmierpraktiken zu machen .	this manual does not attempt to provide instruction about general programming practices .
+11663	w und h benennen die breite und höhe der ellipse , s und e den start - bzw .	w and h specifies the ellipse ' s width and height respectively while the start and end points are specified in degrees indicated by the s and e w and h specifies the ellipse 's width and height respectively while the start and end points are specified in degrees indicated by the s and e arguments .
+33170	auf win-apache müssen alle backslashes `` \ '' in einer pfadangabe , wie z.b . `` c : \directory\file.ext '' , in slashes `` / '' umgewandelt werden , wie z.b . `` c : / directory / file.ext `` .	on win-apache all backslashes in a path statement such as `` c : \directory\file.ext '' , must be converted to forward slashes , as `` c : / directory / file.ext '' .
+21205	ocidefinebyname	ocidefinebyname
+33002	php / fi stand für personal home page / forms interpreter , und beinhaltete manches an funktionalität des php wie wir es heute kennen .	php / fi , which stood for personal home page / forms interpreter , included some of the basic functionality of php as we know it today .
+12414	dabei ist die koordinate 0 , 0 die linke obere ecke des bildes im .	imagesetpixel ( ) draws a pixel at x , y ( top left is 0 , 0 ) in image image of color col .
+28454	weitere informationen finden sie unter return ( ) .	see return ( ) for more information .
+495	while -schleifen sind die einfachste form von schleifen in php .	while loops are the simplest type of loop in php .
+34273	operatoren	operators
+8033	optional können mit dem dritten parameter allowable_tags tags spezifiziert werden , die nicht entfernt werden sollen .	you can use the optional third parameter to specify tags which should not be stripped .
+11363	aufeinanderfolgende aufrufe von ifx_fetch_row ( ) geben die jeweils nächste zeile der ergebnismenge zurück oder false , falls es keine zeile mehr gibt .	subsequent calls to ifx_fetch_row ( ) would return the next row in the result set , or false if there are no more rows .
+34442	erinnern sie sich noch an die grundrechenarten aus der schule ?	remember basic arithmetic from school ?
+11540	andere abfragen auuser selects werden unverzüglich ausgeführt .	non-select queries are `` execute immediate '' .
+22215	die funktion openssl_pkcs7_sign ( ) unterzeichnet die inhalte der datei , angegeben durch den pararmeter infilename .	headers is an array of headers that will be prepended to the data after it has been signed ( see openssl_pkcs7_encrypt ( ) for more information about the format of this parameter .
+35165	schließen sie ihren varaiblennamen in geschweifte klammern ein , wenn sie ausdrücklich das ende des namens angeben wollen .	similarly , you can also have an array index or an object property parsed .
+22660	ruft einen datensatz in ein array ab .	fetches a row of data into an array .
+33015	weitere besondere merkmale von php 3.0 waren die unterstützung für objektorientierte syntax und die viel bessere sowie konsistentere sprachsyntax .	other key features introduced in php 3.0 were the object oriented syntax support and the much more powerful and consistent language syntax .
+28741	doppelte rückstriche ( `` \\ '' ) werden zu `` \ `` umgesetzt .	returns a string with backslashes stripped off . ( \ 'becomes ' and so on . ) double backslashes are made into a single backslash .
+34662	auswirkung	effect
+18229	diese funktion prüft , ob vom server noch weitere ergebnisse angeboten werden .	this function will test for additional results available form the server .
+34885	gefällt ihnen rot ?	do you like red ?
+7988	der parameter enclosure wurde in php 4.3.0 eingeführt .	the enclosure parameter was added in php 4.3.0 .
+3135	beispiel 1. compact ( )	example 1. compact ( ) example
+35392	siehe dateiuploads mit post für informationen über den inhalt der $ _files .automatisch global in jedem geltungsbereich .	variables provided to the script via any user input mechanism , and which therefore can not be trusted .
+7056	im falle einer kollision wird die existierende variable überschrieben .	if there is a collision , overwrite the existing variable .
+33018	gegen ende 1998 wuchs php auf eine installierte basis von ( geschätzten ) zehntausenden benutzern und hunderttausenden websites , auf denen php installiert war , heran .	by the end of 1998 , php grew to an install base of tens of thousands of users ( estimated ) and hundreds of thousands of web sites reporting it installed .
+12986	beispiel 1. imap_mime_header_decode ( ) example	in the above example we would have two elements , whereas the first element had previously been encoded with iso-8859-1 , and the second element would be plain us-ascii .
+39449	as shown in abbildung 24-1 as shown in abbildung 24-1 above , php can be extended primarily at three points : external modules , built-in modules , and the zend engine .	as shown in figure 24-1 as shown in figure 24-1 above , php can be extended primarily at three points : external modules , built-in modules , and the zend engine .
+39138	beispiel 2-2 .	example 2-2 .
+33445	in either case , you need to start the microsoft management console ( may appear as 'internet services manager ' , either in your windows nt 4.0 option pack branch or the control panel= administrative tools under windows 2000 ) .	in either case , you need to start the microsoft management console ( may appear as'internet services manager ' , either in your windows nt 4.0 option pack branch or the control panel= administrative tools under windows 2000 / xp ) .
+38582	während dies den benötigten aufwand mit php zu arbeiten leicht erhöht ist dargelegt , dass die vorteile gegenüber dem aufwand klar überwiegen .	while it does slightly increase the amount of effort required to work with php , it has been argued that the benefits far outweigh the effort .
+38388	wenn ihre datenbank das union konstrukt unterstützt , kann der angreifer versuchen , eine komplette abfrage an das original anzuhängen , um paßwörter aus einer willkürlichen tabelle aufzulisten .	if your database supports the union construct , the attacker may try to append an entire query to the original one to list passwords from an arbitrary table .
+7572	dies geschiet so , als ob fbsql_connect ( ) aufgerufen wird .	if no link is open , the function will try to establish a link as if fbsql_connect ( ) was called , and use it .
+1884	haben die angegebenen arrays die selben string-schlüssel , dann wird der hintere wert dieses schlüssels den vorhergehenden überschreiben .	if the input arrays have the same string keys , then the later value for that key will overwrite the previous one .
+25097	siehe auch pclose ( ) , fopen ( ) und proc_open ( ) .	see also pclose ( ) , fopen ( ) , and proc_open ( ) .
+11586	return false on error otherwise true .	returns true on success or false on failure .
+38612	werden alle transaktionen ausreichend geloggt ?	will any transactions be adequately logged ?
+16181	description int mcal_week_of_year ( int day , int month , int year )	prev
+12731	die bitmaske flags kann aus folgenden werten zusammengesetzt werden :	the options for imap_fetchbody ( ) is a bitmask with one or more of the following :
+23586	wenn keine datei-deskriptor übergeben wird , erfolgt die erstellung des dokuments im speicher , und die ausgabe geschieht seitenweise nach stdout bzw . zum web-browser .	see also pdf_new ( ) , pdf_open_file ( ) .
+679	eine einführung in php von stig sæther bakken ist hier auf der zend website verfügbar .	a nice introduction to php by stig sæther bakken can be found here on the zend website .
+18349	/ / seed with microseconds since last `` whole '' second mt_srand ( ( double ) microtime ( ) * 1000000 ) ; $ randval = mt_rand ( ) ;	since php 4.2.0 it 's no longer necessary to seed the random number generator before using it .
+4781	die flags entsprechen denen des open ( ) -systemaufrufs ( normalerweise bedeutet 0 nur-lesen , 1 nur-schreiben und 2 lesen und schreiben ) .	returns a dbase_identifier for the opened database , or false if the database couldn 't be opened .
+34428	das heißt , dass diese objekte auf jeder ihrer seite auftauchen können , sobald sie teil ihrer session sind .	this basically means that these objects can show up on any of your pages once they become part of your session .
+6799	dies wirkt sich aber nicht auf ereg ( ) s fähigkeit aus , mehr übereinstimmende teilzeichenketten zu finden .	this has no effect on ereg ( ) 's ability to match more substrings .
+22132	sie haben eine openssl-funktion aufgerufen , die einen fehler / / verursacht hat . while ( $ msg = openssl_error_string ( ) ) echo $ msg . `` br / \n '' ;	note :
+22388	das muss der passende öffentliche zum privaten schlüssel sein , der für die unterschrift benutzt wurde .	this must be the public key corresponding to the private key used for signing .
+24118	voreingestellt ist `` test.signio.com '' , normalerweise sollte dies in `` connect.signio.com '' geändert werden , um transaktionen durchzuführen .	by default this is `` test.signio.com '' , so you will certainly want to change this to `` connect.signio.com '' in order to process live transactions .
+34860	vieleicht kennen sie folgende syntax aus alten skripts :	? php $ foo [ bar ] = 'enemy ' ; echo $ foo [ bar ] ; / / etc ?
+33907	scheuen sie sich nicht , die lange liste der php-funktionen zu lesen .	don ' t be afraid reading the long list of php 's features .
+36977	folgendes einfache beispiel zeigt ihnen , wie sie sich mit einer mysql - datenbank verbinden , eine anfrage ausführen , die ergebnisse ausgeben und die verbindung wieder trennen .	example 1 .
+21914	gibt eine odbc-ergebniskennung zurück , wenn der sql-befehl erfolgreich bereitgestellt wurde .	returns an odbc result identifier if the sql command was prepared successfully .
+34887	gefällt ihnen grün ?	do you like green ?
+18681	sind keine weiteren datensätze vorhanden gibt diese funktion false zurück .	returns an associative array that corresponds to the fetched row , or false if there are no more rows .
+11764	gibt den index der angegebenen farbe in der farb-palette des bildes im zurück .	returns the index of the specified color in the palette of the image .
+1146	siehe auch die anweisungen file_uploads , upload_max_filesize , upload_tmp_dir und post_max_size in der php.ini	see also the file_uploads , upload_max_filesize , upload_tmp_dir , and post_max_size directives in php.ini
+9000	standard-elemente sind all die elemente , die bereits in der klassendefinition mit 'var ' definiert wurden .	100 / / as of php 4.2.0 var1 : var2 : xyz var3 :
+38210	verbindung zu einer postgresql datenbank herstellen .	pdf_close_image ( )
+30882	gibt den neuen temporären dateinamen bei erfolg , oder eine false zeichenkette wenn ein fehler auftritt zurück .	returns the new temporary filename , or the false string on failure .
+3852	die funktion cpdf_set_page_animation ( ) legt den übergang zwischen aufeinanderfolgenden seiten fest .	the cpdf_set_page_animation ( ) function set the transition between following pages .
+28486	gibt einen array mit folgenden statistischen informationen als array - elemente zurück :	returns an array with the statistics of the file with the following elements :
+4132	lesen sie die man-pages ihres unix-systems für mehr informationen zu den crypt-funktionen .	if the salt argument is not provided , one will be randomly generated by php .
+33006	obwohl manche leute diesem projekt ein stück code beisteuerten , war es insgesamt immer noch ein ein-mann-projekt .	while there were several people contributing bits of code to this project , it was still at large a one-man project .
+27548	falls sie als referenz ein drittes argument angeben , wird similar_text ( ) ihnen die ähnlichkeit als prozentwert errechnen .	by passing a reference as third argument , similar_text ( ) will calculate the similarity in percent for you .
+36963	spalten werden in einem assioziativen array zurückgegeben .	allow interactive_timeout seconds ( instead of wait_timeout ) of inactivity before closing the connection .
+27758	127.0.0.1 ) , falls der socket zur af_inet -familie gehört , oder der pfadname eines unix-domain socket , falls der socket zur af_unix -familie gehört .	127.0.0.1 ) , if the socket is of the af_inet family ; or the pathname of a unix-domain socket , if the socket family is af_unix .
+8394	wenn sie den inhalt einer datei nur nur in den ausgabepuffer schreiben wollen ohne diese ändern bzw . an eine bestimmte stelle gehen wollen , sollten sie besser readfile ( ) benutzen , bei der sie sich den aufruf von fopen ( ) ersparen .	if you just want to dump the contents of a file to the output buffer , without first modifying it or seeking to a particular offset , you may want to use the readfile ( ) , which saves you the fopen ( ) call .
+12973	die bitmaske flags kann den foldengen wert enthalten :	moves mail messages specified by msglist to specified mailbox . msglist is a range not just message numbers ( as described in rfc2060 ) .
+34336	in php 4 sind nur konstante initialisierungen für var in php 4 sind nur konstante initialisierungen für var variablen erlaubt .	in php 4 , only constant initializers for var variables are allowed .
+35197	der wert wird durch den anfangsteil des strings bestimmt .	you can also serialize php values to xml structures , if you have wddx support in your php setup .
+36849	php beinhaltet zwar einen eingebauten mysql-support , dieser ist jedoch nicht mit mnogosearch kompatibel , deshalb muss php gegen die selben generischen mysql-bibliotheken wie mnogosearch gelinkt werden , also z.b . : -- with-mnogosearch -- with-mysql= / usr .	thus , if you use mnogosearch with mysql , during php configuration you have to indicate the directory of your mysql installation , that was used during mnogosearch configuration , i.e . for example : -- with-mnogosearch -- with-mysql= / usr .
+35257	null	pseudo-types used in this documentation
+31203	- logisches und .	- logical and .
+13090	personal - realer name des empfängers	personal - the personal name
+7259	siehe auch : fbsql_start_db ( ) und fbsql_stop_db ( ) .	see also : fbsql_start_db ( ) and fbsql_stop_db ( ) .
+2090	ist das array replacement angegeben , werden die entfernten elemente durch die elemente dieses arrays ersetzt .	if replacement array is specified , then the removed elements are replaced with elements from this array .
+33103	es war richtig aufregend , als wir das erste hello world programm schrieben und laufen ließen .	when we wrote the first hello world program and fired it up , it was extremely exciting .
+24890	siehe auch pg_query ( ) , pg_send_query ( ) , pg_get_result ( ) , pg_last_error ( ) und pg_last_notice ( )	see also pg_query ( ) , pg_send_query ( ) , pg_get_result ( ) , pg_last_error ( ) and pg_last_notice ( )
+33925	es gibt drei hauptgebiete , in denen php skripte genutzt werden .	there are three main fields where php scripts are used .
+35135	doppelte anführungszeichen	double-quote
+33829	interbase funktionen	interbase functions
+28720	in diesem fall werden diese zeichen von der php-funktion strftime ( ) nicht unterstützt .	12 / 23 / 2004 - % v , % g , % y = 52,2004,2004 print `` 12 / 23 / 2004 - % v , % g , % y = '' . strftime ( `` % v , % g , % y '' , strtotime ( `` 12 / 23 / 2004 '' ) ) . `` \n '' ; / / outputs :
+2068	ist offset positiv , beginnt die sequenz bei diesem offset in dem array .	if offset is positive , the sequence will start at that offset in the array .
+9316	siehe auch getprotobynumber ( ) .	see also : getprotobynumber ( ) .
+34080	während des parsens einer datei geht php den text solange einfach durch , bis einer der speziellen tags gefunden wird , der php mitteilt , dass ab nun mit der interpretation des textes als php code zu beginnen ist .	when php parses a file , it simply passes the text of the file through until it encounters one of the special tags which tell it to start interpreting the text as php code .
+28476	/ / ermittlung der autoren-info und erzeugung eines docbook-eintrages $ auth = `` 24\tlewis carroll '' ; $ n = sscanf ( $ auth , '' % d\t % s % s '' , $ id , $ first , $ last ) ; echo '' author id= ' $ id 'firstname $ first / firstname surname $ last / surname / author \n '' ;	/ / get author info and generate docbook entry $ auth = `` 24\tlewis carroll '' ; $ n = sscanf ( $ auth , '' % d\t % s % s '' , $ id , $ first , $ last ) ; echo '' author id= ' $ id 'firstname $ first / firstname surname $ last / surname / author \n '' ;
+37851	alles , was sie eingeben , wird an den server geschickt und von diesem wieder an sie zurückgegeben .	anything you type will then be output on the server side , and echoed back to you .
+28248	mit dem optionalen parameter length kann man alternativ eine anzahl von bytes angeben , die in den socket geschrieben wrden sollen .	the optional parameter length can specify an alternate length of bytes written to the socket .
+21606	wenn odbc_fetch_into ( ) genutzt wird , wird bei direkter ausgabe ein leerer string als spaltenwert zurückgeliefert .	if odbc_fetch_into ( ) is used , passthru means that an empty string is returned for these columns .
+26058	beispiel 1. pspell_suggest ( )	example 1. pspell_suggest ( )
+38807	tabelle 43-1. php_stream_make_seekable ( ) return values	table 43-1. php_stream_make_seekable ( ) return values
+19027	der parameter server kann ausserdem eine portnummer enthalten , z.b . `` hostname : port '' oder den pfad zu einem socket z.b . `` : / pfad / zu / socket '' für zugriffe auf dem lokalen rechner .	the server parameter can also include a port number . eg . `` hostname : port '' or a path to a socket eg . `` : / path / to / socket '' for the localhost .
+26399	die require ( ) anweisung bindet eine datei ein und führt diese aus .	the require ( ) statement includes and evaluates the specific file .
+34901	füllen eines realen arrays	filling an array
+30919	für details konsultieren sie bitte die dokumentation ihres betriebssystems bzgl . der tmpfile ( 3 ) funktion , wie auch die stdio.h header-datei .	for details , consult your system documentation on the tmpfile ( 3 ) function , as well as the stdio.h header file .
+14836	erzeugung einer liste aller organisationseinheiten einer organisation	produce a list of all organizational units of an organization
+12287	untere linke y-koordinate	lower left y-coordinate
+739	feststellen werden sie dies aber nur bei get-anfragen , da post-anfragen meist versteckt geschehen .	you 'll only notice this in case of get request though , because post requests are usually hidden .
+17312	echo date ( `` m-d-y '' , mktime ( 0,0,0,12,32,1997 ) ) ; echo date ( `` m-d-y '' , mktime ( 0,0,0,13,1,1997 ) ) ; echo date ( `` m-d-y '' , mktime ( 0,0,0,1,1,1998 ) ) ; echo date ( `` m-d-y '' , mktime ( 0,0,0,1,1,98 ) ) ;	echo date ( `` m-d-y '' , mktime ( 0,0,0,12,32,1997 ) ) ; echo date ( `` m-d-y '' , mktime ( 0,0,0,13,1,1997 ) ) ; echo date ( `` m-d-y '' , mktime ( 0,0,0,1,1,1998 ) ) ; echo date ( `` m-d-y '' , mktime ( 0,0,0,1,1,98 ) ) ;
+8167	siehe auch filectime ( ) , stat ( ) , touch ( ) und getlastmod ( ) .	see also filectime ( ) , stat ( ) , touch ( ) , and getlastmod ( ) .
+35783	in php3 und älteren versionen von php4 ( bis einschließlich php4rc1 ) sind diese funktionen nur verfügbar , wenn sie die kalender-erweiterungen unter dl / calendar übersetzt haben .	the constants below are defined by this extension , and will only be available when the extension has either been compiled into php or dynamically loaded at runtime .
+33289	hilfe finden sie in extra / cyberlib .	dir is the openlink base install directory , defaults to / usr / local .
+17691	gibt die inhalte des gelesenen datensatzes in einem array zurück oder false , falls kein datensatz mehr gelesen werden kann .	returns an array that corresponds to the fetched row , or false if there are no more rows .
+5547	diese eigenschaft enthält die aktuellen ergebnisdaten , möglicherweise auch mit den spaltennamen assoziiert , was jedoch vom parameter flags abhängig ist .	this property contains the actual resulting data , possibly associated with column names as well depending on flags .
+754	sie werden feststellen , dass das im url durch amp ; ersetzt wird .	you ' ll notice that the in the url is replaced by amp ; .
+8911	fwrite ( ) gibt bei erfolg die anzahl der geschriebenen bytes zurück , andernfalls false .	fwrite ( ) returns the number of bytes written , or false on error .
+547	er zeigt dem empfangenden programm , wie es die folgenden daten behandeln soll :	tells the receiving program about what it should treat the following data as :
+19212	standardsortierung array ( [ 0 ] = img1.png [ 1 ] = img10.png [ 2 ] = img12.png [ 3 ] = img2.png ) sortieren mit natürlicher reihenfolge array ( [ 3 ] = img1.png [ 2 ] = img2.png [ 1 ] = img10.png [ 0 ] = img12.png )	standard sorting array ( [ 0 ] = img1.png [ 1 ] = img10.png [ 2 ] = img12.png [ 3 ] = img2.png ) natural order sorting array ( [ 3 ] = img1.png [ 2 ] = img2.png [ 1 ] = img10.png [ 0 ] = img12.png )
+22068	uucp-subsystem	uucp subsystem
+11137	vorbereitung einer abfrage für den folgenden gebrauch von parameter-platzhaltern und für die eigentliche ausführung ( per ibase_execute ( ) ) .	prepare a query for later binding of parameter placeholders and execution ( via ibase_execute ( ) ) .
+529	andere inkompatibilitäten	other incompatibilities
+34743	php unterscheidet zwischen variablenname und variableninhalt , wobei der gleiche variableninhalt unterschiedliche namen besitzen kann .	note that in php , variable name and variable content are different , so the same content can have different names .
+407	das ist nicht so sinnlos , wie sie vielleicht glauben , weil man häufig eine schleife erst durch eine bedingte break -anweisung statt durch eine unwahr werdende for -bedingung beenden möchte .	this may not be as useless as you might think , since often you 'd want to end the loop using a conditional break statement instead of using the for truth expression .
+18654	als schlüssel für die assoziativen indizes werden die feldnamen benutzt .	in addition to storing the data in the numeric indices of the result array , it also stores the data in associative indices , using the field names as keys .
+7829	siehe auch fdf_save_string ( ) , fdf_create ( ) und fdf_close ( ) .	see also fdf_save_string ( ) , fdf_create ( ) and fdf_close ( ) .
+2938	192.168.0.2 ) oder ein host-name ( z.b . www.example.com ) sein .	try the pear class net_dns .
+3129	jeder parameter kann entweder ein string mit einem variablennamen , oder ein array mit variablennamen sein .	each parameter can be either a string containing the name of the variable , or an array of variable names .
+28842	wurde needle nicht gefunden , wird false zurück gegeben .	if needle is not found , returns false .
+826	auf der ganzen welt gibt es unzählige communities .	there are countless of them around the world .
+31575	siehe auch urldecode ( ) und rawurldecode ( ) .	see also urldecode ( ) , htmlentities ( ) , rawurldecode ( ) , rawurlencode ( ) .
+36535	common internet message headers	network news transfer protocol ( nntp ) .
+21120	für den parameter column kann wahlweise die splatennummer ( beginnend bei 1 ) oder der spaltenname genommen werden .	you can either use the column-number ( 1-based ) or the column-name for the col parameter .
+34290	sie können auch den operator @ verwenden , um fehlermeldungen innerhalb des konstruktors zu unterdrücken , z.b . @ new .	you also can use the @ operator to mute errors occuring in the constructor , e.g . @ new .
+32955	gibt die ausgelesenen daten zurück oder false , wenn das ende der datei erreicht wurde .	returns the data read , or false if the end of the file is reached .
+11541	ifx_scroll und ifx_hold sind symbolische konstanten und als solche sollten sie nicht in anführungszeichen eingeschlossen werden .	ifx_scroll and ifx_hold are symbolic constants and as such shouldn 't be between quotes .
+2430	der optionale parameter genauigkeit bestimmt die anzahl der nachkommastellen , die für den vergleich ausgewertet werden .	the optional scale the optional scale parameter is used to set the number of digits after the decimal place which will be used in the comparison .
+22606	ora_error	ora_error
+2610	gibt den fehlercode und die fehlerbeschreibung eines beliebigen von dem dateizeiger bz gelieferten bzip2-fehlers in einem assoziativen array zurück .	returns the error number and error string , in an associative array , of any bzip2 error returned by the file pointer bz .
+36484	das standardpasswort , wenn kein passwort in ifx_connect ( ) oder ifx_pconnect ( ) angegeben wurde .	the default password to use when none is specified in ifx_connect ( ) or ifx_pconnect ( ) .
+31410	dieser parameter kann verwendet werden , um festzulegen , welcher wortteil mit dem gesuchten wort übereinstimmen muss .	this feature works only in `` single '' and `` multi `` modes using sql based and built-in database .
+18065	wichtige anmerkung : die verwendung von mssql_fetch_array ( ) ist nur unwesentlich langsamer als die verwendung von mssql_fetch_row ( ) , bietet aber wesentlich mehr .	an important thing to note is that using mssql_fetch_array ( ) is not significantly slower than using mssql_fetch_row ( ) , while it provides a significant added value .
+35117	wenn sie innerhalb eines strings einen backslash vor einem einfachen anführungszeichen oder am ende eines strings ausgeben wollen , müssen sie diesen verdoppeln .	if a backslash needs to occur before a single quote or at the end of the string , you need to double it .
+35131	wagenrücklauf ( cr oder 0x0d als ascii-code )	carriage return ( cr or 0x0d ( 13 ) in ascii )
+15113	siehe auch symlink ( ) um symbolische links zu erstellen und readlink ( ) zusammen mit linkinfo ( ) .	see also the symlink ( ) to create soft links , and readlink ( ) along with linkinfo ( ) .
+32036	bricht die zeilen des strings str an der mittels width angegebenen position um .	returns a string with str wrapped at the column number specified by the ( optional ) width parameter .
+17854	ein string , der den fehler beschreibt , wird in $ phperrmsg geschrieben und auf dem bildschirm ausgegeben , es sei denn , die funktion wurde als @ msql_list_fields ( ) aufgerufen .	a string describing the error will be placed in $ phperrmsg , and unless the function was called as @ msql_list_fields ( ) then this error string will also be printed out .
+37063	ocifreedesc	ocibindbyname ( $ sth , `` : address_id '' , $ addr_id , 10 ) ; ocibindbyname ( $ sth , `` : error_code '' , $ errorcode , 10 ) ; ociexecute ( $ sth ) ; ?
+7997	siehe auch explode ( ) , file ( ) und pack ( ) .	see also explode ( ) , file ( ) , and pack ( )
+7394	? php fbsql_connect ( `` localhost '' , `` _system '' , `` '' ) ; fbsql_select_db ( `` wisconsin '' ) ; $ result = fbsql_query ( `` select * from onek ; '' ) ; $ fields = fbsql_num_fields ( $ result ) ; $ rows = fbsql_num_rows ( $ result ) ; $ i = 0 ; $ table = fbsql_field_table ( $ result , $ i ) ; echo `` ihre ' '' . $ table . '' 'tabelle hat `` . $ fields . `` felder und `` . $ rows . '' datensaetze br `` ; echo `` die tabelle hat die folgenden felder br '' ; while ( $ i $ fields ) { $ type = fbsql_field_type ( $ result , $ i ) ; $ name = fbsql_field_name ( $ result , $ i ) ; $ len = fbsql_field_len ( $ result , $ i ) ; $ flags = fbsql_field_flags ( $ result , $ i ) ; echo $ type . `` `` . $ name . '' `` . $ len . `` `` . $ flags . '' br `` ; $ i++ ; } fbsql_close ( ) ; ?	? php fbsql_connect ( `` localhost '' , `` _system '' , `` '' ) ; fbsql_select_db ( `` wisconsin '' ) ; $ result = fbsql_query ( `` select * from onek ; '' ) ; $ fields = fbsql_num_fields ( $ result ) ; $ rows = fbsql_num_rows ( $ result ) ; $ i = 0 ; $ table = fbsql_field_table ( $ result , $ i ) ; echo `` your ' '' . $ table . '' 'table has `` . $ fields . `` fields and `` . $ rows . '' records br `` ; echo `` the table has the following fields br '' ; while ( $ i $ fields ) { $ type = fbsql_field_type ( $ result , $ i ) ; $ name = fbsql_field_name ( $ result , $ i ) ; $ len = fbsql_field_len ( $ result , $ i ) ; $ flags = fbsql_field_flags ( $ result , $ i ) ; echo $ type . `` `` . $ name . '' `` . $ len . `` `` . $ flags . '' br `` ; $ i++ ; } fbsql_close ( ) ; ?
+815	wir empfehlen ihnen die mailing-listen .	the best way is the mailing lists .
+33674	kurz gesagt - ihr nutzen kann variieren ; wenn sie absolute stabilität benötigen , tauschen sie die performance der sapi module gegen die stabilität des cgi moduls .	the precise dlls involved depend on which web server you use and whether you want to run php as a cgi or as a server module . php4ts.dll is always used .
+15469	beispiel 1. mb_convert_kana ( ) example	example 1. mb_convert_kana ( ) example
+37630	für einen blumenladen wäre das offensichtlich weniger dramatisch als für eine apotheke .	if it is not encrypted , session ids will flow in plain text over the network .
+36647	ldap konfigurations-optionen	ldap configuration options
+2579	lt ; ? php $ str = `` sample data '' ; $ bzstr = bzcompress ( $ str , 9 ) ; print ( $ bzstr ) ; ?	? php $ str = `` sample data '' ; $ bzstr = bzcompress ( $ str , 9 ) ; print ( $ bzstr ) ; ?
+36470	wenn die konfigurationsvariable ifx.nullformat ( und die laufzeitfunktion ifx_nullformat ( ) ) auf true gesetzt sind , werden null -werte in spalten als zeichenkette null zurückgegeben , wenn die variable auf false gesetzt ist , werden leere strings für null werte zurückgegeben .	the configuration variable ifx.nullformat ( and the runtime function ifx_nullformat ( ) ) when set to true will return null columns as the string `` null '' , when set to false they return the empty string .
+26135	siehe auch srand ( ) , getrandmax ( ) , mt_rand ( ) , mt_srand ( ) und mt_getrandmax ( ) .	see also srand ( ) , getrandmax ( ) , and mt_rand ( ) .
+1270	ein auszug aus einem skript , das die clientauthentifizierung auf einer seite erzwingt , würde so aussehen :	these predefined variables are found in the $ _server and $ http_server_vars these predefined variables are found in the $ _server and $ http_server_vars arrays .
+38130	__sleep	var
+1291	http-authentifizierung , mit erneuter anforderung von name / passwort	http authentication example forcing a new name / password
+9907	es gibt zwei spezialfälle von header-aufrufen .	there are two special-case header calls .
+36455	ifx_blobinfile_mode ( 0 ) : gibt byte-felder in den speicher zurück , mit der blob-id können sie auf den inhalt zugreifen .	ifx_blobinfile_mode ( 0 ) : return byte columns in memory , the blob id lets you get at the contents .
+975	wenn ich mir den quelltext anschaue , sehe ich die ausgabe unter ie , aber nicht unter netscape .	when i do a `` view source '' i see the content in ie but not in netscape .
+11166	er hat erst ab interbase-version 6 eine bedeutung .	it has any meaning only with interbase version 6 and higher .
+35635	beispiel e-2 .	example e-2 .
+4518	es folgen einige beispiele zur date ( ) formatierung .	it is possible to use date ( ) and mktime ( ) together to find dates in the future or the past .
+4898	im gegensatz zu `` n '' wird eine bereits existierende datenbank inhaltlich nicht gelöscht , sondern nur `` read-writeable `` geöffnet .	note that php does its own file locking in addition to any file locking that may be done by the dbm library itself .
+18152	siehe auch : mssql_fetch_field ( ) .	see also : mssql_fetch_field ( ) .
+34102	die verwendung der ´short tags´ sollten sie vermeiden , wenn sie applikationen oder bibliotheken entwickeln , die verteilt oder auf php-servern eingesetzt werden soll , die nicht unter ihrer kontrolle stehen , da die ´short tags´ auf dem einzusetzenden server nicht unterstützt werden könnten .	using short tags should be avoided when developing applications or libraries that are meant for redistribution , or deployment on php servers which are not under your control , because short tags may not be supported on the target server .
+24477	diese funktion ersetzt die funktion pg_fieldname ( ) .	this function used to be called pg_fieldname ( ) .
+2602	siehe auch bzerror ( ) und bzerrstr ( ) .	see also bzerror ( ) and bzerrstr ( ) .
+39657	beispiel 33-1 .	example 33-1 .
+13390	dies ist ähnlich der include ( ) -anweisung ; mit dem unterschied , dass einmal eingebundener code nicht nochmals eingebunden wird .	this is a behavior similar to the include ( ) this is a behavior similar to the include ( ) statement , with the only difference being that if the code from a file has already been included , it will not be included again .
+2933	gibt true / wahr zurück , wenn ein datensatz gefunden wurde .	returns true if any records are found ; returns false if no records were found or if an error occurred .
+8494	siehe auch ftell ( ) und rewind ( ) .	see also ftell ( ) and rewind ( ) .
+27593	der snmp `` agent '' wird mit hostname deklariert und die `` read community `` wird in community angegeben .	snmp agent is specified by the hostname and the read community is specified by the community parameter .
+18523	die funktion mysql_create_db ( ) ist veraltet .	the function mysql_create_db ( ) is deprecated .
+36311	ftp ist die abkürzung für file transfer protocol ( datei-übertragungs-protokoll ) .	no external libraries are needed to build this extension .
+30957	setzt datum und uhrzeit der letzten änderung und des letzten zugriffs der durch filename spezifizierten datei auf den durch time spezifizierten wert .	attempts to set the access and modification time of the file named by filename to the value given by time .
+35245	$ foo = ( int ) $ bar ; $ foo = ( int ) $ bar ;	note that tabs and spaces are allowed inside the parentheses , so the following are functionally equivalent :
+8891	? php function foo ( ) { $ numargs = func_num_args ( ) ; echo `` anzahl der argumente : $ numargs\n '' ; } foo ( 1 , 2 , 3 ) ; / / ausgabe : 'anzahl der argumente :	? php function foo ( ) { $ numargs = func_num_args ( ) ; echo `` number of arguments : $ numargs\n '' ; } foo ( 1 , 2 , 3 ) ; / / prints'number of arguments :
+12784	transfer-kodierung	body transfer encoding
+20989	beispiel 1. ob_iconv_handler ( ) beispiel :	example 1. ob_iconv_handler ( ) example :
+4331	zeigt der interne zeiger hinter das ende der elementenliste , gibt current ( ) false zurück .	if the internal pointer points beyond the end of the elements list , current ( ) returns false .
+36630	cn=hans mustermann , ou=buchhaltung , o=meine firma , c=de	cn=john smith , ou=accounts , o=my company , c=us
+37729	wiederhergestellte session-variablen stehen nur im array $ _session zur verfügung .	the restored session variables will only be available in the array $ _session .
+28471	irgendwelche whitespaces in dem formatstring entsprechen auch irgendwelchen whitespaces in dem übergebenen string .	any whitespace in the format string matches any whitespace in the input string .
+28232	grund : `` . socket_strerror ( socket_last_error ( ) ) . `` \n '' ; } if ( false == ( @ socket_bind ( $ socket , '127.0.0.1 ' , 80 ) ) ) { echo `` socket_bind ( ) fehlgeschlagen :	? php if ( false == ( $ socket = @ socket_create ( af_inet , sock_stream , 0 ) ) ) { echo `` socket_create ( ) failed : reason : `` . socket_strerror ( socket_last_error ( ) ) . `` \n '' ; } if ( false == ( @ socket_bind ( $ socket , '127.0.0.1 ' , 80 ) ) ) { echo `` socket_bind ( ) failed : reason : '' . socket_strerror ( socket_last_error ( $ socket ) ) . `` \n '' ; } ?
+14767	der merkmal-index wird in kleinbuchstaben umgewandelt . ( verzeichnis-server unterscheiden nicht zwischen groß - / kleinschreibung hinsichtlich der merkmake , aber der unterschied ist wichtig , wenn diese merkmale als array-indizes benutzt werden . )	the attribute index is converted to lowercase . ( attributes are case-insensitive for directory servers , but not when used as array indices . )
+36689	die mathematischen funktionen behandeln nur werte im bereich der datentypen long und double der jeweiligen architektur .	if you need to handle bigger numbers , take a look at the arbitrary precision math functions .
+26994	die cacheverwaltung steuert die cache-kontrolle der http-header , die zum client geschickt werden .	the cache limiter defines which cache control http headers are sent to the client .
+1972	siehe auch array_push ( ) , array_shift ( ) und array_unshift ( ) .	see also array_push ( ) , array_shift ( ) , and array_unshift ( ) .
+33602	dieser abschnitt wird sie durch die konfiguration und installation von php auf unix systemen führen .	this section will guide you through the general configuration and installation of php on unix systems .
+27003	beispiel 1. session_cache_limiter ( ) beispiel	example 1. session_cache_limiter ( ) example
+1925	flags für sortierreihenfolge :	sorting order flags :
+26797	ein komplettes beispiel für die funktion sesam_fetch_result ( ) findet man in sesam_query ( ) .	see the description of the sesam_query ( ) function for a complete example using sesam_fetch_result ( ) .
+13445	dadurch wird die transaktion beendet .	this closes the transaction .
+33757	nun sollten sie entweder in ihrem debug_ts oder release_ts verzeichnis eine verwendbare php.exe haben .	for more information about pear and the installer read the documantation at the pear website .
+34670	gibt zuerst den aktuellen wert von $ a zurück und erniedrigt dann den wert von $ a um eins .	returns $ a , then decrements $ a by one .
+33793	verwenden sie stattdessen dba ( php_dba.dll )	php_dba.dll
+7111	siehe auch : fbsql_num_rows ( ) .	see also : fbsql_num_rows ( ) .
+35160	wird ein string in doppelten anführungszeichen oder mit heredoc angegeben , werden enthaltene variablen ausgewertet ( geparst ) .	there are two types of syntax , a simple one and a complex one .
+1640	rückgabewert : ein assoziatives array mit allen apache-antwort headern .	returns an array of all apache response headers .
+27549	es wird die anzahl der in beiden strings übereinstimmenden zeichen zurück gegeben .	it returns the number of matching chars in both strings .
+23827	die funktion pdf_setgray_stroke ( ) setzt die aktuellen grauwert zum zeichen von linien .	set the current stroke color to a gray value between 0 and 1 inclusive
+35774	dieses modul bietet eine reihe von funktionen , die die umwandlung von daten zwischen verschiedenen kalendern erleichtern .	the intermediary or standard it is based on is the julian day count .
+26680	diese verbindung ist `` permanent '' , d.h. nur der erste zugriff veranlaßt das laden des treibers aus der konfigurierten sesam-oml-plam-bibliothek .	the connection is always `` persistent '' in the sense that only the very first invocation will actually load the driver from the configured sesam oml plam library .
+29074	so ist z.b . im string 'abcdef ' das zeichen an der position 0 gleich ' a ' , das zeichen an der position 2 ist ' c ' usw .	for instance , in the string 'abcdef ' , the character at position 0 is ' a ' , the character at position 2 is ' c ' , and so forth .
+19013	siehe auch : mysql_affected_rows ( ) , mysql_connect ( ) , mysql_data_seek ( ) , mysql_select_db ( ) und mysql_query ( ) .	see also : mysql_affected_rows ( ) , mysql_connect ( ) , mysql_data_seek ( ) , mysql_select_db ( ) , and mysql_query ( ) .
+35174	tatsächlich können sie jeden beliebigen wert einbeziehen , der im namensbereich in strings gültig ist .	in otherwords , it will still work but / / because php first looks for a constant named foo , it will / / throw an error of level e_notice ( undefined constant ) . echo `` this is wrong : { $ arr [ foo ] [ 3 ] } '' ; / / works .
+1172	ist register_globals in der php.ini aktiviert , stehen zusätzliche variablen zur verfügung .	when register_globals is turned on in php.ini , additional variables are available .
+38138	liste von ressourcentypen	predefined variables
+27204	die verwendung von zlib.output_compression ist ob_gzhandler ( ) vorzuziehen .	use of zlib.output_compression is recommended rather than ob_gzhandler ( )
+17155	genau wie soundex ( ) berechnet metaphone den gleichen schlüssel für ähnlich klingende wörter .	similar to soundex ( ) metaphone creates the same key for similar sounding words .
+26557	wenn man den wert dieses parameters innerhalb der funktion ändert , bleibt der parameter außerhalb der funktion unverändert .	by default , function arguments are passed by value ( so that if you change the value of the argument within the function , it does not get changed outside of the function ) .
+21133	bitte beachten sie auch ocinumcols ( ) , ocicolumntype ( ) , und ocicolumnsize ( ) .	see also ocinumcols ( ) , ocicolumntype ( ) , and ocicolumnsize ( ) .
+11496	gibt bei einem erfolgreichen verbindungsaufbau eine positive informix verbindungskennung zurück oder false , falls ein fehler auftrat .	a positive informix persistent link identifier on success , or false on error
+4333	enthält das array leere elemente ( 0 oder `` '' , den leeren string ) , gibt diese funktion auch für diese elemente false enthält das array leere elemente ( 0 oder '' '' , den leeren string ) , gibt diese funktion auch für diese elemente false zurück .	if the array contains empty elements ( 0 or `` '' , the empty string ) then this function will return false for these elements as well .
+5684	siehe auch openlog ( ) , syslog ( ) und closelog ( ) .	see also openlog ( ) , syslog ( ) and closelog ( ) .
+5656	wenn die angegebene konstante name existiert , wird true zurück gegeben , ansonsten false .	? php if ( defined ( `` constant '' ) ) { / / note that it should be quoted echo constant ; / / } ?
+13987	% f - von	% f - from
+31374	seit version 3.1.12 von mnogosearch wird eine verfolgung von suchanfragen unterstützt .	since version 3.1.2 mnogosearch has a query tracking support .
+1063	sie liefert ein bitfeld des aktiven status .	this function returns a bitfield of the active states .
+471	deshalb ist es wichtig break -anweisungen zu setzen ( abgesehen von bestimmten fällen , in denen sie diese mit absicht weglassen ) .	thus , it is important not to forget break statements ( even though you may want to avoid supplying them on purpose under certain circumstances ) .
+11040	? php $ dbh = ibase_connect ( $ host , $ username , $ password ) ; $ stmt = 'select * from tblname ' ; $ sth = ibase_query ( $ dbh , $ stmt ) ; while ( $ row = ibase_fetch_object ( $ sth ) ) { print $ row - email . `` \n '' ; } ibase_close ( $ dbh ) ; ?	? php $ host = 'localhost : / path / to / your.gdb ' ; $ dbh = ibase_connect ( $ host , $ username , $ password ) ; $ stmt = 'select * from tblname ' ; $ sth = ibase_query ( $ dbh , $ stmt ) ; while ( $ row = ibase_fetch_object ( $ sth ) ) { echo $ row - email , `` \n '' ; } ibase_free_result ( $ sth ) ; ibase_close ( $ dbh ) ; ?
+13919	function ircg_nickname_unescape ( ) liefert einen decodierten benutzernamen zurück , der über den parameter nick übergeben wurde .	function ircg_nickname_unescape ( ) returns a decoded nickname , which is specified in nick .
+31311	nachdem diese funktion aufgerufen wurde , sollte nicht vergessen werden , mittels udm_free_ispell_data ( ) den durch ispell belegten speicher wieder freizugeben , auch wenn udm_ispell_type_server verwendet wird .	after using this function to free memory allocated for ispell data , please use udm_free_ispell_data ( ) , even if you use udm_ispell_type_server mode .
+35148	heredoc-text funktioniert wie ein string innnerhalb doppelter anführungszeichen , nur ohne doppelte anführungszeichen .	if in this case a proper closing identifier is not found then a parse error will result with the line number being at the end of the script .
+8329	funktionen zur ausgabesteuerung	output control functions
+831	für die anderen mailing-listen können sie ähnliche adressen benutzen .	use similar addresses for the other mailing lists .
+34424	wenn sie $ a der klasse a in page2.php mittels unserialize wiederherstellen möchten , muss die definition von klasse a in page2.php vorhanden sein .	if you want to be able to unserialize this on page2.php , recreating $ a of class a , the definition of class a must be present in page2.php .
+17940	beispiel 1. msql_query ( )	example 1. msql_query ( )
+28846	3 gleichheits-zeichen / / nicht gefunden ... } / / in versionen vor 4.0b3 : $ pos = strpos ( $ mystring , `` b '' ) ; if ( is_string ( $ pos ) ! $ pos ) { / / nicht gefunden ... }	/ / in php 4.0b3 and newer : $ pos = strpos ( $ mystring , `` b '' ) ; if ( $ pos === false ) { / / note : three equal signs / / not found ... } / / in versions older than 4.0b3 : $ pos = strpos ( $ mystring , `` b '' ) ; if ( ! is_integer ( $ pos ) ) { / / not found ... }
+22202	beispiel 1. openssl_pkcs7_encrypt ( ) beispiel	the enemy is closing in !
+37488	beispiele regulärer ausdrücke	regular expression examples
+28774	gibt die länge der zeichenkette string zurück .	returns the length of string .
+25071	diese funktionen liefert ( im rahmen der möglichen genauigkeit ) den wert der kreiszahl pi .	the returned float has a precision based on the precision directive in php.ini , which defaults to 14 .
+31512	beispiel 1. unpack ( ) formatierter string	example 1. unpack ( ) format string
+37078	es handelt sich um echte native datenbankschnittstellen , die den funktionsnamen und den funktionssyntax der odbc-funktionen nutzen .	the functions that you use to speak natively to them just happen to share the same names and syntax as the odbc functions .
+12379	obere rechte x-koordinate	upper right x-coordinate
+27271	in anderen worten werden sie diesen wert wahrscheinlich mittels der funktion time ( ) plus der anzahl sekunden bis zum gewünschten ablauf des cookies .	in otherwords , you ' ll most likely set this with the time ( ) function plus the number of seconds before you want it to expire .
+2037	diese funktion durchsucht haystack nach needle und gibt bei erfolg den schlüssel zurück , andernfalls false .	searches haystack for needle and returns the key if it is found in the array , false otherwise .
+36890	damit diese funktionen zur verfügung stehen , müssen sie php mit -- with-mssql [ =dir ] übersetzen , wobei dir der präfix der freetds-installation ist .	to get these functions to work , you have to compile php with -- with-mssql [ =dir ] , where dir is the freetds install prefix .
+37539	der common-memory-pool-mechanismus und die tatsache , dass php in den webserver statisch eingebunden ist , machen die datenbankzugriffe sehr schnell .	in case of distributed databases you have to start a sesam / sql-dcn agent with the distribution table including the host and database names .
+21455	ociplogon ( ) gibt bei erfolgreicher öffnung einer persistenten verbindung einen verbindungsindex zurück .	ociplogon ( ) creates a persistent connection to an oracle 8 database and logs on .
+39131	die variable , die uns jetzt interessiert , ist $ _server [ `` http_user_agent '' ] .	the variable we are interested in right now is $ _server [ `` http_user_agent '' ] .
+33009	php 3.0 war die erste version , die dem heutigen php sehr gleicht .	php 3.0 was the first version that closely resembles php as we know it today .
+8069	das ist falsch .	this is wrong .
+543	zeit inklusive mikrosekunden : ss : mm : uuuuuu	time including microseconds : hh : mm : uuuuuu
+12357	size wird in pixel ausgedrückt .	size is expressed in pixels .
+26840	result_id ist eine gültige ergebniskennung ( ? ) der funktion sesam_query ( ) .	result_id is a valid result id returned by sesam_query ( ) .
+26584	rückgabewerte	returning values
+39009	html head title php-test / title / head body ? php echo `` hallo welt p '' ; ? / body / html	html head title php test / title / head body ? php echo `` p hello world / p '' ; ? / body / html
+11532	gibt bei erfolg einen positiven integerwert als ergebniskennung zurück oder false , falls ein fehler auftrat .	a positive informix result identifier on success , or false on error .
+33427	ich hoffe das hilft jemandem , paul mckay .	hope this helps somebody , paul mckay .
+31397	wörter , die in allen dokumententeilen vorkommen haben das gewicht 00011111 .	word used in all document parts will have 00011111 aggregate weight .
+19070	für alle anderen sql anweisungen ist der rückgabewert von mysql_query ( ) im erfolgsfall true , im fehlerfall false .	for other type of sql statements , mysql_query ( ) returns true on success and false on error .
+24067	siehe auch pdf_set_font ( ) .	see also : pdf_setfont ( ) and pdf_findfont ( ) .
+4118	2.3445 , m_pi als trig : -1.6291725057799 als hypotenuse :	2.3445 , m_pi some trig : -1.6291725057799 a hypotenuse :
+2611	beispiel 1. bzerror ( ) beispiel	example 1. bzerror ( ) example
+22563	eine transaktion ist definiert als gesamtheit aller änderungen seit der letzten bestätigung / dem letzten rollback , seit die automatische bestätigung abgeschaltet wurde oder seit die verbindung besteht .	a transaction is defined as all the changes on a given connection since the last commit / rollback , autocommit was turned off or when the connection was established .
+12786	mime subtyp	mime subtype
+8804	löscht das angegebene verzeichnis .	returns true on success or false on failure .
+5692	diese funktion wandelt den übergebenen winkel von grad in bogenmaß .	this function converts number from degrees to the radian equivalent .
+35228	wollen sie den typ einer variable ändern , schauen sie bei settype ( ) nach .	if you wish to change the type of a variable , see settype ( ) .
+26943	result_id ist eine gültige ergebniskennung ( ? ? ? ) ; nur bei abfragen vom typ select und nur , wenn beim aufruf von sesam_query ( ) ) ein `` scrollable cursor `` verlangt wurde .	result_id is a valid result id ( select type queries only , and only if a `` scrollable `` cursor was requested when calling sesam_query ( ) ) .
+33439	one to set up the php cgi binary , the other is to use the isapi module dll .	one to set up the php cgi binary , the other is to use the isapi module dll .
+21984	weil die effekte je nach odbc-treiber unterschiedlich sind , sollte skripte mit diesen funktionen nicht veröffentlich werden .	because the effects may vary depending on the odbc driver , use of this function in scripts to be made publicly available is strongly discouraged .
+25792	? php $ a = array ( 1 , 2 , array ( `` a '' , `` b '' , `` c '' ) ) ; print_r ( $ a ) ; ?	which will output :
+12370	möglich sind werte von 4 bis 16 .	allowed values are 4 and 16 .
+28020	see also socket_accept ( ) , socket_bind ( ) , socket_connect ( ) , socket_listen ( ) , socket_last_error ( ) , socket_strerror ( ) und socket_write ( ) .	see also socket_accept ( ) , socket_bind ( ) , socket_connect ( ) , socket_listen ( ) , socket_last_error ( ) , socket_strerror ( ) and socket_write ( ) .
+35726	siehe auch pspell .	see also pspell .
+1663	beispiel 1. array_change_key_case ( )	example 1. array_change_key_case ( ) example
+30996	siehe usort ( ) und uksort ( ) für beispiele von benutzerdefinierten vergleichsfunktionen	please see usort ( ) and uksort ( ) for examples of user-defined comparison functions .
+31975	wddx funktionen	wddx functions
+2324	beschreibung	description
+18814	für abwärtskompatibilität kann mysql_fieldtable ( ) verwendet werden .	for downward compatibility mysql_fieldtable ( ) can also be used .
+22781	diese funktion steht in zusammenhang mit chr ( ) .	this function complements chr ( ) .
+14763	rückgabewert : im erfolgsfall wird die gesamte information des ergebnisses in einem multidimensionalen array zurückgegeben ; im fehlerfall false .	returns a complete result information in a multi-dimenasional array on success and false on error .
+33767	eine liste mit den bereits inkludierten modulen befindet sich in der readme.txt oder install.txt ihrer distribution .	see your distributions readme.txt or install.txt for a list of built in modules .
+3021	dies ist z.b . hilfreich bei der umwandlung von base64_encode -ausgaben , die der rfc 2045 entsprechen müssen .	can be used to split a string into smaller chunks which is useful for e.g . converting base64_encode output to match rfc 2045 semantics .
+27149	siehe auch die session.save_path konfigurationsanweisung .	see also the session.save_path configuration directive .
+18907	mysql-befehle mit mysql_info ( )	relevant mysql statements
+16166	returns true on success and false on error .	returns the event id of the modified event on success and false on error .
+21539	ocistatementtype	ocistatementtype
+18064	zusätzlich zum speichern der daten in den numerischen indizes des ergebnisarrays , speichert sie die daten unter verwendung der feldnamen als schlüssel auch in assoziativen indizes .	in addition to storing the data in the numeric indices of the result array , it also stores the data in associative indices , using the field names as keys .
+13666	die verbindung zum ingres server wird nicht geschlossen wenn die ausführung des skripts beendet ist , sondern die verbindung bleibt zum weiteren gebrauch offen ( ingres_close ( ) schliesst die verbindungen , die mit ingres_pconnect ( ) geöffnet wurden nicht ) .	instead , the link will remain open for future use ( ingres_close ( ) will not close links established by ingres_pconnect ( ) ) .
+33031	die zukunft von php ist hauptsächlich von seinem kern , der zend engine , geprägt .	the future of php is mainly driven by it 's core , the zend engine .
+28721	beispiel 1. strftime ( ) beispiel	12 / 31 / 2004 - % v , % g , % y = 53,2004,2004 print `` 12 / 31 / 2004 - % v , % g , % y = '' . strftime ( `` % v , % g , % y '' , strtotime ( `` 12 / 31 / 2004 '' ) ) . `` \n '' ; / / outputs :
+13810	errorcode : $ error [ 0 ] description : $ error [ 1 ] '' ) ; }	error code : $ error [ 0 ] description : $ error [ 1 ] '' ) ; }
+28978	gibt string zurück , in dem alle buchstaben in kleinbuchstaben umgewandelt wurden .	returns string with all alphabetic characters converted to lowercase .
+33129	stellen sie jedoch sicher , dass der server zuvor heruntergefahren wurde .	a recompile of apache is not needed .
+35196	ansonsten wird er als integer-wert interpretiert .	this method is called serialization , and can be done with the function serialize ( ) .
+34832	wenn ein schlüssel die standard-darstellung einer integer zahl ist , wird es als solche interpretiert werden , ( z.b . `` 8 `` wird als 8 interpretiert , während `` 08 '' als `` 08 `` interpretiert werden wird ) .	there are no different indexed and associative array types in php , there is only one array type , which can both contain integer and string indices .
+36443	danach schreiben sie die blob id ' s in ein array und ersetzen die blob-felder durch ein fragezeichen ( ? ) im abfragestring .	you then plug the blob id ' s into an array , and replace the blob columns with a question mark ( ? ) in the query string .
+37117	um openssl mit php nutzen zu können , müssen sie php mit der option -- with-openssl [ =dir ] übersetzen .	if you are using php 4.2.0 or later and are missing the file , you can obtain it from the openssl home page or by downloading the php 4.3.0 release and using the configuration file from there .
+1988	siehe auch array_pop ( ) , array_shift ( ) und array_unshift ( ) .	see also array_pop ( ) , array_shift ( ) , and array_unshift ( ) .
+11296	zeiger auf deninhalt , falls modus = 1 :	param : if mode = 0 : pointer to the content , if mode = 1 : pointer to the filestring .
+32102	beispiel 2. parsemoldb.php - parses moldb.xml into and array of molecular objects	example 2. parsemoldb.php - parses moldb.xml into and array of molecular objects
+2185	wird das auf array_walk ( ) angewendete array geändert , so ist das verhalten dieser funktion undefiniert und unvorhersagbar .	if the array that array_walk ( ) is applied to is changed , the behavior of this function is undefined , and unpredictable .
+28950	siehe auch stristr ( ) , strrchr ( ) , substr ( ) und ereg ( ) .	see also ereg ( ) , preg_match ( ) , strchr ( ) , stristr ( ) , strpos ( ) , strrchr ( ) , and substr ( ) .
+36141	xml_attribute_node	domdocument_create_element ( ) and add it with domnode_append_child ( ) .
+25350	siehe auch : posix_setgid ( ) .	see also posix_setgid ( ) .
+3979	die funktion cpdf_show_xy ( ) gibt die zeichenkette text an der position mit den koordinaten ( x-koor , y-koor ) aus .	the cpdf_show_xy ( ) function outputs the string text at position with coordinates ( x-coor , y-coor ) .
+538	jede zeile hat einen typ , und mehrere zeilen bilden eine meldung .	each line has a type , and several lines compose a message .
+37891	schauen sie sich die posix-funktionen und die perl-kompatiblen funktionen für reguläre ausdrücke an , wenn sie noch mächtigere funktionen zur string-verarbeitung nutzen möchten .	for even more powerful string handling and manipulating functions take a look at the posix regular expression functions and the perl compatible regular expression functions .
+21987	bei sqlsetconnectoption ( ) ist es eine verbindungskennung , bei sqlsetstmtoption ( ) eine ergebniskennung .	for sqlsetstmtoption ( ) , this is a result id .
+145	hauptfunktion	master function
+14272	diese funktion ergibt true , falls das objekt obj zu einer subklasse von superclass gehört , ansonsten false .	this function returns true if the object object , belongs to a class which is a subclass of class_name , false otherwise .
+13321	beispiel 1. in_array ( )	example 1. in_array ( ) example
+7120	wenn er angegeben ist , wird der autocommit-status gewechselt .	fbsql_autocommit ( ) returns the current autocommit status . if the optional onoff parameter is given the auto commit status will be changed .
+897	wo sind die pop-ups auf der website hin ?	where did the pop-ups go on the website ?
+14051	liefert true , wenn var ein array ist , sonst false .	returns true if var is an array , false otherwise .
+38459	schwächen einer webseite .	this allows for deeper investigation into open database ports , or to look for specific bugs or weaknesses in a web page .
+38400	ein furchterregendes beispiel , wie der zugriff auf kommandos auf betriebssystemebene bei manchen datenbankservern erfolgen kann .	a frightening example how operating system level commands can be accessed on some database hosts .
+33898	beispiel 1-1 .	example 1-1 .
+38405	das heißt jedoch nicht , dass nicht ein ähnlicher angriff auf andere produkte möglich wäre .	this does not mean that a similar attack is impossible against other products .
+8465	sind nur 2 parameter angegeben , werden die analysierten werte als array zurückgegeben .	if only two parameters were passed to this function , the values parsed will be returned as an array .
+22389	beispiel 1. openssl_verify ( ) beispiel	example 1. openssl_verify ( ) example
+13374	return.php ? php $ var = 'php ' ; return $ var ; ? noreturn.php ? php $ var = 'php ' ; ? testreturns.php ? php $ foo = include 'return.php ' ; echo $ foo ; / / gibt 'php ' aus $ bar = include 'noreturn.php ' ; echo $ bar ; / / gibt 1 aus ?	return.php ? php $ var = 'php ' ; return $ var ; ? noreturn.php ? php $ var = 'php ' ; ? testreturns.php ? php $ foo = include'return.php ' ; echo $ foo ; / / prints'php ' $ bar = include'noreturn.php ' ; echo $ bar ; / / prints 1 ?
+12794	dispositionsstring	disposition string
+1924	die nachfolgenden argumente können entweder ein array oder eines der folgenden sortierflags sein .	subsequently , each argument can be either an array or a sorting flag from the following lists .
+23706	sie wirkt wie das postscript-kommando gsave .	( php 3 = 3.0.6 , php 4 )
+25379	diese funktion macht den aktuellen prozess zum prozessgruppen-führer .	make the current process a session leader .
+31071	weitere modi sind der crc-modus und der multi-crc-modus , wobei der crc-modus schneller als der single - und der multimodus sind , und der multi-crc-modus die technik des crc-modus mit der speicherstruktur des multi-modus verbindet .	this mode requres less disk space and it is faster comparing with `` single '' and `` multi `` modes . `` crc-multi '' uses the same storage structure with the `` crc `` mode , but also stores words in different tables depending on words lengths like `` multi '' mode .
+37386	sensible daten können mit den posix -funktionen , z.b . posix_getpwnam ( ) und freunde , abgefragt werden .	sensitive data can be retrieved with the posix functions , e.g . posix_getpwnam ( ) and friends .
+17317	letzter tag des nächsten monats	last day of next month
+39068	hätten wir get verwendet , dann wären die daten unseres formulars stattdessen im autoglobalen array $ _get verfügbar .	if we used the method get then our form information would live in the $ _get if we used the method get then our form information would live in the $ _get autoglobal instead .
+34427	wenn sie mit sessions arbeiten und session_register ( ) verwenden , um objekte zu registrieren , so werden diese objekte am ende der php seite serialisiert , und in jeder folgenden seite automatisch via unserialize wiederhergestellt .	if you are using sessions and use session_register ( ) to register objects , these objects are serialized automatically at the end of each php page , and are unserialized automatically on each of the following pages .
+1445	überprüft ob das verzeichnis in dem das skript ausgeführt werden soll , die gleiche uid hat wie das skript selbst . ( note : only the target is checked )	this is supported by means of the safe_mode_gid switch .
+31172	agent - zeiger auf einen agenten , erhalten nach einem aufruf von udm_alloc_agent ( ) .	agent - link to agent identifier , received after call to udm_alloc_agent ( ) .
+27492	diese funktion entfernt den wert mit der kennung variable_key aus einem gemeinsamen speichersegment und stellt den hiervon genutzten speicher innerhalb des egmentes wieder zur verfügung .	removes a variable with a given variable_key and frees the occupied memory .
+24333	der rückgabewert ist der maskierte string .	it returns escaped string .
+31449	siehe auch usort ( ) , uasort ( ) , sort ( ) , asort ( ) , arsort ( ) , ksort ( ) , natsort ( ) und rsort ( ) .	see also usort ( ) , uasort ( ) , sort ( ) , asort ( ) , arsort ( ) , ksort ( ) , natsort ( ) , and rsort ( ) .
+31677	anstehende header werden ebenfalls abgeschickt .	to run the sub-request , all buffers are terminated and flushed to the browser , pending headers are sent too .
+32789	jeder host , der informationen abrufen möchte , verbindet sich selbst zu einer bestimmten domäne .	every host that needs to look up information binds itself to a certain domain .
+467	zum beispiel :	for example :
+38377	die folgenden beispiele basieren - leider - auf wahren begebenheiten .	the following examples are based on true stories , unfortunately .
+33042	anhang a .	appendix a .
+28324	soundex ( `` euler '' ) == soundex ( `` ellery '' ) == 'e460 ' ; soundex ( `` gauss '' ) == soundex ( `` ghosh '' ) == 'g200 ' ; soundex ( `` knuth '' ) == soundex ( `` kant '' ) == 'h416 ' ; soundex ( `` lloyd '' ) == soundex ( `` ladd '' ) == 'l300 ' ; soundex ( `` lukasiewicz '' ) == soundex ( `` lissajous '' ) == 'l222 ' ;	see also levenshtein ( ) , metaphone ( ) , and similar_text ( ) .
+1830	der name dieser funktion ist in php 4.0.6 key_exists ( ) .	the name of this function is key_exists ( ) in php version 4.0.6 .
+34015	manchmal ist es hilfreich , auf funktionen in basisklassen bzw . auf funktionen in klassen zuzugreifen , die noch keine instanzen haben .	sometimes it is useful to refer to functions and variables in base classes or to refer to functions in classes that have not yet any instances .
+34097	auch wenn dise methode standardmäßig in der php.ini.dist aktiviert ist , wird die verwendung dieser kurzform nicht empfohlen .	even if it is enabled by default in php.ini-dist , use of short tags are discouraged .
+18212	beschreibung void mssql_min_error_severity ( int schwellenwert )	prev
+37502	beachten sie bitte , dass gemeinsame speichersegmente keinen schutze vor konkurrierenden gleichzeitigen zugriffen bieten .	limits of shared memory by the unix os
+24530	siehe auch pg_field_len ( ) und pg_field_name ( ) .	see also pg_field_len ( ) and pg_field_name ( ) .
+33832	benötigt jvm.dll ( bundled )	requires : jvm.dll ( bundled )
+6100	das wurzelelement zurückliefern	retrieving root element
+21621	in diesem fall bleibt die betroffene verbindung auch nach dem odbc_close_all ( ) bestehen .	this connection will remain open in this case .
+35136	die zeichenfolge , die dem regulären ausdruck entspricht ist ein zeichen in oktal-schreibweise	the sequence of characters matching the regular expression is a character in octal notation
+35413	meistens besteht dieser aus einem einzigen bereich .	for example :
+36503	sie können die grafik-funktionen von php nicht nur benutzen , um die grösse von jpeg , gif , png und swf -bild-dateien zu ermitteln , sondern auch - sofern sie die gd -bibliothek ( verfügbar unter http : / /www.boutell.com / gd / ) eingebunden haben - grafiken bzw .	if you have the gd library ( available at http : / /www.boutell.com / gd / ) you will also be able to create and manipulate images .
+19136	mysql_stat ( ) liefert den momentanen serverstatus zurück .	mysql_stat ( ) returns the current server status .
+14784	prüfen der protokollversion	check protocol version
+9199	array ( [ 0 ] = xml [ 1 ] = wddx [ 2 ] = standard [ 3 ] = session [ 4 ] = posix [ 5 ] = pgsql [ 6 ] = pcre [ 7 ] = gd [ 8 ] = ftp [ 9 ] = db [ 10 ] = calendar [ 11 ] = bcmath )	array ( [ 0 ] = xml [ 1 ] = wddx [ 2 ] = standard [ 3 ] = session [ 4 ] = posix [ 5 ] = pgsql [ 6 ] = pcre [ 7 ] = gd [ 8 ] = ftp [ 9 ] = db [ 10 ] = calendar [ 11 ] = bcmath )
+33331	diese extension kann nur als eine shared dl erstellt werden .	build shared libraries [ default=yes ] .
+33980	kapitel 14 .	chapter 14 .
+957	würde php diesen zeilenumbruch ausgeben , müssten sie sehr lange zeilen schreiben und ihren code damit unlesbar machen .	because when formatting normal html , this usually makes your life easier because you don ' t want that newline , but you 'd have to create extremely long lines or otherwise make the raw page source unreadable to achieve that effect .
+30992	diese funktion sortiert ein array so , dass die beziehung der indices zu den arrayelementen beibehalten bleibt .	this function sorts an array such that array indices maintain their correlation with the array elements they are associated with .
+12952	diese funktion kopiert die in msglist angegebenen nachrichten in das postfach mbox . msglist kann eine einzelne nachrichtennummer oder aufzählungen und bereiche gemäß rfc2060 enthalten .	returns true on success and false on error .
+39607	tabelle 33-1 , tabelle 33-2 and tabelle 33-3 describe these functions .	table 33-1 , table 33-2 and table 33-3 describe these functions .
+25253	diese funktion gibt ein assoziatives array zurück , das informationen über die benutzerin enthält , auf die die in uid übergebene numerische benutzer-id verweist .	returns an associative array containing information about a user referenced by a numeric user id , passed in the uid parameter .
+33990	hier wird die klasse named_cart definiert , die über alle variablen und funktionen von cart , plus der variable $ owner und der funktion set_owner ( ) verfügt .	this defines a class named_cart that has all variables and functions of cart plus an additional variable $ owner and an additional function set_owner ( ) .
+4398	cybermut_testmac ( ) wird dazu verwendet , sicherzustellen , dass keine betrügerischen oder falschen daten in der erhaltenen bestätigungsnachricht sind .	cybermut_testmac ( ) is used to make sure that there was not data diddling contained in the received message of confirmation .
+11044	er funktioniert ab der interbase-version 6 .	the optional dialect parameter was added in php 4.0.0 and is functional only with interbase 6 and up .
+11063	dies ist effizienter als der gebrauch von ibase_query ( ) , sofern sie mehrere ähnliche abfragen durchführen wollen , bei denen sich immer nur einige parameter ändern .	this is a lot more effective than using ibase_query ( ) if you are repeating a same kind of query several times with only some parameters changing .
+36946	legt das passwort fest , das bei einer verbindung zu einer datenbank verwendet werden soll , wenn kein passwort angegeben wurde .	the default password to use when connecting to the database server if no other password is specified .
+25405	cutime - benutzerzeit , die vom aktuellen prozess und dessen kindprozessen verbraucht wurde .	cutime - user time used by current process and children .
+33165	apache 1.3.22 für windows hat in seiner konfigurationsdatei ( httpd.conf-dist-win ) die clearmodulelist direktive standardmäßig inkludiert .	there are 2 ways you can use the source code highlighting feature , however their ability to work depends on your installation .
+835	es gibt auch ein experimentelles web-interface für den newsserver unter http : / /news.php.net / .	there is also an experimental web interface for the news server at http : / /news.php.net /
+36623	das konzept ist dabei ähnlich der verzeichnisstruktur ihrer festplatte , mit der ausnahme , dass in diesem zusammenhang das wurzelverzeichnis `` die welt '' ist und die unterverzeichnisse der ersten ebene `` länder `` abbilden .	the concept is similar to your hard disk directory structure , except that in this context , the root directory is `` the world '' and the first level subdirectories are `` countries `` .
+9079	ein überlick über viele umgebungsvariablen und deren bedeutung findet sich unter den cgi spezificationen , speziell auf der seite der umgebungsvariablen .	see also putenv ( ) .
+35469	echo `` $ a $ hallo '' ;	? php echo `` $ a $ hello '' ; ?
+35238	folgende umwandlungen sind möglich :	type casting in php works much as it does in c : the name of the desired type is written in parentheses before the variable which is to be cast .
+26569	function mach_joghurt ( $ typ = `` rechtsdrehendes '' , $ geschmack ) { return `` mache einen becher $ typ $ geschmack-joghurt.\n '' ; } echo mach_joghurt ( `` brombeer '' ) ; / / arbeitet nicht wie erwartet	function makeyogurt ( $ type = `` acidophilus '' , $ flavour ) { return `` making a bowl of $ type $ flavour.\n '' ; } echo makeyogurt ( `` raspberry '' ) ; / / wo n't work as expected
+4375	cybermut_creerformulairecm ( ) wird dazu verwendet um ein html formular zur zahlungsaufforderung zu erzeugen .	cybermut_creerformulairecm ( ) is used to generate the html form of request for payment .
+10826	beispiel 4. modifying title attribute	example 4. modifying title attribute
+39247	beispiel 32-2 .	example 32-2 .
+24715	die funktion wird hauptsächlich für binärdaten wie bilder oder sound genutzt .	mainly intended for sending binary data like images or sound .
+35246	es ist nicht immer offenkundig , was bei der typ-umwandlung geschieht .	? php $ foo = ( int ) $ bar ; $ foo = ( int ) $ bar ; ?
+38165	gmp nummer	none
+27095	wenn name angegeben wird , wird der name der aktuellen session durch dessen wert ersetzt .	if name is specified , the name of the current session is changed to its value .
+34495	php 4 unterstützt 'assignement by reference ' ( zuweisung als verweis ) , mit hilfe der schreibweise $ var = $ othervar ; , das funktioniert jedoch nicht in php 3 . 'assignement by reference 'bedeutet , dass beide variablen nach der zuweisung die selben daten repräsentieren und nichts kopiert wird .	php 4 supports assignment by reference , using the $ var = $ othervar ; syntax , but this is not possible in php 3 . 'assignment by reference 'means that both variables end up pointing at the same data , and nothing is copied anywhere .
+13361	beispiel 12-5. include ( ) über http	example 12-5. include ( ) through http
+28994	dort wird die gültige syntax für time beschrieben .	described there is valid syntax for the time parameter .
+729	html-interpretation :	html interpretation .
+38216	postgresql ergebnis	pg_lo_close ( )
+39061	die ausgabe des skripts könnte dann so aussehen :	a sample output of this script may be :
+35584	php 3.0 wurde komplett neu geschrieben .	php 3.0 is rewritten from the ground up .
+37762	die zweite methode hängt die session-id direkt an die urls .	php is capable of transforming links transparently .
+19109	wenn auf anfrageergebnisse mit vielen datensätzen zugegriffen werden soll , sollten sie funktionen , die auf ganze datensätze zugreifen , in betracht ziehen ( siehe unten ) .	when working on large result sets , you should consider using one of the functions that fetch an entire row ( specified below ) .
+7575	der frontbase-server kann über frontbase -fbexec=no -port= port number database name . gestartet werden .	the frontbase server can be stared as frontbase -fbexec=no -port= port number database name .
+18568	wenn dies fehlschlägt , wird versucht eine verbindung aufzubauen , auf die gleiche art und weise wie beim aufruf von mysql_connect ( ) ohne angabe von argumenten .	if the optional link identifier isn ' t specified , the function will try to find an open link to the mysql server and if no such link is found it 'll try to create one as if mysql_connect ( ) was called with no arguments .
+12656	diese funktion löscht die übergebenen flags für eine oder mehrere nachrichten .	the flags which you can unset are `` \\seen '' , `` \\answered '' , `` \\flagged '' , `` \\deleted '' , and `` \\draft '' ( as defined by rfc2060 ) .
+37050	es wird hierbei das oracle8 call-interface ( oci8 ) verwendet , welches installierte oracle8 client bibliotheken ( libraries ) benötigt .	this extension is more flexible than the standard oracle extension .
+35826	klasse `` .get_class ( $ leafy ) ; echo '' , eltern `` .get_parent_class ( $ leafy ) . `` \n '' ; / / zeige eigenschaften von veggie echo `` \nveggie :	class `` .get_class ( $ leafy ) ; echo '' , parent `` .get_parent_class ( $ leafy ) . `` \n '' ; / / show veggie properties echo `` \nveggie :
+5548	wenn dbx_result_assoc gesetzt ist , können sie $ result - data [ 2 ] [ `` feldname '' ] verwenden .	if dbx_result_assoc is set , it is possible to use $ result - data [ 2 ] [ `` field_name '' ] .
+17223	msec stellt den mikrosekunden-teil dar .	returns the string `` msec sec '' where sec is the current time measured in the number of seconds since the unix epoch ( 0:00:00 january 1 , 1970 gmt ) , and msec is the microseconds part .
+31084	diese funktion erlaubt es dem benutzer zu erfahren , welche funktionen der mnogosearch-api verfügbar sind . udm_get_doc_count ( ) diese funktion ist erst ab mnogosearch 3.1.11 oder später verfügbar .	this function allows user to identify which api functions are available , e.g . udm_get_doc_count ( ) function is only available in mnogosearch 3.1.11 or later .
+38343	die folgenden abschnitte sind eine einführung in die grundlagen , wie man innerhalb von php skripten auf datenbanken zugreift und diese manipuliert .	the following sections aim to be an introduction into the very basics of how to access and manipulate databases within php scripts .
+2917	prüft die gültigkeit der angebenen datumswerte .	checks the validity of the date formed by the arguments .
+2073	beachten sie , dass array_slice ( ) schlüssel ignoriert , und offsets sowie längen anhand der aktuellen positionen berechnet .	note that array_slice ( ) will ignore array keys , and will calculate offsets and lengths based on the actual positions of elements within the array .
+19195	das wird als `` natürliche reihenfolge '' bezeichnet .	this is described as a `` natural ordering '' .
+17693	zusätzlich zur speicherung der daten in einem nummerischen array speichert diese funktion den datensatz auch mit assoziativen indizes , indem sie die feldnamen als schlüssel benutzt .	in addition to storing the data in the numeric indices of the result array , it also stores the data in associative indices , using the field names as keys .
+32800	yp_master ( ) gibt den namen des hauptservers ( master ) für eine nis-map zurück .	yp_master ( ) returns the machine name of the master nis server for a map .
+26856	das `` length '' attribut wird in `` character `` und `` varchar '' sql-typen zur spezifizierung der ( maximalen ) länge der zeichenvariablen verwendet .	the `` length '' attribute is used with `` character `` and `` varchar '' sql types to specify the ( maximum ) length of the string variable .
+27402	siehe auch gettype ( ) .	see also gettype ( ) , type-casting and type-juggling .
+35781	weitere informationen zum thema liefert die seite http : / /genealogy.org / ~scottlee / cal-overview.html , aus der teile der erklärungen in den folgenden funktionsbeschreibungen stammen .	you do not need to load any additional extension in order to use these functions .
+26504	siehe auch mkdir ( ) und unlink ( ) .	see also mkdir ( ) and unlink ( ) .
+22418	netscape ssl server ?	can the cert be used for netscape ssl server ?
+18661	das optionale zweite argumente ergebnistyp in mysql_fetch_array ( ) ist eine konstante und kann die folgenden werte annehmen :	the optional second argument result_type in mysql_fetch_array ( ) is a constant and can take the following values :
+33229	damit können sie ein eventuelles problem mit php auf ihrer plattform erkennen , bevor sie später damit zu kämpfen haben .	it is always a good idea to test your build .
+31604	diese funktion sortiert ein array nach seinen werten mittels einer benutzerdefinierten vergleichsfunktion .	this function will sort an array by its values using a user-supplied comparison function .
+18335	ohne die optionalen parameter min und max liefert mt_rand ( ) eine pseudo-zufallszahl zwischen 0 und einem plattformabhängigen maximalwert , der mit mt_getrandmax ( ) ermittelt werden kann .	if you want a random number between 5 and 15 ( inclusive ) , for example , use mt_rand ( 5 , 15 ) .
+34323	eine klasse wird folgendermaßen definiert :	a class is defined using the following syntax :
+7864	die funktion fdf_set_file ( ) die funktion fdf_set_file ( ) wählt ein pdf-dokument aus , in dem fdf-formulardaten angezeigt werden sollen .	the fdf_set_file ( ) selects a different pdf document to display the form results in then the form it originated from .
+36023	es wird beschrieben als `` werkzeugsatz für eingebaute unterstützung von hochleistungs-datenbanken für standalone - und client / server - applikationen '' . ( -- with-db2 )	to enable support for gdbm add -- with-gdbm [ =dir ] .
+35379	andere umgebungs-variablen beinhalten die cgi-variablen , die ohne rücksicht darauf , ob php als web-server-modul oder im cgi-modus läuft , gesetzt werden .	variables set by the web server or otherwise directly related to the execution environment of the current script .
+5809	`` ctime '' - letzte änderung	`` ctime '' - time of last change
+13011	liefert die anzahl der neu hinzugekommenen nachrichten im aktuellen postfach	see also : imap_num_msg ( ) and imap_status ( ) .
+21257	ocifetchinto	ocifetchinto
+10078	beachten sie auch , dass das optionale 2 .	the third argument defines character set used in conversion .
+7079	das obige beispiel wird folgendes ausgeben :	the above example will produce :
+37731	mit $ _session werden die funktionen session_register ( ) , session_unregister ( ) und session_is_registered ( ) nicht benötigt .	with $ _session , there is no need to use the session_register ( ) , session_unregister ( ) , session_is_registered ( ) functions .
+13350	aus diesem grund hat dieser code den geltungsbereich der variablen dieser funktion .	so , it will follow the variable scope of that function .
+30880	vor php 4.0.6 war das verhalten von tempnam ( ) systemabhängig .	prior to php 4.0.6 , the behaviour of the tempnam ( ) function was system dependent .
+24924	pg_send_query ( ) sendet eine asynchrone abfrage auf der verbindung connection .	pg_send_query ( ) send asynchronous query to the connection .
+3056	dieser muss vorher durch opendir ( ) geöffnet worden sein .	the stream must have previously been opened by opendir ( ) .
+24247	ein aufruf von pg_get_result ( ) wir dann blockiert .	if pg_get_result ( ) is called , it will be blocked .
+14496	a = orange b = banane c = apfel d = zitrone	a = orange b = banana c = apple d = lemon
+9912	der status kann mittels header ( ) jederzeit mit einer neuen statuszeile überschrieben werden , es sei denn , dass die http header bereits gesendet wurden .	the status may be overridden by calling header ( ) with a new status line at any time unless the http headers have already been sent .
+36020	es hat jedoch die meisten einschränkungen von dbm übernommen und ist daher ebenfalls nicht empfehlenswert . ( -- with-ndbm )	you also have to add support for at least one of the following handlers by specifying the -- with-xxxx configure switch to your php configure line .
+1095	der mit max_file_size eingestellte wert kann nicht größer sein als der des ini-parameters upload_max_filesize .	the max_file_size item can not specify a file size greater than the file size that has been set in the upload_max_filesize ini-setting .
+14377	diese funktion konvertiert den in julianday angegebenen tag im julianischen datum in einen string , der das entsprechnde datum im kalender der französischen revolution in der form `` mm / dd / yyyy '' enthält .	converts a julian day count to the french republican calendar .
+31021	siehe auch strtoupper ( ) , strtolower ( ) und ucfirst ( ) .	see also strtoupper ( ) , strtolower ( ) and ucfirst ( ) .
+12880	der zustand des fehlerstacks wird durch diese funktion nicht verändert , weitere aufrufe von imap_last_error ( ) liefern somit weiter dasselbe ergebis , solange keine weiteren fehler aufgetreten sind .	the error stack is untouched ; calling imap_last_error ( ) subsequently , with no intervening errors , will return the same error .
+5435	direkte ein - / ausgabe funktionen	direct io functions
+33405	installationsanleitung für hp-ux 10	installation instructions for hp-ux 10
+26684	`` user '' bezieht sich auf benutzer , die auf die `` catalog `` / `` schema '' kombination zugriff haben .	the `` user '' argument references one of the users which are allowed to access this `` catalog `` / `` schema '' combination .
+39111	die empfohlene methode , auf diese werte zuzugreifen , ist , die oben genannten autoglobalen arrays zu verwenden .	the preferred method of accessing these values is via the autoglobal arrays mentioned above .
+34086	wenn sie weiters beabsichtigen , php code in xml oder xhtml einzubinden , werden sie die xml-konformen ? php ... ? verwenden müssen .	also , if you intend to embed php code in xml or xhtml , you will need to use the ? php ... ? form to conform to the xml .
+31424	so werden bei einer suche nach `` tested '' z.b . auch dokumente gefunden , die das wort `` untested `` enthalten .	possible values :
+8460	ftp-funktionen	ftp functions
+824	sie können die listen auch über das web-interface auf unserer support -seite abonnieren oder abbestellen .	you can also subscribe and unsubscribe using the web interface on our support page .
+8609	ftp_delete ( ) löscht die per path angegebene datei auf dem ftp-server .	returns true on success or false on failure .
+4243	gibt true zurück , wenn jedes zeichen in text ein großbuchstabe im sinne der aktuellen locale-einstellung ist , anderenfalls false .	returns true if every character in text is a uppercase letter in the current locale .
+8158	gibt datum und uhrzeit zurück , wann die datei das letzte mal modifiziert wurde , oder false wenn ein fehler auftrat .	returns the time the file was last modified , or false in case of an error .
+3914	die funktion cpdf_set_text_pos ( ) legt die position des textes für den nächsten aufruf von cpdf_show ( ) fest .	the cpdf_set_text_pos ( ) function sets the position of text for the next cpdf_show ( ) function call .
+4719	hier ist eine längenangabe erforderlich .	string .
+12290	siehe auch imagepstext ( ) .	see also imagepstext ( ) .
+35219	das bedeutet , dass bei der zuweisung einer zeichenkette / eines strings zu einer variablen var diese variable var zum typ string wird .	that is to say , if you assign a string value to variable $ var , $ var becomes a string .
+11146	für reale abfragen und beispiele sehen sie unter ibase_prepare ( ) und ibase_execute ( ) nach .	see also ibase_errmsg ( ) , ibase_fetch_row ( ) , ibase_fetch_object ( ) , and ibase_free_result ( ) .
+1209	nehmen wir zum beispiel an , dass die dateinamen / home / test / review.html und / home / test / xwp.out übermittelt wurden .	for instance , assume that the filenames / home / test / review.html and / home / test / xwp.out are submitted .
+14802	return_value [ `` count '' ] = anzahl der werte eines merkmals return_value [ 0 ] = der erste wert des merkmals return_value [ i ] = der i-te wert des merkmals	return_value [ `` count '' ] = number of values for attribute return_value [ 0 ] = first value of attribute return_value [ i ] = ith value of attribute
+36883	die client tools können entweder von der ms sql server-cd oder durch kopieren von ntwdblib.dll von \winnt\system32 auf dem server nach \winnt\system32 auf dem php-rechner installiert werden .	the client tools can be installed from the ms sql server cd or by copying ntwdblib.dll from \winnt\system32 on the server to \winnt\system32 on the php box .
+2145	als ergebnis enthält $ queue die folgenden elemente :	this would result in $ queue having the following elements :
+38428	abgesehen davon profitieren sie von einer protokollierung der abfragen entweder in ihrem skript , oder durch die datenbank selbst , wenn es hilft .	besides these , you benefit from logging queries either within your script or by the database itself , if it supports .
+7246	fbsql_db_status ( ) fragt den momentanen status der datenbank , die mit datenbankname spezifiziert wurde , ab .	fbsql_db_status ( ) requests the current status of the database specified by database_name .
+18521	diese funktion ist jedoch veraltet .	this is deprecated , however .
+5454	der parameter flags spezifiziert die vergleichsrichtung :	the flags can be set to specify comparison direction :
+28716	% x - bevorzugte zeitwiedergabe ( ohne datum ) , abhängig von der gesetzten umgebung .	12 / 28 / 2002 - % v , % g , % y = 52,2002,2002 print `` 12 / 28 / 2002 - % v , % g , % y = '' . strftime ( `` % v , % g , % y '' , strtotime ( `` 12 / 28 / 2002 '' ) ) . `` \n '' ; / / outputs :
+6136	siehe auch domdocument_dump_file ( ) , domdocument_html_dump_mem ( ) .	see also domdocument_dump_file ( ) , domdocument_html_dump_mem ( ) .
+21390	? php print `` html body '' ; $ conn = ocilogon ( `` scott '' , '' tiger '' ) ; $ count_cursor = `` cursor ( select count ( empno ) num_emps from emp `` . `` where emp.deptno = dept.deptno ) as empcnt from dept '' ; $ stmt = ociparse ( $ conn , '' select deptno , dname , $ count_cursor '' ) ; ociexecute ( $ stmt ) ; print '' table border=\ '' 1\ `` '' ; print `` tr '' ; print `` th dept name / th '' ; print `` th dept # / th '' ; print `` th # employees / th '' ; print `` / tr '' ; while ( ocifetchinto ( $ stmt , $ data , oci_assoc ) ) { print `` tr '' ; $ dname = $ data [ `` dname '' ] ; $ deptno = $ data [ `` deptno '' ] ; print `` td $ dname / td '' ; print `` td $ deptno / td '' ; ociexecute ( $ data [ `` empcnt `` ] ) ; while ( ocifetchinto ( $ data [ `` empcnt '' ] , $ subdata , oci_assoc ) ) { $ num_emps = $ subdata [ `` num_emps '' ] ; print `` td $ num_emps / td '' ; } print `` / tr '' ; } print `` / table '' ; print `` / body / html '' ; ocifreestatement ( $ stmt ) ; ocilogoff ( $ conn ) ; ?	? php print `` html body '' ; $ conn = ocilogon ( `` scott '' , '' tiger '' ) ; $ count_cursor = `` cursor ( select count ( empno ) num_emps from emp `` . `` where emp.deptno = dept.deptno ) as empcnt from dept '' ; $ stmt = ociparse ( $ conn , '' select deptno , dname , $ count_cursor '' ) ; ociexecute ( $ stmt ) ; print '' table border=\ '' 1\ `` '' ; print `` tr '' ; print `` th dept name / th '' ; print `` th dept # / th '' ; print `` th # employees / th '' ; print `` / tr '' ; while ( ocifetchinto ( $ stmt , $ data , oci_assoc ) ) { print `` tr '' ; $ dname = $ data [ `` dname '' ] ; $ deptno = $ data [ `` deptno '' ] ; print `` td $ dname / td '' ; print `` td $ deptno / td '' ; ociexecute ( $ data [ `` empcnt '' ] ) ; while ( ocifetchinto ( $ data [ `` empcnt '' ] , $ subdata , oci_assoc ) ) { $ num_emps = $ subdata [ `` num_emps '' ] ; print `` td $ num_emps / td '' ; } print `` / tr '' ; } print `` / table '' ; print `` / body / html '' ; ocifreestatement ( $ stmt ) ; ocilogoff ( $ conn ) ; ?
+30958	wenn die option time nicht angegeben wurde , wird die aktuelle zeit benutzt .	if the option time is not given , uses the present time .
+28510	beispiel 1. strcasecmp ( ) -beispiel :	example 1. strcasecmp ( ) example
+31559	beispiel 1. urldecode ( ) beispiel	example 1. urldecode ( ) example
+28840	gibt als numerischen wert die position des ersten vorkommens von needle innerhalb der zeichenkette haystack zurück .	returns the numeric position of the first occurrence of needle in the haystack string .
+18112	siehe auch : mssql_fetch-array ( ) und mssql_fetch-row ( ) .	see also : mssql_fetch-array ( ) and mssql_fetch-row ( ) .
+10458	iconv funktionen	iconv functions
+12926	diese funktion liefert dieselben informationen wie imap_status ( ) sowie zusätzlich die größe des postfachs in bytes .	the imap_mailboxmsginfo ( ) the imap_mailboxmsginfo ( ) function checks the current mailbox status on the server .
+15168	`` tm_mon '' - monat des jahres , beginnt bei 0 für januar	`` tm_mon '' - month of the year , starting with 0 for january
+24387	ein aufruf von pg_fetch_array ( ) inkrementiert den internen datensatzzähler um 1 .	calling pg_fetch_array ( ) will increment internal row counter by 1 .
+8010	wenn sie an die c-semantik von fgets ( ) gewöhnt sind , sollten sie auf die unterschiedliche behandlung von eof ( genauer : wie eof zurückgegeben wird ) achten .	people used to the ' c ' semantics of fgets ( ) should note the difference in how eof is returned .
+32046	der schnelle braune fuchs sprang über den faulen hund .	the quick brown fox jumped over the lazy dog .
+17922	gibt bei erfolg eine positive zahl als msql verbindungskennung für die persistente verbindung zurück , oder false bei einem fehler .	returns a positive msql persistent link identifier on success , or false on error .
+2553	die funktion bindtextdomain ( ) setzt den pfad für einen textbereich .	the bindtextdomain ( ) function sets the path for a domain .
+23195	zur zeit wird dieser text nicht wieder freigegeben , allerdings kümmert sich der php-speichermanager darum .	see pdf_add_bookmark ( ) .
+2419	der optionale parameter genauigkeit kann angegeben werden , um die anzahl der nachkommastellen im ergebnis zu bestimmen .	the optional scale parameter is used to set the number of digits after the decimal place in the result .
+38606	gefährliche verwendung von variablen	dangerous variable usage
+33617	als ein apache modul	as an apache module
+6978	beispiel 1. exif_thumbnail ( ) example	example 1. exif_thumbnail ( ) example
+12369	antialias_steps antialias_steps erlaubt die kontrolle über die anzahl der farben , mit der der farbübergang vom text zum hintergrundbild vorgenommen werden soll .	antialias_steps allows you to control the number of colours used for antialiasing text .
+6765	diese kurzform funktioniert nur , wenn die konfigurationsoption short_open_tag aktiviert ist .	this short syntax only works with the short_open_tag configuration setting enabled .
+32995	php hat in den letzten jahren einen langen weg hinter sich , und zu einer der bekanntesten sprachen für das web zu werden , war keine einfache aufgabe .	growing to be one of the most prominent languages powering the web was not an easy task .
+907	das bzip2 kommandozeilenprogramm von redhat :	the bzip2 commandline tool from redhat :
+7368	user_id passwort	user_id password
+30920	beispiel 1. tmpfile ( )	example 1. tmpfile ( ) example
+38550	mit php können komplette server applikationen mit allen möglichkeiten eines shell benutzers erstellt werden , oder auch nur einfache server side includes mit einem minimalen risiko in einer streng kontrollierten umgebung .	php can be used to build complete server applications , with all the power of a shell user , or it can be used for simple server-side includes with little risk in a tightly controlled environment .
+6969	also the size of an embedded thumbnail is returned in thumbnail subarray and the function exif_read_data ( ) can return thumbnails in tiff format .	also the size of an embedded thumbnail is returned in thumbnail subarray and the function exif_read_data ( ) can return thumbnails in tiff also the size of an embedded thumbnail is returned in thumbnail subarray and the function exif_read_data ( ) can return thumbnails in tiff format .
+30830	fehler aufgetreten .	error conditions
+27148	unter linux , zum beispiel , bietet reiserfs eventuell eine bessere performance als ext2fs .	for example , on linux , reiserfs may provide better performance than ext2fs .
+15161	ist dieser 0 oder nicht gesetzt , wird das werte-array als reguläres , numerisch indiziertes array zurück gegeben .	the second argument to the localtime ( ) is the is_associative , if this is set to 0 or not supplied than the array is returned as a regular , numerically indexed array .
+5485	das ist ein gültiges handle für die verbundene datenbank , und als solche kann es wenn nötig auch in modulspezifischen funktionen verwendet werden .	it is a valid handle for the connected database , and as such it can be used in module-specific functions ( if required ) .
+28752	es wird die gleiche art der tag-engine wie bei der fgetss ( ) -funktion benutzt .	it uses the same tag stripping state machine as the fgetss ( ) function .
+22199	der parameter recipcerts der parameter recipcerts kann ein einzelnes x.509 zertifikat oder ein array von x.509 zertifikaten enthalten .	example 1. openssl_pkcs7_encrypt ( ) example
+6098	das andere element - der kommentar - wird nicht zurückgegeben .	the other node - - the comment - - is not returned .
+7168	in diesem fall liefert die funktion die kennung der bereits bestehenden verbindung zurück .	if a second call is made to fbsql_connect ( ) with the same arguments , no new link will be established , but instead , the link identifier of the already opened link will be returned .
+27129	$ barney = `` a big purple dinosaur . `` ; session_register ( `` barney '' ) ; $ _session [ `` zim '' ] = `` an invader from another planet . `` ; # die alte methode war , $ http_session_vars zu verwenden $ http_session_vars [ `` spongebob '' ] = `` he 's got square pants . `` ;	$ barney = `` a big purple dinosaur . `` ; session_register ( `` barney '' ) ; $ _session [ `` zim '' ] = `` an invader from another planet . `` ; # the old way was to use $ http_session_vars $ http_session_vars [ `` spongebob '' ] = `` he 's got square pants . `` ;
+3810	siehe auch : cpdf_continue_text ( ) .	see also cpdf_continue_text ( ) .
+2330	assert_options ( ) gibt die einstellung der gesetzten optionen zurück oder liefert den wert false bei auftreten eines fehlers zurück .	assert_options ( ) will return the original setting of any option or false on errors .
+18525	siehe auch : mysql_drop_db ( ) und mysql_query ( ) .	see also : mysql_drop_db ( ) , mysql_query ( ) .
+38199	odbc ergebnis	oracle cursor
+26333	umkodierung der datei , die durch den dateizeiger input referenziert wird in die datei output , entsprechend der recode anweisung request .	recode the file referenced by file handle input into the file referenced by file handle output according to the recode request .
+3338	? php cpdf_begin_text ( $ pdf ) ; cpdf_set_font ( $ pdf , 16 , `` helvetica '' , `` winansiencoding '' ) ; cpdf_text ( $ pdf , 100 , 100 , `` etwas text '' ) ; cpdf_end_text ( $ pdf ) ?	? php cpdf_begin_text ( $ pdf ) ; cpdf_set_font ( $ pdf , 16 , `` helvetica '' , `` winansiencoding '' ) ; cpdf_text ( $ pdf , 100 , 100 , `` some text '' ) ; cpdf_end_text ( $ pdf ) ?
+3314	? php $ cpdf = cpdf_open ( 0 ) ; cpdf_page_init ( $ cpdf , 1 , 0 , 595 , 842 ) ; cpdf_add_outline ( $ cpdf , 0 , 0 , 0 , 1 , `` seite 1 '' ) ; / / ... / / etwas zeichnung / / ... cpdf_finalize ( $ cpdf ) ; header ( `` content-type : application / pdf '' ) ; cpdf_output_buffer ( $ cpdf ) ; cpdf_close ( $ cpdf ) ; ?	? php $ cpdf = cpdf_open ( 0 ) ; cpdf_page_init ( $ cpdf , 1 , 0 , 595 , 842 ) ; cpdf_add_outline ( $ cpdf , 0 , 0 , 0 , 1 , `` page 1 '' ) ; / / ... / / some drawing / / ... cpdf_finalize ( $ cpdf ) ; header ( `` content-type : application / pdf '' ) ; cpdf_output_buffer ( $ cpdf ) ; cpdf_close ( $ cpdf ) ; ?
+28229	socket_strerror ( ) nimmt als parameter errno den rückgabewert von socket_last_error ( ) entgegen und gibt seinerseits den entsprechenden erklärungstext aus .	socket_strerror ( ) takes as its errno parameter a socket error code as returned by socket_last_error ( ) and returns the corresponding explanatory text .
+35800	anzumerken ist , dass ccvs unterstützung vorausetzt , dass $ ccvs_pfad / lib und $ ccvs_pfad / include existieren , und dass die includedatei cv_api.h im include verzeichnis , und libccvs.a im lib verzeichnis liegen .	it is similar in design and has documented php support !
+2029	der zweite parameter wurde in php 4.0.3 hinzugefügt .	the second parameter was added in php 4.0.3 .
+14019	im falle eines verbindungsabruchs der verbindung connection sendet ircg_set_on_die ( ) auf einem irc-server , der über host und port ( hinweis , der parameter host muss eine gültige ipv4-adresse enthalten ) angegeben wird , die zeichenkette data .	this can be used to trigger a php script for example .
+9405	`` usec '' - microsekunden	`` usec '' - microseconds
+6927	das ist mein $ string , voll mit $ name .	this is a $ string with my $ name in it .
+8533	gruppen id eigentümer	group id owner
+3587	die funktion cpdf_rect ( ) zeichnet ein rechteck , bei dem die linke untere ecke im punkt ( x-koor , y-koor ) liegt .	the cpdf_rect ( ) function draws a rectangle with its lower left corner at point ( x-coor , y-coor ) .
+11124	wird eine solche gefunden , wird statt eines neuen verbindungs-aufbaus die id der bestehenden verbindung zurück gegeben .	if one is found , an identifier for it will be returned instead of opening a new connection .
+23312	viele funktion wie z.b . pdf_moveto ( ) , pdf_circle ( ) und pdf_rect ( ) starten einen neuen pfad .	close the current path .
+38491	dies geht von einer situation aus , in der ein php web-interface regelmäßig zum dateimanagement verwendet wird , und der apache user ist auch berechtigt , in seinem heimatverzeichnis dateien zu löschen .	this assumes a situation where a php web interface is regularly used for file management , so the apache user is allowed to delete files in the user home directories .
+31467	diese basiert auf der aktuellen zeit in mikrosekunden .	uniqid ( ) returns a prefixed unique identifier based on the current time in microseconds .
+1245	nach dem abarbeiten der anfrage wird die temporäre datei gelöscht .	when the request ends , this temporary file is deleted .
+26512	diese funktion rundet den eingabewert val auf precision stellen nach dem komma auf oder ab .	php doesn ' t handle strings like `` 12,300.2 `` correctly by default .
+33697	ihr ' % windows % ' oder ' % systemroot % 'verzeichnis ist normalerweise :	if you are using omnihttpd , do not follow the next step .
+25400	diese funktion gibt eine reihe von zahlenwerten mit informationen über die auslastung der cpu durch den aktuellen prozess zurück .	returns a hash of strings with information about the current process cpu usage .
+21610	das verhalten von longvarbinary wird ebenfalls durch die funktion odbc_longreadlen ( ) bestimmt .	handling of binary long columns is also affected by odbc_longreadlen ( )
+8598	ftp_connect ( ) stellt eine ftp-verbindung zum angegebenen host her .	the timeout parameter specifies the timeout for all subsequent network operations .
+8379	sollten sie dennoch backslashes verwenden , vergessen sie nicht diese zu escapen '\\ '	? php $ handle = fopen ( `` c : \\data\\info.txt '' , `` r '' ) ; ?
+26785	sowohl zeilen - als auch spaltenindizes sind null-basiert .	note that both row and column indexes are zero-based .
+614	auch in der datei install ihrer php-distribution finden sich informationen dazu .	also have a look at the install file in the php distribution .
+33906	das beste an der verwendung von php ist , dass es für neulinge extrem simpel ist , aber auch einen riesigen funktionsumfang für den professionellen programmierer bietet .	the best things in using php are that it is extremely simple for a newcomer , but offers many advanced features for a professional programmer .
+27230	benutzen sie bei verwendung von $ _session ( oder $ http_session_vars bei php 4.0.6 oder niedriger ) unset ( ) um die registrierung einer session-variablen aufzuheben , also unset ( $ _session ) ;	if $ _session ( or $ http_session_vars for php 4.0.6 or less ) is used , use unset ( ) to unregister session variable . i.e . $ _session = array ( ) ;
+36487	sie können diese einstellung mit der funktion ifx_blobinfile_mode ( ) zur laufzeit ändern .	you can override the setting at runtime with ifx_blobinfile_mode ( ) .
+18938	beispiel 1. mysql_list_dbs ( ) beispiel	example 1. mysql_list_dbs ( ) example
+7808	zugang zu den formulardaten	accessing the form data
+36824	swfdisplayitem - scale - - scales the object in relative coordinates .	home
+35089	der resource-typ wurde in php 4 eingeführt .	the resource type was introduced in php 4
+27240	bei der verwendung von framesets zusammen mit sessions werden sie merken , dass wegen dieser sperrung ein frame nach dem anderen geladen wird .	when using framesets together with sessions you will experience the frames loading one by one due to this locking .
+8045	das datum wird als unix-timestamp zurückgegeben .	the time is returned as a unix timestamp .
+1296	ein klick auf den zurück - button und danach auf vorwärts wird die angeforderte adresse öffnen ( und zwar so lange , bis die identifizierung der benutzer geändert wird ) .	also note that this does not work using microsoft 's iis server and the cgi version of php due to a limitation of iis .
+11406	true .	returns true on success or false on failure .
+34083	es gibt vier arten von tags , welche die böcke mit php code kennzeichnen .	there are four sets of tags which can be used to denote blocks of php code .
+8066	bei den meisten unix dateisystemen gilt eine datei als geändert , sobald ihre inode-daten geändert wurden ; d.h. wenn die rechte , eigentümer , gruppe , oder andere metadaten des inodes aktualisiert werden .	in most unix filesystems , a file is considered changed when its inode data is changed ; that is , when the permissions , owner , group , or other metadata from the inode is updated .
+19098	siehe auch : mysql_escape_string ( ) , mysql_character_set_name ( ) .	see also : mysql_escape_string ( ) , mysql_character_set_name ( ) .
+13847	diese funktion entfernt den benutzer nick von der liste der ignorierten personen auf dem verbunden irc-server connection .	this function removes user nick from the ircg ignore list associated with connection .
+1783	automatischer index mit array ( )	automatic index with array ( )
+36827	swftextfield - setleftmargin - - sets the left margin width of the text field .	up
+34426	classa.inc : class a { var $ one = 1 ; function show_one ( ) { echo $ this - one ; } } page1.php : include ( `` classa.inc '' ) ; $ a = new a ; $ s = serialize ( $ a ) ; / / speichere $ s irgendwo , wo sie page2.php finden kann . $ fp = fopen ( `` store '' , `` w '' ) ; fputs ( $ fp , $ s ) ; fclose ( $ fp ) ; page2.php : / / dies ist für das korrekte arbeiten von unserialize nötig . include ( `` classa.inc '' ) ; $ s = implode ( `` '' , @ file ( `` store '' ) ) ; $ a = unserialize ( $ s ) ; / / nun verwenden wir die funktion show_one ( ) des objektes $ a . $ a - show_one ( ) ;	classa.inc : class a { var $ one = 1 ; function show_one ( ) { echo $ this - one ; } } page1.php : include ( `` classa.inc '' ) ; $ a = new a ; $ s = serialize ( $ a ) ; / / store $ s somewhere where page2.php can find it . $ fp = fopen ( `` store '' , `` w '' ) ; fputs ( $ fp , $ s ) ; fclose ( $ fp ) ; page2.php : / / this is needed for the unserialize to work properly . include ( `` classa.inc '' ) ; $ s = implode ( `` '' , @ file ( `` store '' ) ) ; $ a = unserialize ( $ s ) ; / / now use the function show_one ( ) of the $ a object . $ a - show_one ( ) ;
+38108	nachfolgend finden sie eine liste der reservierten wörter , konstanten und vordefinierter variablen .	the following is a listing of predefined identifiers in php .
+38233	verbindung zu einer sybase datenbank über die ct library herstellen .	link to sybase database using ct library
+472	bei einer switch -anweisung wird die bedingung also nur einmal überprüft und das ergebnis mit jeder case -anweisung verglichen .	in a switch statement , the condition is evaluated only once and the result is compared to each case statement .
+18121	mssql_fetch_row ( ) liefert einen datensatz von dem ergebnis , das zur angegebenen ergebnis -kennung gehört .	mssql_fetch_row ( ) fetches one row of data from the result associated with the specified result identifier .
+1906	haben die arrays den gleichen numerischen schlüssel , dann wird der hintere wert den vorhergehenden nicht überschreiben , sondern an den vorderen angehängt .	if , however , the arrays have the same numeric key , the later value will not overwrite the original value , but will be appended .
+21490	ocirowcounts ( ) gibt die anzahl der betroffenen zeilen zum beispiel einer update aktion zurück .	ocirowcount ( ) returns the number of rows affected for eg update-statements .
+33081	pear , das php extension and application repository ( ursprünglich php extension and add-on repository ) ist php 's version von fundamentalen klassen , und könnte in der zukunft zu einem der hauptwege zur verteilung von php - und c-basierten php erweiterungen zwischen entwicklern werden .	pear , the php extension and application repository ( originally , php extension and add-on repository ) is php 's version of foundation classes , and may grow in the future to be one of the key ways to distribute both php and c-based php extensions among developers .
+28912	der wert des letzen vorkommens von needle im string haystack wird ermittelt .	returns the numeric position of the last occurrence of needle in the haystack string .
+13131	body `` string '' - im inhalt der nachricht ist `` string `` enthalten	body `` string '' - match messages with `` string `` in the body of the message
+39105	zwei der wichtigsten aktuellen änderungen , die alten code betreffen , sind :	two of the most important recent changes that affect old code are :
+27523	php unterstützt weder das überladen von funktionen , noch ist es möglich , zuvor deklarierte funktionen neu zu definieren oder die definition zu löschen .	php does not support function overloading , nor is it possible to undefine or redefine previously-declared functions .
+17616	wenn der hostname fehlt , wird localhost angenommen .	it defaults to 'localhost ' .
+2156	beispiel 1. array_values ( )	example 1. array_values ( ) example
+7078	? php / * annahme : $ var_array ist ein von wddx_deserialize zurückgegebenes array * / $ groesse = `` groß '' ; $ var_array = array ( `` farbe '' = `` blau '' , `` groesse `` = `` mittel '' , `` form '' = `` kugel '' ) ; extract ( $ var_array , extr_prefix_same , `` wddx '' ) ; print `` $ farbe , $ groesse , $ form , $ wddx_groesse\n '' ; ?	? php / * suppose that $ var_array is an array returned from wddx_deserialize * / $ size = `` large '' ; $ var_array = array ( `` color '' = `` blue '' , `` size `` = `` medium '' , `` shape '' = `` sphere '' ) ; extract ( $ var_array , extr_prefix_same , `` wddx '' ) ; print `` $ color , $ size , $ shape , $ wddx_size\n '' ; ?
+26562	function machkaffee ( $ typ = `` cappucino '' ) { return `` ich mache eine tasse $ typ.\n '' ; } echo machkaffee ( ) ; echo machkaffee ( `` espresso '' ) ;	function makecoffee ( $ type = `` cappuccino '' ) { return `` making a cup of $ type.\n '' ; } echo makecoffee ( ) ; echo makecoffee ( `` espresso '' ) ;
+31431	udm_param_vardir - gibt einen pfad zu einem verzeichnis an , in dem der indexer daten speichert , wenn der integrierte datenbank-modus oder der cachemodus verwendet wird .	udm_param_vardir - specifies a custom path to directory where indexer stores data when using built-in database and in cache mode .
+29104	beispiel 1. substr_replace ( ) -beispiel :	example 1. substr_replace ( ) example
+8951	dies geschieht durch auslesen der zum browser vorhandenen werte aus der datei browscap.ini .	this is done by looking up the browser 's information in the browscap.ini file .
+19112	aufrufe von mysql_result ( ) sollten nicht mit aufrufen anderer funktionen verschachtelt werden , die auch auf das ergebnis zugreifen .	calls to mysql_result ( ) should not be mixed with calls to other functions that deal with the result set .
+34556	gibt true zurück , wenn $ a größer als $ b ist .	true if $ a is strictly greater than $ b .
+5784	der whence gibt dabei an , wie die position pos interpretiert werden soll :	the parameter whence specifies how the position pos should be interpreted :
+33872	yaz funktionen	yaz functions
+523	damit lässt sich ein `` debugging server '' einrichten , der innerhalb einer ide oder eines programmierbaren editors ( z .	php 4 does not have an internal debugging facility .
+34338	eine solche funktion wird konstruktor genannt ( siehe unten ) .	such a function is called a constructor ( see below ) .
+18788	der paramater ergebnis-kennung muss eine gültige ergebnis-kennung sein und feldindex bestimmt den numerischen offset des feldes .	mysql_field_name ( ) returns the name of the specified field index . result must be a valid result identifier and field_index is the numerical offset of the field .
+34104	der schließende tag für den php-block schließt eine sofort folgende zeilenschaltung mit ein , falls diese vorhanden ist .	the closing tag for the block will include the immediately trailing newline if one is present .
+8014	eine datei zeile für zeile einlesen	reading a file line by line
+3993	die funktion cpdf_stringwidth ( ) gibt die breite der zeichenkette in text zurück .	the cpdf_stringwidth ( ) function returns the width of the string in text .
+37338	alter name	php_ini_all
+4873	schreibt den datensatz mit angegebenen schlüssel in die datenbank .	( php 3 , php 4 )
+36249	auswertung eines fdf_dokuments	evaluating a fdf document
+5668	eine konstante nicht umdefiniert oder zurück gesetzt werden kann , wenn sie einmal gesetzt wurde und	the optional third parameter case_insensitive is also available .
+33508	komplette liste der konfigurationsoptionen	unix / openbsd installs
+36584	es gibt zwei wege , um die welten von java und php zu verbinden .	the former is provided by a sapi module that interfaces with the servlet server , the latter by this java extension .
+11447	informix sqlca.sqlerrd [ x ] werte ermitteln	retrieve informix sqlca.sqlerrd [ x ] values
+24235	mit unterschiedlichen verbindungsstrings können sie mehrere verbindungen zu derselben datenbank öffnen .	you can have multiple connections to the same database if you use different connection string .
+3502	die funktion cpdf_lineto ( ) zeichnet eine linie vom aktuellen punkt zum punkt mit den koordinaten ( x-koor , y-koor ) .	the cpdf_lineto ( ) function draws a line from the current point to the point with coordinates ( x-coor , y-coor ) .
+24940	encoding ist die kodierung des clients und kann einen der werte sql_ascii , euc_jp , euc_cn , euc_kr , euc_tw , unicode , mule_internal , latinx ( x=1 ... 9 ) , koi8 , win , alt , sjis , big5 odeer win1250 haben .	sql_ascii , euc_jp , euc_cn , euc_kr , euc_tw , unicode , mule_internal , latinx ( x=1 ... 9 ) , koi8 , win , alt , sjis , big5 , win1250 .
+35183	einige string-beispiele	perl and posix extended ) .
+31099	$ array [ 0 ] beinhaltet '020300 ' $ array [ 1 ] beinhaltet 'audi ' $ array [ 2 ] beinhaltet '020301 ' $ array [ 3 ] beinhaltet 'bmw ' $ array [ 4 ] beinhaltet '020302 ' $ array [ 5 ] beinhaltet 'opel ' ... usw .	$ array [ 0 ] will contain '020300 ' $ array [ 1 ] will contain'audi ' $ array [ 2 ] will contain '020301 ' $ array [ 3 ] will contain'bmw ' $ array [ 4 ] will contain '020302 ' $ array [ 5 ] will contain'opel ' ... etc .
+28934	so ergibt z.b .	the line of code :
+2186	beispiel 1. array_walk ( )	example 1. array_walk ( ) example
+17760	msql_fieldlen ( ) gibt die länge des angegebenen feldes zurück .	msql_fieldlen ( ) returns the length of the specified field .
+22204	hq eod ; / / schlüssel laden $ key = implode ( `` '' , file ( `` nighthawk.pem '' ) ) ; / / speichern der nachricht in einer datei $ fp = fopen ( `` msg.txt '' , `` w '' ) ; fwrite ( $ fp , $ data ) ; fclose ( $ fp ) ; / / verschlüsseln if ( openssl_pkcs7_encrypt ( `` msg.txt '' , `` enc.txt '' , $ key , array ( `` to `` = `` nighthawk @ example.com '' , / / keyed syntax `` from :	hq eod ; / / load key $ key = file_get_contents ( `` nighthawk.pem '' ) ; / / save message to file $ fp = fopen ( `` msg.txt '' , `` w '' ) ; fwrite ( $ fp , $ data ) ; fclose ( $ fp ) ; / / encrypt it if ( openssl_pkcs7_encrypt ( `` msg.txt '' , `` enc.txt '' , $ key , array ( `` to `` = `` nighthawk @ example.com '' , / / keyed syntax `` from :
+28968	beachten sie , dass die teile auch `` 0 '' sein können .	also be careful that your tokens may be equal to `` 0 '' .
+35232	$ a = `` 1 '' ; / / $ a ist ein string $ a [ 0 ] = `` f '' ; / / was ist mit den string offsets ?	? php $ a = `` 1 '' ; / / $ a is a string $ a [ 0 ] = `` f '' ; / / what about string offsets ?
+36161	domdocumenttype - entities	domprocessinginstruction class ( domprocessinginstruction :
+37500	mit hilfe gemeinsamer speichersegmente ( shared memory ) können system-globale variablen angelegt und bereitgestellt werden .	different httpd-daemons and even other programs ( such as perl , c , ... ) are able to access this data to provide a global data-exchange .
+12785	wahr , wenn das feld subtype gesetzt ist	true if there is a subtype string
+27622	sets the specified snmp object value , returning true on success	sets the specified snmp object value , returning true on success and false on error .
+695	es existieren einige artikel dazu , die von den autoren von php 4 verfasst wurden .	there are a couple of articles written on this by the authors of php 4 .
+27169	session_set_save_handler ( ) setzt die benutzerdefinierten session-speicherfunktionen , die zur speicherung und wiederherstellung von zur session gehörigen daten verwendet werden .	session_set_save_handler ( ) sets the user-level session storage functions which are used for storing and retrieving data associated with a session .
+1328	derzeit bietet php 4 unterstützung für isapi , wsapi und nsapi ( unter windows ) , wodurch die nutzung von php mit multithread-serven wie netscape fast track ( iplanet ) , microsoft internet information server ( iis ) und o'reilly 's website pro ermöglicht wird .	currently php 4 has support for isapi , wsapi , and nsapi ( on windows ) , which all allow php to be used as a plug-in on multithreaded servers like netscape fasttrack ( iplanet ) , microsoft 's internet information server ( iis ) , and o'reilly 's website pro .
+1110	fehlermeldungen erklärt	error messages explained
+21468	ociresult ( ) gibt den inhalt der spalte mit dem spaltenname in der aktuellen zeile zurück ( dazu wichtig ocifetch ( ) ) .	ociresult ( ) returns the data for column column in the current row ( see ocifetch ( ) ) .
+21877	odbc_num_fields ( ) liefert die anzahl der spalten , die in einem odbc-ergebnis vorhanden sind , zurück .	this function will return -1 on error .
+882	von php 2 auf php 3 umsteigen ?	migrating from php 2 to php 3 ?
+8036	siehe auch fgets ( ) , fopen ( ) , fsockopen ( ) , popen ( ) und strip_tags ( ) .	see also fgets ( ) , fopen ( ) , fsockopen ( ) , popen ( ) , and strip_tags ( ) .
+37548	bitte beachten : die sesam-oml ( plam-bibliothek ) und die sesam-konfigurationsdatei müssen für die benutzerkennung , unter der der webserver läuft , lesbar sein !	make sure that the sesam oml plam library and sesam configuration file are readable by the user id running the web server .
+2271	$ aspell_link = aspell_new ( `` english '' ) ; if ( aspell_check_raw ( $ aspell_link , `` test '' ) ) { echo `` gültige schreibweise '' ; } else { echo `` bedaure , falsche schreibweise '' ; }	$ aspell_link = aspell_new ( `` english '' ) ; if ( aspell_check_raw ( $ aspell_link , `` test '' ) ) { echo `` this is a valid spelling '' ; } else { echo `` sorry , wrong spelling '' ; }
+6803	der folgende code-schnipsel mimmt ein datum im iso-format ( jjjj-mm-tt ) und gibt es im format tt.mm.jjjj aus :	the following code snippet takes a date in iso format ( yyyy-mm-dd ) and prints it in dd.mm.yyyy format :
+939	pre ? php echo `` das soll die erste zeile sein . '' ; ? ? php echo `` das soll nach dem obigen zeilenumbruch erscheinen . '' ; ? / pre	pre ? php echo `` this should be the first line . '' ; ? ? php echo `` this should show up after the new line above . '' ; ? / pre
+20929	siehe auch ob_start ( ) , ob_get_contents ( ) und ob_end_clean ( ) .	see also ob_start ( ) , ob_get_contents ( ) , ob_flush ( ) and ob_end_clean ( ) .
+37861	grund : `` . socket_strerror ( $ socket ) . `` \n '' ; } else { echo `` ok.\n '' ; } echo `` versuche , eine verbindung zu ' $ address 'auf port ' $ service_port ' aufzubauen .. . '' ; $ result = socket_connect ( $ socket , $ address , $ service_port ) ; if ( $ result 0 ) { echo `` socket_connect ( ) fehlgeschlagen.\ngrund : ( $ result ) '' . socket_strerror ( $ result ) . `` \n '' ; } else { echo `` ok.\n '' ; } $ in = `` head / http / 1.0\r\n\r\n '' ; $ out = `` ; echo `` einen http head request senden .. . '' ; socket_write ( $ socket , $ in , strlen ( $ in ) ) ; echo `` ok.\n '' ; echo `` die antwort lesen : \n\n '' ; while ( $ out = socket_read ( $ socket , 2048 ) ) { echo $ out ; } echo `` den socket schliessen .. . '' ; socket_close ( $ socket ) ; echo `` ok.\n\n '' ; ?	? php error_reporting ( e_all ) ; echo `` h2 tcp / ip connection / h2 \n '' ; / * get the port for the www service . * / $ service_port = getservbyname ( 'www ' , 'tcp ' ) ; / * get the ip address for the target host . * / $ address = gethostbyname ( 'www.example.com ' ) ; / * create a tcp / ip socket . * / $ socket = socket_create ( af_inet , sock_stream , 0 ) ; if ( $ socket 0 ) { echo `` socket_create ( ) failed : reason : '' . socket_strerror ( $ socket ) . `` \n '' ; } else { echo `` ok.\n '' ; } echo `` attempting to connect to ' $ address ' on port ' $ service_port ' .. . '' ; $ result = socket_connect ( $ socket , $ address , $ service_port ) ; if ( $ result 0 ) { echo `` socket_connect ( ) failed.\nreason : ( $ result ) `` . socket_strerror ( $ result ) . `` \n '' ; } else { echo `` ok.\n '' ; } $ in = `` head / http / 1.0\r\n\r\n '' ; $ out = `` ; echo `` sending http head request .. . '' ; socket_write ( $ socket , $ in , strlen ( $ in ) ) ; echo `` ok.\n '' ; echo `` reading response : \n\n '' ; while ( $ out = socket_read ( $ socket , 2048 ) ) { echo $ out ; } echo `` closing socket .. . '' ; socket_close ( $ socket ) ; echo `` ok.\n\n '' ; ?
+5552	spaltennamen für abfragen an einer oracle datenbank werden in kleinbuchstaben zurückgegeben .	column names for queries on an oracle database are returned in lowercase .
+13044	die imap_ping ( ) funktion schickt ein ping-signal an den mailserver und prüft so die verfügbarkeit der verbindung .	imap_ping ( ) function pings the stream to see it is still active .
+25314	diese funktion sendet das signal sig zum prozess mit der prozesskennung ( prozess-id ) pid .	send the signal sig to the process with the process identifier pid .
+25184	für informationen darüber , wie mehr informationen über diesen benutzer bekommen werden können , siehe posix_getpwnam ( ) .	see posix_getpwnam ( ) for information how to get more information about this user .
+38520	generell ist sicherheit durch unklarheit eine der schwächsten formen von sicherheit .	in general , security by obscurity is one of the weakest forms of security .
+24218	pg_close ( ) schließt die nichtpersistente verbindung zu einem postgresql-datenbankserver , die durch die angegebene connection kennung bezeichnet wird .	returns true on success or false on failure .
+18277	siehe auch : mssql_db_query ( ) , mssql_select_db ( ) und mssql_connect ( ) .	see also : mssql_db_query ( ) , mssql_select_db ( ) , and mssql_connect ( ) .
+12313	zeichens aufweist , werden sie dies oft anpassen wollen , sofern sie eine andere sprache als englisch benutzen .	as a postscript fonts default vector lacks most of the character positions above 127 , you 'll definitely want to change this if you use an other language than english .
+11035	die parameter username und password können auch über die php-konfigurations-anweisungen ibase.default_user und ibase.default_password gesetzt werden .	if the server is not local , it must be prefixed with either 'hostname : ' ( tcp / ip ) , '/ /hostname / ' ( netbeui ) or'hostname @ ' ( ipx / spx ) , depending on the connection protocol used . username and password can also be specified with php configuration directives ibase.default_user and ibase.default_password . charset is the default character set for a database . buffers is the number of database buffers to allocate for the server-side cache .
+35172	für irgendetwas komplexeres sollten sie die komplexe syntax nutzen .	this is { fantastic } echo `` this is { $ great } '' ; / / works , outputs :
+25337	diese funktion setzt die effektive gruppen-id des aktuellen prozesses .	set the effective group id of the current process .
+2147	siehe auch array_shift ( ) , array_push ( ) und array_pop ( ) .	see also array_shift ( ) , array_push ( ) , and array_pop ( ) .
+24090	verisign payflow pro funktionen	verisign payflow pro functions
+35677	bezeichnung	name
+27134	eine liste der funktionen , die ressourcen zurückgeben befindet sich im anhang liste von php ressourcen .	a list of functions that return resources are available in the resource types appendix .
+7268	fbsql_drop_db ( ) entfernt eine ganze datenbank von dem server , der mit der verbindungkennung assoziert ist .	fbsql_drop_db ( ) attempts to drop ( remove ) an entire database from the server associated with the specified link identifier .
+1606	als resultat wird eine klasse zurückgeliefert , die folgende elemente enthält :	the properties of the returned class are :
+14994	sie haben nur die möglichkeit die beschränkung noch weiter herabzusetzen .	you can set it lower though .
+1244	wenn php eine put-anfrage erhält , wird die datei genau wie bei der post-methode in einem temporären verzeichnis gespeichert .	the only trick here is that when php sees a put-method request it stores the uploaded file in a temporary file just like those handled but the post-method .
+4484	i - minuten : `` 00 '' bis `` 59 ``	h
+11255	beachten sie , dass dies normalerweise nicht notwendig ist , da nichtpersistente verbindungen automatisch mit dem ende des skripts geschlossen werden .	note that this isn ' t usually necessary , as non-persistent open links are automatically closed at the end of the script 's execution .
+17199	mhash_get_hash_name beispiel	example 1. mhash_get_hash_name ( ) example
+28704	% r - zeit in der 24-stunden-formatierung	% w - day of the week as a decimal , sunday being 0
+13447	sie können auch den server automatisch nach jeder abfrage einen commit ausführen lassen , wenn sie die funktion ingres_autocommit ( ) aufrufen , bevor sie die transaktion öffnen .	you can also have the server commit automaticaly after every query by calling ingres_autocommit ( ) before opening the transaction .
+33676	für das isapi modul wird ein isapi 4.0 kompatibler webserver benötigt ( getestet wurden iis 4.0 , pws 4.0 und iis 5.0 ) .	if you are using any php extension dlls then you will need those as well .
+6945	andernfalls wird php solange laufen , bis das programm beendet ist .	if you start a program using this function and want to leave it running in the background , you have to make sure that the output of that program is redirected to a file or some other output stream or else php will hang until the execution of the program ends .
+26861	das attribut `` scale '' der sql-variablen in column ( col ) , wobei col zwischen 0 and $ arr [ `` count '' ] -1 liegt .	the `` scale '' attribute of the sql variable in column ( col ) , where col is between 0 and $ arr [ `` count '' ] -1 .
+38202	persistente verbindung zu einer odbc datenbank herstellen .	persistent link to odbc database
+32967	siehe auch zip_read ( ) und zip_close ( ) .	see also zip_read ( ) and zip_close ( ) .
+32044	$ text = `` der schnelle braune fuchs sprang über den faulen hund . `` ; $ neuertext = wordwrap ( $ text , 20 ) ; echo `` $ neuertext\n '' ;	$ text = `` the quick brown fox jumped over the lazy dog . `` ; $ newtext = wordwrap ( $ text , 20 ) ; echo `` $ newtext\n '' ;
+3359	die funktion cpdf_clip ( ) beschränkt alle zeichnungen auf den aktuellen pfad .	the cpdf_clip ( ) function clips all drawing to the current path .
+34262	es ist zu beachten , dass negative werte nicht null es ist zu beachten , dass negative werte nicht null sind und deshalb als wahr aufgefasst werden !	the constants true and false the constants true and false ( case-insensitive ) are the two possible boolean values .
+24792	diese funktion gibt im fehlerfall -1 aus .	this function will return -1 on error .
+196	die eigenschaft handle kann mit anderen directory-funktionen wie readdir ( ) , rewinddir ( ) und closedir ( ) benutzt werden ( handles sind verweise auf einträge in einer internen tabelle zur verwaltung von objekten ) .	we are explicitly testing whether the return value is identical to ( equal to and of the same type as -- see comparison operators for more information ) false since otherwise , any directory entry whose name evaluates to false will stop the loop .
+38385	ein gangbarer weg um passwörter zu finden ist , ihre seiten mit den suchergebnissen hinters licht zu führen .	a feasible way to gain passwords is to circumvent your search result pages .
+8938	lesen sie bitte die dokumentation zu apache_request_headers ( ) um mehr informationen über die funktionsweise zu erhalten .	please read the apache_request_headers ( ) documentation for more information on how this function works .
+4045	wenn dictionary nicht spezifiziert wird , wird das zuletzt geöffnete wörterbuch genutzt .	if dictionary is not specified , the last opened dictionary is used .
+18019	mssql_close ( ) schließt keine mittels mssql_pconnect ( ) aufgebauten persistenten verbindungen .	mssql_close ( ) will not close persistent links generated by mssql_pconnect ( ) .
+17906	siehe auch : msql ( ) , msql_query ( ) und msql_fetch_row ( ) .	see also : msql ( ) , msql_query ( ) , and msql_fetch_row ( ) .
+1322	typischerweise hat ein multiprozess-webserver einen prozess ( den 'eltern 'prozess ) , der einen satz weiterer prozesse ( die 'kinder ' ) koordiniert , welche die eigentliche arbeit des bereitstellens der seiten übernehmen .	a multiprocess server typically has one process ( the parent ) which coordinates a set of processes ( its children ) who actually do the work of serving up web pages .
+36868	diese funktionen erlauben ihnen , auf einen msql-datenbankserver zuzugreifen .	more information about msql can be found at http : / /www.hughes.com.au / .
+39373	kapitel 26 .	chapter 26 .
+24296	die funktion gibt das array als ergebnis zurück , falls die aktion erfolgreich war , anderenfalls false .	it returns false on failure .
+5907	20010901 ) .	20010901 )
+35040	zum gegenwärtigen zeitpunkt ist das verhalten so , als ob der wert zuerst nach boolean konvertiert wird .	currently , the behaviour is the same as if the value was first converted to boolean .
+1400	einschränkungen	`` ``
+37745	sie können das vermeiden , indem sie einfach einträge in $ _session setzen .	you can avoid this by simply setting entries in $ _session .
+8316	siehe auch ceil ( ) und round ( ) .	see also ceil ( ) and round ( ) .
+38070	zu beachten ist , dass zziplib nur eine untermenge der funktionen zur verfügung stellt , die in einer vollständigen implementation des zip algorithmus vorhanden sind .	note that zziplib only provides a subset of functions provided in a full implementation of the zip compression algorithm and can only read zip file archives .
+6801	die suche unterscheidet zwischen groß und kleinschreibung .	searching is case sensitive .
+35371	die ip-adresse , von der aus gerade auf die web-seite zugegriffen wird .	for this reason , they are often known as ' autoglobals ' or'superglobals ' . ( there is no mechanism in php for user-defined superglobals . ) the superglobals are listed below ; however , for a listing of their contents and further discussion on php predefined variables and their natures , please see the section reserved predefined variables .
+14551	? php / /verwenden von anonymen ldap bind / / verbinden zum ldap server $ ldapconn = ldap_connect ( `` ldap.example.com '' ) or die ( `` could not connect to ldap server . `` ) ; if ( $ ldapconn ) { / / anonymes binding $ ldapbind = ldap_bind ( $ ldapconn ) ; if ( $ ldapbind ) { echo `` anonymes ldap bind erfolgreich .. . '' ; } else { echo `` anonymes ldap bind fehlgeschlagen .. . '' ; } } ?	? php / /using ldap bind anonymously / / connect to ldap server $ ldapconn = ldap_connect ( `` ldap.example.com '' ) or die ( `` could not connect to ldap server . `` ) ; if ( $ ldapconn ) { / / binding anonymously $ ldapbind = ldap_bind ( $ ldapconn ) ; if ( $ ldapbind ) { echo `` ldap bind anonymous successful .. . '' ; } else { echo `` ldap bind anonymous failed .. . '' ; } } ?
+31614	beispiel 2. usort ( ) beispiel mit einem mehrdimensionalen array	example 2. usort ( ) example using multi-dimensional array
+31244	gibt den speicher frei , der für ergebnisse alloziiert wurde .	freeing up memory allocated for results .
+29027	$ trans = array ( `` hallo `` = `` hi '' , `` hi '' = `` hallo '' ) ; echo strtr ( `` hi alle , ich sage hallo '' , $ trans ) . `` \n '' ;	$ trans = array ( `` hello `` = `` hi '' , `` hi '' = `` hello '' ) ; echo strtr ( `` hi all , i said hello '' , $ trans ) . `` \n '' ;
+21329	ociinternaldebug ( ) aktiviert die interne debugausgabe . onoff kann auf 0 gesetzt werden , um die ausgabe abzuschalten und auf 1 , um sie anzuschalten .	set onoff to 0 to turn debug output off , 1 to turn it on .
+706	ist der bug noch nicht bekannt , können sie diesen über das reportformular posten .	if you don 't see it in the database , use the reporting form to report the bug .
+2589	wenn der optionale parameter small true ist , wird ein alternative dekomprimierungsalgorithmus verwendet , der weniger speicher benötigt , jedoch nur halb so schnell läuft .	if the optional parameter small is true , an alternative decompression algorithm will be used which uses less memory ( the maximum memory requirement drops to around 2300k ) but works at roughly half the speed .
+234	sie sollten dies ausschalten , wenn der globale bereich ihrer skripte nicht durch benutzerdaten gestört werden soll .	you may want to view the latest php.ini here from cvs .
+34167	variablen ausserhalb von php	variables from outside php
+21992	beispiel 1. odbc.setoption beispiele	odbc setoption examples
+37650	session.save_path session.save_path definiert das argument , das an die speicherprozedur übergeben wird .	session.save_path session.save_path defines the argument which is passed to the save handler .
+13300	siehe auch explode ( ) , join ( ) und split ( ) .	see also explode ( ) , and split ( ) .
+24615	von der benutzung des postgresql-moduls in php 4.0.6 wird abgeraten , auch wenn sie die funktion pg_last_notice ( ) nicht nutzen .	use of the postgresql module with php 4.0.6 is not recommended even if you are not using pg_last_notice ( ) .
+29038	diese funktion liefert den übergebenen ausdruck var als string-repräsentation zurück .	see the documentation on string for more information on converting to string .
+6716	april 2001 `` * /	the date of easter day was defined by the council of nicaea in ad325 as the sunday after the first full moon which falls on or after the spring equinox .
+14660	erzeugen und abfangen eines fehlers	generating and catching an error
+6721	( der code basiert auf einen c-programm von simon kershaw , webmaster @ ely.anglican.org )	( the code is based on a c program by simon kershaw , webmaster @ ely.anglican.org )
+28380	einer optionalen zahl für die längen-angabe , welche die mindestens zurückzugebende anzahl zeichen spezifiziert .	an optional number , a width specifier that says how many characters ( minimum ) this conversion should result in .
+39164	wenn true zurückgeben wird , wird die if -anweisung zu true wenn true zurückgeben wird , wird die if -anweisung zu true ausgewertet und der code innerhalb der geschweiften klammern wird ausgeführt .	if it returns true , the if statement evaluates to true if it returns true , the if statement evaluates to true and the code within its { braces } is executed .
+35828	methoden\n '' ; zeige_methoden ( $ leafy ) ; echo `` \nabstammung : \n '' ; klassen_abstammung ( `` leafy '' , `` spinat '' ) ; klassen_abstammung ( `` leafy '' , `` gemuese '' ) ; ? / pre	methods\n '' ; print_methods ( $ leafy ) ; echo `` \nparentage : \n '' ; class_parentage ( `` leafy '' , `` spinach '' ) ; class_parentage ( `` leafy '' , `` vegetable '' ) ; ? / pre
+5540	das zurückgegebene objekt hat abhängig von flags vier oder fünf eigenschaften :	the returing object has four or five properties depending on flags :
+33283	php 3 :	dir is the iodbc base install directory , defaults to / usr / local .
+3604	siehe auch : cpdf_save ( ) .	see also cpdf_save ( ) .
+1368	auch eine datei auf einem ftp-server kann geschrieben werden , solange man sich über einen benutzer mit entsprechenden zugriffsrechten verbindet und die datei noch nicht existiert .	you can also write to files on an ftp server ( provided that you have connected as a user with the correct access rights ) .
+3284	count ( ) kann 0 zurückgeben wenn die variable nicht gesetzt ist , aber sie könnte ebenfalls 0 zurückgeben , wenn eine variable als leeres array initialisiert wurde .	count ( ) may return 0 for a variable that is n't set , but it may also return 0 for a variable that has been initialized with an empty array .
+36964	spalten werden sowohl als assioziatives als auch als numerisches array zurückgegeben .	the function mysql_fetch_array ( ) uses a constant for the different types of result arrays .
+12497	die font-größe	the font size in pixels .
+33967	sie können unsere xslt erweiterung verwenden , um xml dokumente zu transformieren .	you can use our xslt extension to transform xml documents .
+22755	ora_plogon	ora_plogon
+22760	siehe auch : ora_logon ( ) .	see also ora_logon ( ) .
+4570	key ist der schlüssel , mit dem die daten identifizert werden .	skip is the number of key-value pairs to ignore when using cdb databases .
+27085	session_module_name ( ) gibt den namen des aktuellen session-moduls zurück .	session_module_name ( ) returns the name of the current session module .
+4805	dbm datenbankfunktionen	dbm functions [ deprecated ]
+21429	ocinumcols	ocinumcols
+38451	speziell gefährlich ist es , code von bekannten quellen mit integrierten debugging handlern auszuführen , oder weit verbreitete debuggingtechniken zu verwenden .	especially dangerous is running code from known sources with built-in debugging handlers , or using common debugging techniques .
+17923	msql_pconnect ( ) verhält sich sehr ähnlich wie msql_connect ( ) , mit zwei grossen unterschieden .	msql_pconnect ( ) acts very much like msql_connect ( ) with two major differences .
+4334	das macht es unmöglich , unter verwendung von current ( ) herauszufinden , ob das wirklich am ende der liste sind .	this makes it impossible to determine if you are really at the end of the list in such an array using current ( ) .
+36840	diese funktionen erlauben den zugriff auf die mnogosearch ( früher als udmsearch bekannt ) suchmaschine .	it offers full-text indexing and searching for html , pdf , and text documents . mnogosearch consists of two parts .
+9128	vergleichen sie dazu die modus-beschreibung unter htmlspecialchars ( ) .	see the description of these modes in htmlspecialchars ( ) .
+4	nach vorne	next
+11126	statt dessen wird die verbindung für den weiteren gebrauch beibehalten ( ibase_close ( ) beendet keine verbindung , die mittels ibase_pconnect ( ) erzeugt wurde ) .	this type of link is therefore called 'persistent ' .
+1842	beispiel 1. array_keys ( )	example 1. array_keys ( ) example
+36949	auf linuxsystemen wird dieser timeout auch für die erste antwort des servers benutzt .	on linux this timeout is also used for waiting for the first answer from the server .
+209	variant klassen-konstruktor .	variant class constructor .
+27994	socket_listen ( ) kann nur mit sockets vom typ sock_stream oder sock_seqpacket benutzt werden .	socket_listen ( ) is applicable only to sockets of type sock_stream or sock_seqpacket .
+2642	beispiel 1. bzopen ( ) beispiel	example 1. bzopen ( ) example
+18642	beispiel 1. mysql_escape_string ( ) beispiel	? php $ item = `` zak 's laptop '' ; $ escaped_item = mysql_escape_string ( $ item ) ; printf ( `` escaped string : % s\n '' , $ escaped_item ) ; ?
+25917	$ pspell_config = pspell_config_create ( `` de '' ) ; pspell_config_personal ( $ pspell_config , `` / var / dictionaries / custom.pws '' ) ; $ pspell_link = pspell_new_config ( $ pspell_config ) ; pspell_check ( $ pspell_link , `` diespinne '' ) ;	$ pspell_config = pspell_config_create ( `` en '' ) ; pspell_config_personal ( $ pspell_config , `` / var / dictionaries / custom.pws '' ) ; $ pspell_link = pspell_new_config ( $ pspell_config ) ; pspell_check ( $ pspell_link , `` thecat '' ) ;
+18251	siehe auch : mssql_db_query ( ) , mssql_query ( ) und mssql_fetch_row ( ) .	see also : mssql_db_query ( ) , mssql_query ( ) , and mssql_fetch_row ( ) .
+37674	sie müssen sich daher einen anderen weg einfallen lassen , um die 'müllentsorgung ' ihrer session zu erledigen , wenn sie an ein fat-dateisystem gebunden sind oder an irgendein anderes dateisystem , das keine atime-kontrolle bietet .	windows fat does not so you will have to come up with another way to handle garbage collecting your session if you are stuck with a fat filesystem or any other fs where atime tracking is not available .
+34154	benutzen sie die funktion defined ( ) um herauszufinden , ob eine konstante definiert ist .	use the defined ( ) -function if you want to know if a constant is set .
+21528	ocisetprefetch	ocisetprefetch
+21298	ocifreecursor	ocifreecursor
+12227	c daten-typ	c data type
+38338	nachdem heikle oder geheime informationen in solch einer datenbank gespeichert werden können , sollten sie deren schutz ernsthaft bedenken .	since very sensitive or secret informations can be stored in such database , you should strongly consider to protect them somehow .
+33332	aktiviert transfer tables für mod_charset ( rus apache ) .	build static libraries [ default=yes ] .
+38411	diese angriffe basieren hauptsächlich auf dem ausnutzen des codes , welcher ohne bedenken auf die sicherheit geschrieben wurde .	these attacks are mainly based on exploiting the code not being written with security in mind .
+25822	beispiel 1. pspell_add_to_personal ( )	example 1. pspell_add_to_personal ( )
+7171	? php $ link = fbsql_connect ( `` localhost '' , `` _system '' , `` geheim '' ) or die ( `` konnte keine verbindung herstellen ! `` ) ; print ( `` verbinden mit frontbase erfolgreich '' ) ; fbsql_close ( $ link ) ; ?	? php $ link = fbsql_connect ( `` localhost '' , `` _system '' , `` secret '' ) or die ( `` could not connect '' ) ; print ( `` connected successfully '' ) ; fbsql_close ( $ link ) ; ?
+17742	aufeinanderfolgende aufrufe von msql_fetch_row ( ) geben jeweils die nächste zeile des abfrageergebnisses zurück , oder false , wenn keine datensätze mehr gelesen werden können .	subsequent call to msql_fetch_row ( ) would return the next row in the result set , or false if there are no more rows .
+867	wenn sie sich über die kompatibilität wirklich nicht sicher sind , dann sollten sie php 4 auf einem testsystem installieren und ihre scripts dort testen .	if you 're really unsure about compatibility you should install php 4 in a test environment and run your scripts there .
+33295	php 4 : jpeg dir für pdflib 3.x and 4.x	php 3 only !
+3265	zählt die häufigkeit des vorkommens jedes einzelnen byte-wertes ( 0 .. 255 ) in string und gibt sie auf verschiedene arten zurück .	counts the number of occurrences of every byte-value ( 0 .. 255 ) in string and returns it in various ways .
+27635	wenn quick_print nicht aktiviert ist , ( standardeinstellung ) gibt die ucd snmp bibliothek extra informationen aus , die den typ des wertes ( z.b .	when quick_print is not enabled ( default ) the ucd snmp library prints extra information including the type of the value ( i.e .
+25380	sehen sie sich dazu posix.1 und die setsid ( 2 ) -manpage auf ihrem posix-system an , um mehr informationen über prozessgruppen und job-kontrolle zu erhalten .	see posix.1 and the setsid ( 2 ) manual page on your posix system for more informations on process groups and job control .
+22421	unterschreiben einer zertifikats-widerrufliste ( crl ) ?	can the cert be used to sign a certificate revocation list ( crl ) ?
+22663	beispiel 1. ora_fetch_into ( )	example 1. ora_fetch_into ( )
+6868	ist das der fall , so wird mit dem destination parameter der hostname oder die ip-adresse gesetzt .	in this case , the destination parameter specifies the host name or ip address and optionally , port number , of the socket receiving the debug information .
+8397	auch wenn es ihr system nicht verlangt , sollten sie den b flag bei binärdateien verwenden , um die portabilität ihrer skripte zu erhöhen .	you are encouraged to use the b flag when dealing with binary files , even if your system does not require it , so that your scripts will be more portable .
+9994	siehe auch dechex ( ) sowie bindec ( ) und octdec ( ) .	var_dump ( hexdec ( `` see '' ) ) ; var_dump ( hexdec ( `` ee '' ) ) ; / / both prints `` int ( 238 ) `` var_dump ( hexdec ( `` that '' ) ) ; var_dump ( hexdec ( `` a0 '' ) ) ; / / both prints int ( 160 )
+33846	benötigt ntwdblib.dll ( bundled )	requires : ntwdblib.dll ( bundled )
+25852	die aktuelle wortliste wird geleert und wenn sie zum beispiel versuchen , sie mit pspell_save_wordlist ( ) zu speichern , passiert gar nichts .	the current wordlist becomes blank , and , for example , if you try to save it with pspell_save_wordlist ( ) , nothing happens .
+22497	diese funktion bindet die genannte php-variable an einen sql-parameter .	this function binds the named php variable with a sql parameter .
+33616	es gibt verschiedene wege , php zu installieren :	there are several ways to install php :
+2095	beispiel 1. array_splice ( )	example 1. array_splice ( ) examples
+33415	ist das der fall , fügen sie diese bitte dem path hinzu .	right , now into the hard stuff .
+17286	der mode wird ebenfalls mit der aktuellen umask modifiziert , welchen sie mittels umask ( ) ändern können .	the mode is also modified by the current umask , which you can change using umask ( ) .
+39249	tabelle 32-2 .	table 32-2 .
+31606	die vergleichsfunktion muss einen integer zurückgeben , der kleiner , gleich , oder größer ist als null , wenn für das erste argument auch angenommen wird , dass es kleiner , gleich , oder größer ist als das zweite .	the comparison function must return an integer less than , equal to , or greater than zero if the first argument is considered to be respectively less than , equal to , or greater than the second .
+13503	diese funktion ist ähnlich zu ingres_fetch_array ( ) , mit einem unterschied - ein objekt wird anstelle eines arrays zurückgegeben .	this function is similar to ingres_fetch_array ( ) , with one difference - an object is returned , instead of an array .
+22503	? php ora_parse ( $ curs , `` declare tmp integer ; begin tmp : = : in ; : out : = tmp ; : x : = 7.77 ; end ; '' ) ; ora_bind ( $ curs , `` ergebnis '' , `` : x '' , $ len , 2 ) ; ora_bind ( $ curs , `` eingabe '' , `` : in '' , 5 , 1 ) ; ora_bind ( $ curs , `` ausgabe '' , `` : out '' , 5 , 2 ) ; $ eingabe = 765 ; ora_exec ( $ curs ) ; echo `` ergebnis : $ ergebnis br ausgabe : $ ausgabe br eingabe : $ eingabe '' ; ?	? php ora_parse ( $ curs , `` declare tmp integer ; begin tmp : = : in ; : out : = tmp ; : x : = 7.77 ; end ; '' ) ; ora_bind ( $ curs , `` result '' , `` : x '' , $ len , 2 ) ; ora_bind ( $ curs , `` input '' , `` : in '' , 5 , 1 ) ; ora_bind ( $ curs , `` output '' , `` : out '' , 5 , 2 ) ; $ input = 765 ; ora_exec ( $ curs ) ; echo `` result : $ result br out : $ output br in : $ input '' ; ?
+11229	informix funktionen	informix functions
+35441	das sind funktionen , die sich selbst aufrufen .	null object ( stdclass ) ( 0 ) { }
+17146	beispiel 1. mdecrypt_generic ( ) example	example 1. mdecrypt_generic ( ) example
+26445	reset ( ) setzt den internen zeiger von array auf das erste element zurück .	reset ( ) rewinds array 's internal pointer to the first element .
+35112	einfache anführungszeichen ( single quoted )	a string literal can be specified in three different ways .
+37763	falls php mit -- enable-trans-sid kompiliert wurde , kann es dies transparent machen .	unless you are using php 4.2 or later , you need to enable it manually when building php .
+39008	unser erstes php-skript : hallo.php	our first php script : hello.php
+38081	beispiel zur verwendung der zip funktion	zip usage example
+8216	gibt den typ des feldes , das field_number entspricht , zurück .	returns the edit type of the field corresponding to field_number .
+12985	im folgenden beispiel besteht das headerfeld aus zwei teilstücken , wobei das erste nach iso-8859-1 codiert ist :	example 1. imap_mime_header_decode ( ) example
+33760	die folgende tabelle beschreibt einige der verfügbaren erweiterungen .	the following table describes some of the extensions available .
+1631	dieser weg funktioniert unabhängig davon , ob sie php als modul für apache benutzen .	you can also get at the value of the common cgi variables by reading them from the environment , which works whether or not you are using php as an apache module .
+1678	default ist false .	the default is false .
+6842	wenn sie als ersatz einen ganzzahligen wert verwenden , bekommen sie vielleicht nicht das erwartete ergebnis .	one thing to take note of is that if you use an integer value as the replacement one thing to take note of is that if you use an integer value as the replacement parameter , you may not get the results you expect .
+1466	apache-spezifische funktionen	apache-specific functions
+37641	session-konfigurationsoptionen	session configuration options
+4509	ist das zeichen mit dem backslash bereits eine spezielle zeichenfolge , müssen sie diesen backslash ebenso escapen .	examples :
+18803	setzt den feldzeiger auf den angegeben feldoffset .	seeks to the specified field offset .
+11197	beispiel 1. iconv ( ) beispiel :	example 1. iconv ( ) example :
+4525	siehe auch : getlastmod ( ) , gmdate ( ) , mktime ( ) , strftime ( ) und time ( ) .	see also getlastmod ( ) , gmdate ( ) , mktime ( ) , strftime ( ) and time ( ) .
+3256	liefert den cosinus des winkels arg ( arg in bogenmaß ) .	the arg parameter is in radians .
+39149	sie können mehrere php-anweisungen innerhalb eines php-tags platzieren und so kleine code-blöcke schreiben , die mehr als nur eine ausgabe mit echo ( ) enthalten .	you can put multiple php statements inside a php tag and create little blocks of code that do more than just a single echo .
+39006	erstellen sie eine datei mit dem namen hallo.php unterhalb des root-verzeichnisses ihres web-servers mit dem folgenden inhalt :	create a file named hello.php and put it in your web servers root directory ( document_root ) with the following content :
+9972	der optionale parameter max_chars_per_line der optionale parameter max_chars_per_line entspricht der zeichenzahl pro ausgabe-zeile .	the optional parameter max_chars_per_line indicates maximum number of characters per line will be output .
+9149	grafik-ausmaße ermitteln per getimagesize :	as an example , gif always uses 3 channels per pixel , but the number of bits per pixel can not be calculated for an animated gif with a global color table .
+14468	siehe auch current ( ) und next ( ) .	see also current ( ) and next ( ) .
+37631	deshalb sollte es beim umgang mit sensiblen daten immer zusätzliche methoden geben , mit denen festgestellt werden kann , ob es sich um eine gültige session handelt .	no external libraries are needed to build this extension .
+36643	um dieses modul unter windows nutzen zu können , müssen sie libsasl.dll aus dem dll ordner des php / win32 packets in den system32 ordner ihres systems kopieren ( z.b . :	in order to enable this module on a windows environment , you must copy libsasl.dll from the dll folder of the php / win32 binary package to the system32 folder of your windows machine . ( ex :
+19149	beispiel 1. mysql_tablename ( ) bespiel	example 1. mysql_tablename ( ) example
+24115	pfpro_process ( ) führt eine transaktion mir payflow pro aus .	pfpro_process ( ) processes a transaction with payflow pro .
+23784	die funktion pdf_setflat ( ) setzt the flatness auf einen wert zwischen 0 und 100 .	set the flatness to a value between 0 and 100 inclusive .
+15443	ist mindestens einer der eingabewerte vom typ double , so werden alle werte als double behandelt und der rückgabewert ist ebenfalls vom typ double .	if one or more of the values is a float , all the values will be treated as floats , and a float is returned .
+18621	stattdessen sollten sie die funktion mysql_error ( ) verwenden , um den fehlertext zu erhalten .	instead , use mysql_error ( ) to retrieve the error text .
+29165	beispiel 4. swfaction ( ) example	example 4. swfaction ( ) example
+26895	die ausgabe ist ein integer-wert , der die anzahl aller spalten ( aka.fields ) im aktuellen result_id ergebnis-satz oder false .	returns an integer describing the total number of columns ( aka . fields ) in the current result_id result set or false on error .
+32938	in der dokumentation zu fopen ( ) finden sich weitere erklärungen zu diesem parameter .	please see fopen ( ) for an explanation of various modes , including `` rb `` .
+4812	dba_sync ( ) hat als rückgabewert true oder false , abhängig davon , ob die aktion erfolgreich war oder nicht .	dba_sync ( ) returns true or false , if the synchronization succeeds or fails , respectively .
+27867	falls der angegebene socket vom typ af_inet ist , gibt socket_getsockname ( ) die ip addresse des lokalen rechners im parameter address in punktnotation zurück ( z.b .	if the given socket is of type af_inet , socket_getsockname ( ) will return the local ip address in dotted-quad notation ( e.g .
+6717	märz , festgelegt .	the equinox is assumed to always fall on 21st march , so the calculation reduces to determining the date of the full moon and the date of the following sunday .
+26864	siehe beschreibung von sesam_query ( ) für eine beispielhafte anwendung der funktion sesam_field_array ( ) .	see the sesam_query ( ) function for an example of the sesam_field_array ( ) use .
+39088	wenn ihr server php unterstützt , müssen sie nichts machen .	let 's say you want to save precious bandwidth and develop locally .
+36489	sie können diese einstellung mit der funktion ifx_textasvarchar ( ) zur laufzeit ändern .	you can override the setting at runtime with ifx_textasvarchar ( ) .
+38033	diese php erweiterung stellt eine parserunabhängige api für xslt-transformationen zur verfügung .	currently this extension only supports the sablotron library from the ginger alliance .
+14992	anmerkung :	note :
+11336	siehe auch : ifx_errormsg ( )	see also : ifx_errormsg ( )
+17795	die argumente sind identisch , nur wird hier der typ des feldes zurückgegeben .	the arguments are identical , but the field type is returned .
+13428	gibt bei erfolg true zurück , bei einem fehler false .	returns true on success , or false on failure .
+13448	siehe auch ingres_query ( ) , ingres_rollback ( ) und ingres_autocommit ( ) .	see also ingres_query ( ) , ingres_rollback ( ) , and ingres_autocommit ( ) .
+31401	e ist ein faktor für das gewicht 1 ( url weight bit ) d ist ein faktor für das gewicht 2 ( bodyweight bit ) c ist ein faktor für das gewicht 4 ( titleweight bit ) b ist ein faktor für das gewicht 8 ( keywordweight bit ) a ist ein faktor für das gewicht 16 ( descweight bit )	e is a factor for weight 1 ( url weight bit ) d is a factor for weight 2 ( bodyweight bit ) c is a factor for weight 4 ( titleweight bit ) b is a factor for weight 8 ( keywordweight bit ) a is a factor for weight 16 ( descweight bit )
+22219	beispiel 1. openssl_pkcs7_sign ( ) beispiel	/ / the message you want to sign so that recipient can be sure it was you that / / sent it $ data = eod you have my authorization to spend $ 10,000 on dinner expenses .
+27992	wenn auf win32-systemen somaxconn gesetzt ist , ist der dienstanbieter verantwortlich für den socket und muss die warteschlange auf einen vernünftigen maximalwert begrenzen .	on win32 , if passed somaxconn , the underlying service provider responsible for the socket will set the backlog to a maximum reasonable value .
+17313	der letzte tag eines gegebenen monats kann als der tag `` 0 '' des nächsten monats ausgedrückt werden ( nicht als der tag `` -1 '' ) .	the last day of any given month can be expressed as the `` 0 '' day of the next month , not the -1 day .
+38250	wenn sie php zum zugriff auf eine datenbank benutzen , es sei denn diese datenbank hat eine integrierte zugriffskontrolle , müssen sie dem benutzer `` nobody '' zugriffsrechte auf die datenbank erteilen .	for example , if you are using php to access a database , unless that database has built-in access control , you will have to make the database accessable to the `` nobody '' user .
+27218	sie müssen unset ( ) aufrufen , um die entsprechende globale variable zu entfernen .	you must call unset ( ) to remove the corresponding global variable .
+11865	die koordinaten beziehen sich auf die linke obere ecke .	there is a problem due to palette image limitations ( 255+1 colors ) .
+34811	daneben besteht die möglichkeit aus funktionen heraus werte mit return by-reference zurückzugeben .	the third thing reference can do is return by reference .
+534	anhang d .	appendix d .
+801	eines der vorteile von asp ist , dass es , weil vbscript verwendet wird , relativ leicht zu erlernen ist , wenn sie bereits visual basic programmieren können .	some of the pros of asp is that since it primarily uses vbscript it ' s relatively easy to pick up the language if you 're already know how to program in visual basic .
+27317	sobald das cookie aber von ihrem skript gelesen wird , werden alle werte in ein einziges array mit dem cookie-namen eingelesen :	this has the effect of setting as many cookies as you have array elements , but when the cookie is received by your script , the values are all placed in an array with the cookie 's name :
+21491	sie gibt nicht die anzahl der zurückgelieferten zeilen von einem select statements zurück !	this function will not tell you the number of rows that a select will return !
+38110	sie sollten nicht versuchen , diese namen als variablen , funktionen , konstanten oder methodennamen zu verwenden .	these lists include keywords and predefined variable , constant , and class names .
+33707	bei einer neuinstallation ist es ratsam , erst php zu installieren und zu testen , bevor sie erweiterungen in der php.ini aktivieren .	select the `` execute `` -checkbox
+1284	php prüft das vorhandensein einer authtype php prüft das vorhandensein einer authtype apache-direktive , um zu entscheiden , ob eine externe authentifizierung aktiv ist .	as of php 4.3.0 , in order to prevent someone from writing a script which reveals the password for a page that was authenticated through a traditional external mechanism , the php_auth variables will not be set if external authentication is enabled for that particular page and safe mode is enabled .
+31206	zum beispiel `` mysql_bar_odbc '' . mnogosearch wird alle dokumente zurückliefern die das wort `` mysql '' oder das wort `` odbc `` enthalten .	for example `` mysql_bar_odbc '' . mnogosearch will find any urls , that contain word `` mysql '' or word `` odbc `` .
+4679	dba_replace ( ) ersetzt oder fügt in der durch handle spezifizierten datenbank einen datensatz ein , der durch den schlüssel key und den wert value beschrieben wird .	dba_replace ( ) replaces or inserts the entry described with key and value into the database specified by handle .
+28284	funktionen , die durch old_function definiert werden , können nicht von php selbst aufgerufen werden .	functions declared as old_function can not be called from php 's internal code .
+24512	pg_field_size ( ) liefert die interne speichergrösse ( in bytes ) des angegebenen feldes in dem durch result pg_field_size ( ) liefert die interne speichergrösse ( in bytes ) des angegebenen feldes in dem durch result bezeichneten postgresql-ergebnis zurück .	pg_field_size ( ) returns the internal storage size ( in bytes ) of the field number in the given postgresql result .
+4761	gibt die anzahl der datenfelder ( spalten ) in der angegebenen datenbank zurück .	returns the number of fields ( columns ) in the specified database .
+8011	der datei-zeiger fp muss gültig sein , d.h. die datei , auf die gezeigt wird , muss zuvor mit fopen ( ) , popen ( ) , oder fsockopen ( ) geöffnet worden sein .	the file pointer must be valid , and must point to a file successfully opened by fopen ( ) , popen ( ) , or fsockopen ( ) .
+8597	gibt bei erfolg einen stream zurück , sonst false .	the port the port parameter specifies an alternate port to connect to .
+17225	beide teile des strings werden in sekunden zurückgegen .	both portions of the string are returned in units of seconds .
+33032	php 5 wird die neue zend engine 2.0 enthalten .	php 5 will include the new zend engine 2.0 .
+28733	siehe auch addcslashes ( ) .	see also addcslashes ( ) .
+35368	inhalt des accept-charset : -headers der aktuellen anforderung ( sofern es einen gibt ) .	using the available php reserved predefined variables , like the superglobal arrays , is preferred .
+13598	für nähere informationen schauen sie sich den ingres / openapi user guide - appendix c an .	for detailed information , see the ingres / openapi user guide - appendix c .
+34602	die backticks sind keine einfachen anführungszeichen !	note that these are not single-quotes !
+1998	wenn sie nur einen eintrag auswählen , liefert array_rand ( ) den schlüssel eines zufälligen eintrages .	if you are picking only one entry , array_rand ( ) returns the key for a random entry .
+30837	? php define_syslog_variables ( ) ; / / öffne syslog , schließe die prozess-id ( pid ) ein , sende / / die log-meldungen an die standard-fehler-ausgabe und benutze / / einen user-definierten log-mechanismus . openlog ( `` myscriplog '' , log_pid _bar_ log_perror , log_local0 ) ; / / etwas code if ( authorized_client ( ) ) { / / mache etwas } else { / / unerlaubter client ! / / logge den zugriff $ access = date ( `` y / m/d h : i : s '' ) ; syslog ( log_warning , '' unauthorisierter client : $ access $ remote_addr ( $ http_user_agent ) '' ) ; } closelog ( ) ; ?	on windows nt , the syslog service is emulated using the event log .
+6744	die funktion setzt die ebcdic-kodierte zeichenkette ebcdic_str in ihre äquivalente ascii-darstellung um ( binärfest ) , und liefert das konvertierte ergebnis zurück .	it translates the ebcdic encoded string ebcdic_str to its equivalent ascii representation ( binary safe ) , and returns the result .
+15909	mcal_day_of_week ( ) returns the day of the week of the given date	possible return values range from 0 for sunday through 6 for saturday .
+1375	wie oben erwähnt kann man jedoch ausschließlich neue dateien anlegen , wenn man url fopen ( ) wrapper benutzt .	unfortunately that would not work because the fopen ( ) call will fail if the remote file already exists .
+30578	beispiel 1. swftext ( ) example	example 1. swftext ( ) example
+2380	base64-kodierte daten benötigen ungefähr 33 % mehr speicher als die originaldaten .	base64-encoded data takes about 33 % more space than the original data .
+37056	wenn libpthread hier nicht gelistet ist , dann muss der webserver neu übersetzt werden :	please note that on some systems like unixware it is libthread instead of libpthread .
+37113	dieses modul nutzt die funktionen von openssl zur erzeugung und überprüfung von signaturen und zum versiegeln ( verschlüsseln ) und öffnen ( entschlüsseln ) von daten .	to use php ' s openssl support you must also compile php -- with-openssl [ =dir ] .
+18535	der nächste aufruf von mysql_fetch_row ( ) liefert den entsprechenden datensatz .	the next call to mysql_fetch_row ( ) would return that row .
+548	tabelle d-1 .	table d-1 .
+35204	weitere informationen über solche umwandlungen finden sie in den unix manualseiten unter strtod ( 3 ) .	for more information on this conversion , see the unix manual page for strtod ( 3 ) .
+6848	ersetzen von urls durch links	replace urls with links
+15138	list ( ) weist die werte von rechts beginnend zu .	list ( ) assigns the values starting with the right-most parameter .
+14614	anzahl der einträge im ergebnis , false im fehlerfall .	returns number of entries in the result or false on error .
+765	input name= '' meinarray [ ] `` input name= '' meinarray [ ] '' input name= '' meinanderesarray [ ] `` input name= '' meinanderesarray [ ] ''	input name= '' myarray [ ] `` input name= '' myarray [ ] '' input name= '' myotherarray [ ] `` input name= '' myotherarray [ ] ''
+24132	? php pfpro_init ( ) ; $ transaction = array ( user = 'mylogin ' , pwd = 'mypassword ' , trxtype = 's ' , tender = ' c ' , amt = 1.50 , acct = '4111111111111111 ' , expdate = '0904 ' ) ; $ response = pfpro_process ( $ transaction ) ; if ( ! $ response ) { die ( `` could n't establish link to verisign.\n '' ) ; } echo `` verisign response code was `` . $ response [ result ] ; echo `` , which means : `` . $ response [ respmsg ] . `` \n '' ; echo `` \nthe transaction request : '' ; print_r ( $ transaction ) ; echo `` \nthe response : `` ; print_r ( $ response ) ; pfpro_cleanup ( ) ; ?	? php pfpro_init ( ) ; $ transaction = array ( 'user '= 'mylogin ' , 'pwd ' = 'mypassword ' , 'partner '= 'verisign ' , 'trxtype ' = 's ' , 'tender '= ' c ' , 'amt ' = 1.50 , 'acct '= '4111111111111111 ' , 'expdate ' = '0904 ' ) ; $ response = pfpro_process ( $ transaction ) ; if ( ! $ response ) { die ( `` could n't establish link to verisign.\n '' ) ; } echo `` verisign response code was `` . $ response [ 'result ' ] ; echo `` , which means : `` . $ response [ 'respmsg ' ] . `` \n '' ; echo `` \nthe transaction request : '' ; print_r ( $ transaction ) ; echo `` \nthe response : `` ; print_r ( $ response ) ; pfpro_cleanup ( ) ; ?
+21362	verbindungen werden gemeinsam wärend eines skriptes genutzt , wenn ocilogon ( ) benutzt wird .	connections are shared at the page level when using ocilogon ( ) .
+35470	hallo welt .	i.e . they both produce : hello world .
+33738	für windows nt , mkdir % systemdrive % \tmp .	library files : c : \work\win32build\lib
+19150	? php mysql_connect ( `` localhost '' , `` mysql_user '' , `` mysql_password '' ) ; $ result = mysql_list_tables ( `` mydb '' ) ; for ( $ i = 0 ; $ i mysql_num_rows ( $ result ) ; $ i++ ) printf ( `` table : % s\n '' , mysql_tablename ( $ result , $ i ) ) ; mysql_free_result ( $ result ) ; ? ?	? php mysql_connect ( `` localhost '' , `` mysql_user '' , `` mysql_password '' ) ; $ result = mysql_list_tables ( `` mydb '' ) ; for ( $ i = 0 ; $ i mysql_num_rows ( $ result ) ; $ i++ ) printf ( `` table : % s\n '' , mysql_tablename ( $ result , $ i ) ) ; mysql_free_result ( $ result ) ; ?
+26951	suche relativ zur aktuellen position ; offset kann positiv oder negativ sein und wird auch als standard-offset für weitere abfragen gesetzt	fetch relative to current scroll position , where offset can be a positive or negative offset value ( this also sets the default `` offset `` value for subsequent fetches ) .
+21214	in diesem zusammenhang ist auch die ocibindbyname ( ) zu beachten .	see also the ocibindbyname ( ) function .
+24208	weitere informationen , wie sie multibyte unterstützung aktivieren , und welche kodierungen unterstützt werden , entnehmen sie dem postgresql-manual .	refer to postgresql manual for details to enable multibyte support and encoding supported .
+1629	beispiel 1. apache_request_headers ( ) beispiel	example 1. apache_request_headers ( ) example
+481	der case -ausdruck kann eine prüfung einfacher typen sein , also von integer - oder fließkomma-zahlen oder von strings / zeichenketten .	the case expression may be any expression that evaluates to a simple type , that is , integer or floating-point numbers and strings .
+26935	? php if ( sesam_connect ( `` mycatalog '' , `` myschema '' , `` otto '' ) ) { if ( sesam_execimm ( `` insert into mytable values ( * , 'small test ' , 0 , 8 , 15 ) '' ) sesam_execimm ( `` insert into othertable values ( * , 'another test ' , 1 ) '' ) ) sesam_commit ( ) ; else sesam_rollback ( ) ; } ?	? php if ( sesam_connect ( `` mycatalog '' , `` myschema '' , `` otto '' ) ) { if ( sesam_execimm ( `` insert into mytable values ( * , 'small test ' , 0 , 8 , 15 ) '' ) sesam_execimm ( `` insert into othertable values ( * , 'another test ' , 1 ) '' ) ) sesam_commit ( ) ; else sesam_rollback ( ) ; } ?
+1179	beispiel 18-2 .	example 18-2 .
+213	mögliche werte sind vt_ui1 , vt_ui2 , vt_ui4 , vt_i1 , vt_i2 , vt_i4 , vt_r4 , vt_r8 , vt_int , vt_uint , vt_bool , vt_error , vt_cy , vt_date , vt_bstr , vt_decimal , vt_unknown , vt_dispatch und vt_variant .	possible values are vt_ui1 , vt_ui2 , vt_ui4 , vt_i1 , vt_i2 , vt_i4 , vt_r4 , vt_r8 , vt_int , vt_uint , vt_bool , vt_error , vt_cy , vt_date , vt_bstr , vt_decimal , vt_unknown , vt_dispatch and vt_variant .
+38449	das sind alles informationen , die ausgenutzt werden können .	this is all information that can be exploited .
+2244	beispiel 1. asort ( )	example 1. asort ( ) example
+31422	nur endungen werden normalerweise unterstützt .	prefixes support may also be found useful for site 's spelling checking purposes .
+5596	oracle 8 funktionen	oracle 8 functions
+26203	? php $ exif = read_exif_data ( 'p0001807.jpg ' ) ; while ( list ( $ k , $ v ) =each ( $ exif ) ) { echo `` $ k : $ v br \n '' ; } ?	the read_exif_data ( ) function is an alias for exif_read_data ( ) .
+37572	in sesam müssen schlüsselwörter in anführungsstrichen ( ? ? ? ) angegeben werden ( sql-standard ) schlüssel .	in sesam ( as in standard sql ) , such identifiers must be enclosed in double quotes ( or renamed ) .
+7254	benutzen sie fbsql_start_db ( ) , um die datenbank zu starten .	use fbsql_start_db ( ) to start the database .
+34487	d.h. der wert des ausdruckes `` $ a = 3 '' ist 3 .	that is , the value of `` $ a = 3 '' is 3 .
+34251	b . ´ $ a -= 5´ ( vermindert den wert von $ a um 5 ) oder ´ $ a * = 7´ ( multipliziert den wert von $ a mit 7 und weist das ergebnis $ a zu ) , usw .	any two-place operator can be used in this operator-assignment mode , for example ' $ a -= 5 ' ( subtract 5 from the value of $ a ) , ' $ b * = 7 ' ( multiply the value of $ b by 7 ) , etc .
+37359	die unterstützten umgebungsvariablen variieren von version zu version .	supported environment variables are different from version to version .
+18031	falls mssql_connect ( ) zum zweiten mal mit den selben argumenten aufgerufen wird , wird keine neue verbindung aufgebaut , sondern stattdessen die verbindungs-kennung der bereits bestehenden verbindung zurückgegeben .	in case a second call is made to mssql_connect ( ) with the same arguments , no new link will be established , but instead , the link identifier of the already opened link will be returned .
+27364	? php / * locale auf holland setzen * / setlocale ( lc_all , 'nl_nl ' ) ; / * ausgabe : vrijdag 22 december 1978 * / echo strftime ( `` % a % e % b % y '' , mktime ( 0 , 0 , 0 , 12 , 22 , 1978 ) ) ; / * versuche verschiedene mögliche locale namen für deutsch * / $ loc_de = setlocale ( lc_all , 'de_de @ euro ' , 'de_de ' , 'de ' , 'ge ' ) ; echo `` preferred locale for german on this system is ' $ loc_de ' '' ; ?	? php / * set locale to dutch * / setlocale ( lc_all , 'nl_nl ' ) ; / * output : vrijdag 22 december 1978 * / echo strftime ( `` % a % e % b % y '' , mktime ( 0 , 0 , 0 , 12 , 22 , 1978 ) ) ; / * try different possible locale names for german as of php 4.3.0 * / $ loc_de = setlocale ( lc_all , 'de_de @ euro ' , 'de_de ' , 'de ' , 'ge ' ) ; echo `` preferred locale for german on this system is ' $ loc_de ' '' ; ?
+1043	manchmal ist es sinnvoll , skripte sauber zu beenden , auch wenn kein browser mehr zur verfügung steht , der die ausgabe empfängt .	sometimes it is handy to always have your scripts run to completion even if there is no remote browser receiving the output .
+33491	vorsicht wenn sie dies tun , sie könnten ihren apache webserver vermurksen !	be careful when you do this , you could screw up your apache web server !
+8415	fputs ( ) ist ein alias für die funktion fwrite ( ) , und ist in jeder hinsicht identisch mit ihr .	fputs ( ) is an alias to fwrite ( ) , and is identical in every way .
+33696	kopieren sie die gewünschte ini datei ( siehe unten ) in ihr ' % windows % 'verzeichnis auf windows 9x / me , oder in ihr ' % systemroot % ' verzeichnis unter windows nt oder windows 2000 , und benennen sie sie in php.ini um .	please do not forget the last backslash . ex : c : \php\extensions\
+2401	diese funktion extrahiert aus einer vollständigen pfadangabe den namen der datei und gibt diesen zurück .	given a string containing a path to a file , this function will return the base name of the file .
+22054	tabelle 2. openlog ( ) -möglichkeiten	table 2. openlog ( ) facilities
+26772	nachfolgende aufrufe von sesam_fetch_array ( ) liefern die nächste zeile ( oder die vorhergehende , höchste / niedrigste je nach den attributen ) im ausgabesatz oder false wenn keine zeilen mehr verfügabr sind .	subsequent calls to sesam_fetch_array ( ) would return the next ( or prior , or n'th next / prior , depending on the scroll attributes ) row in the result set , or false if there are no more rows .
+34810	hierbei beziehen sich der lokale variablenname als auch der variablenname der aufrufenden instanz auf denselben variableninhalt :	example :
+34939	das boolean false	the boolean false itself
+34745	referenzen können nun als hardlinks im dateisystem verstanden werden .	references can be thought of as hardlinking in unix filesystem .
+27372	setzt magic_quotes_runtime . ( 0 für aus , 1 für an ) .	set the current active configuration setting of magic_quotes_runtime ( 0 for off , 1 for on ) .
+1372	? php $ file = fopen ( `` ftp : / /ftp.example.com / incoming / outputfile '' , `` w '' ) ; if ( ! $ file ) { echo `` p datei konnte zum schreiben nicht geöffnet werden.\n '' ; exit ; } / * schreibe die daten hier hin . * / fputs ( $ file , `` $ http_user_agent\n '' ) ; fclose ( $ file ) ; ?	? php $ file = fopen ( `` ftp : / /ftp.example.com / incoming / outputfile '' , `` w '' ) ; if ( ! $ file ) { echo `` p unable to open remote file for writing.\n '' ; exit ; } / * write the data here . * / fputs ( $ file , $ _server [ 'http_user_agent ' ] . `` \n '' ) ; fclose ( $ file ) ; ?
+35283	zur übertragung eines formulars kann auch ein bild ( image ) statt eines übertragungs-schalters ( submit-button ) benutzt werden , dessen tag wie folgt aussieht :	you may , for example , group related variables together , or use this feature to retrieve values from a multiple select input .
+2069	ist offset negativ , beginnt die sequenz offset elemente vor dem ende von array .	if offset is negative , the sequence will start that far from the end of the array .
+31322	udm_ispell_type_affix - gibt an , dass die ispell-daten aus einer datei geladen werden sollen und initiiert das laden der anhangsdaten .	udm_ispell_type_affix - indicates that ispell data should be loaded from file and initiates loading affixes file .
+36215	den pfad sollten sie immer angeben , wenn sie frontbase nicht im standardverzeichnis installiert haben .	fbsql.default_database
+24284	pg_copy_from ( ) fügt datensätze aus einem array in eine tabelle ein .	pg_copy_from ( ) insert records into a table from rows .
+10025	siehe auch highlight_file ( ) und show_source ( ) .	see also highlight_file ( ) , and show_source ( ) .
+23052	die folgenden arrayelemente werden zurückgegeben : den verzeichnisnamen dirname , den dateinamen basename , und die dateinamenserweiterung extension .	the following array elements are returned : dirname , basename and extension .
+690	kann ich mehrere verschiedene php-versionen zur selben zeit laufen lassen ?	can i run several versions of php at the same time ?
+37525	konfigurationshinweise :	required for using sesam functions .
+21946	mit dem optionalen string format kann ein allgemeines tabellenformat angegeben werden .	with the optional string argument format , additional overall table formatting can be done .
+39613	beispiel 33-4 .	example 33-4 .
+13393	weitere beispiele zu require_once ( ) und include_once ( ) können sie dem pear -code entnehmen , welcher im aktuellsten php-source-code enthalten ist .	for more examples on using require_once ( ) and include_once ( ) , look at the pear code included in the latest php source code distributions .
+4714	memo . ( beachten sie , dass diese von php nicht unterstützt werden . ) auch diese haben keine länge oder nachkommastellen .	memo . ( note that these are n't supported by php . ) these do not have a length or precision .
+850	wenn sie probleme mit ihren quelltexten haben , müssen sie den teil , der nicht funktioniert , mitschicken .	if you ' re having problems with your source code you need to include the part of the code that is n't working .
+33223	standardmäßig wird php als ein cgi programm kompiliert .	the default is to build php as a cgi program .
+8666	anmeldung beim angegebenen ftp-stream .	returns true on success or false on failure .
+12528	das beispiel-skript erzeugt eine schwarze gif-grafik von 400x30 pixel mit dem weissen text `` teste ... '' im tt-font arial .	this example script will produce a black gif 400x30 pixels , with the words `` testing ... '' in white in the font arial .
+2173	ist der optionale parameter userdata angegeben , so wird er als dritter parameter an die funktion function übergeben .	if the optional userdata parameter is supplied , it will be passed as the third parameter to the callback function .
+36391	interbase befindet sich gerade auf dem weg zum open source !	c : \winnt\system32 or c : \windows\system32 ) .
+38114	parent	using them as variable names is generally ok , but could lead to confusion .
+517	dieses material kann unter den bedingungen der open publication license , v1.0 oder neuer ( die aktuellste version ist unter http : / /www.opencontent.org / openpub / erhältlich ) verteilt werden .	this material may be distributed only subject to the terms and conditions set forth in the open publication license , v1.0 or later ( the latest version is presently available at http : / /www.opencontent.org / openpub / ) .
+35028	ein wert wird automatisch konvertiert , falls ein operator , eine funktion oder eine kontrollstruktur ein integer argument erfordert .	you can also convert a value to integer with the function intval ( ) .
+2175	diese warnmeldungen können unterdrückt werden , indem man dem funktionsaufruf von array_walk ( ) den operator @ voranstellt , oder error_reporting ( ) verwendet .	these warnings may be suppressed by prepending the php error operator @ to the array_walk ( ) call , or by using error_reporting ( ) .
+36236	diese einträge finden sich in der fdf dokumentation unter / f-key oder / status-key .	those entries are referred to in the fdf documentation as / f-key or / status-key .
+268	break bricht die ausführung der aktuellen for , foreach while , do .. while or switch anweisungs-sequenz ab .	break ends execution of the current for , foreach while , do .. while or switch structure .
+39112	ältere skripte , bücher und tutorials gehen eventuell davon aus , dass diese einstellung auf on ältere skripte , bücher und tutorials gehen eventuell davon aus , dass diese einstellung auf on steht .	older scripts , books , and tutorials may rely on this directive being on .
+21958	der erste aufruf von odbc_result ( ) liefert den wert des drittes feldes im aktuellen datensatz im abfrageergebnis zurück .	the first call to odbc_result ( ) the first call to odbc_result ( ) returns the value of the third field in the current record of the query result .
+10068	'' ( kaufmännisches und ) wird zu 'amp ; '	'' ( ampersand ) becomes ' amp ; '
+11357	der wert dieses parameters kann `` next '' , `` previous '' , `` current '' , `` first '' , `` last '' oder eine zahl sein .	position is an optional parameter for a `` fetch '' operation on `` scroll `` cursors : `` next '' , `` previous '' , `` current '' , `` first '' , `` last '' or a number .
+38379	beispiel 5-6 .	example 5-6 .
