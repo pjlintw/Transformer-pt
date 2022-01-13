@@ -23,7 +23,14 @@ from datasets import ClassLabel, load_dataset, load_metric
 
 from models.rnn import LSTMEncoder,CustomLSTM
 from models.transformer import Transformer
-from models.utils import create_transformer_masks, init_weights, prepare_discriminator_data,convert_tensor_to_tokens,save_k_exmaple_from_tensor,check_k_exmaple_from_tensor, build_vocab
+from models.utils import (create_transformer_masks, 
+    init_weights, 
+    prepare_discriminator_data,
+    convert_tensor_to_tokens,
+    save_k_exmaple_from_tensor,
+    check_k_exmaple_from_tensor, 
+    build_vocab,
+    pad_sequence)
 from models.transformer_blocks import WarmupScheduler
 
 from pprint import pprint
@@ -182,7 +189,7 @@ def train_generator_MLE(model,
 
         # Save output file
         # Save model
-        if (epoch+1) % 1 == 0:
+        if (epoch+1) % 5 == 0:
             if args.do_eval:
                 msg = f"### Evaluate ###"
                 logging.info(msg)
@@ -302,20 +309,9 @@ def main():
 
 
     ### Create vocabulary, token-to-index, index-to-token
-    speical_tokens = ["[CLS]", "[UNK]", "[SEP]", "[PAD]"]
-    src_vocab = build_vocab(args.source_vocab)
-    src_vocab.update(speical_tokens)
+    src_vocab, (src_tok2id, src_id2tok) = build_vocab(args.source_vocab, speical_tokens=True)
+    tgt_vocab, (tgt_tok2id, tgt_id2tok) = build_vocab(args.target_vocab, speical_tokens=True)
     
-    tgt_vocab = build_vocab(args.target_vocab)
-    tgt_vocab.update(speical_tokens)
-
-    src_tok2id = {w: idx for idx, w in enumerate(src_vocab)}
-    src_id2tok = {v: k for k, v in src_tok2id.items()}
-
-    tgt_tok2id = {w: idx for idx, w in enumerate(tgt_vocab)}
-    tgt_id2tok = {v: k for k, v in tgt_tok2id.items()}
-
-
     src_vocab_size = len(src_id2tok)
     tgt_vocab_size = len(tgt_id2tok)
 
@@ -323,7 +319,6 @@ def main():
         print("source ids [CLS], [UNK], [SEP], [PAD]", src_tok2id["[CLS]"],src_tok2id["[UNK]"],src_tok2id["[SEP]"],src_tok2id["[PAD]"])
         print("target ids [CLS], [UNK], [SEP], [PAD]", tgt_tok2id["[CLS]"],tgt_tok2id["[UNK]"],tgt_tok2id["[SEP]"],tgt_tok2id["[PAD]"])
 
-    
     # Create `tokenizer_collector` for trainer function
     tokenizer_collector = dict()
     tokenizer_collector["src_tok2id"] = src_tok2id
@@ -349,24 +344,24 @@ def main():
             [ '[what]',  '[CLS]','what', 'was', 'the', 'average', 'in', '2001', '[SEP]', '[PAD]']
 
         """
-        def _pad_sequence(sequence, max_seq_len, n_special_token=0):
-            sent_len = len(sequence)
-            max_seq_len = max_seq_len - n_special_token
-            max_sent_len = max_seq_len if sent_len >= max_seq_len else (sent_len)
+        # def _pad_sequence(sequence, max_seq_len, n_special_token=0):
+        #     sent_len = len(sequence)
+        #     max_seq_len = max_seq_len - n_special_token
+        #     max_sent_len = max_seq_len if sent_len >= max_seq_len else (sent_len)
                
-            # Extend words list with special tokens
-            padded_sentence_lst = ["[CLS]"]+ sequence[:max_sent_len] + ["[SEP]"] 
+        #     # Extend words list with special tokens
+        #     padded_sentence_lst = ["[CLS]"]+ sequence[:max_sent_len] + ["[SEP]"] 
 
-            # [CLS] + sentence + [SEP]
-            padded_len = len(padded_sentence_lst)
+        #     # [CLS] + sentence + [SEP]
+        #     padded_len = len(padded_sentence_lst)
             
-            # Add [PAD]
-            num_pad = max_seq_len+n_special_token - padded_len
-            padded_sentence_lst += ["[PAD]"] * num_pad
+        #     # Add [PAD]
+        #     num_pad = max_seq_len+n_special_token - padded_len
+        #     padded_sentence_lst += ["[PAD]"] * num_pad
 
-            #print(padded_sentence_lst)
-            assert len(padded_sentence_lst) == (max_seq_len+n_special_token)
-            return padded_sentence_lst
+        #     #print(padded_sentence_lst)
+        #     assert len(padded_sentence_lst) == (max_seq_len+n_special_token)
+        #     return padded_sentence_lst
 
         feature_dict = dict()
         # token_ids = list()
@@ -377,8 +372,8 @@ def main():
         
         ### Add special token and pad ###
         # 2 for [CLS] and [SEP]
-        padded_source_sentence_lst = _pad_sequence(source_sent, max_seq_len, 2)
-        padded_target_sentence_lst = _pad_sequence(target_sent, max_seq_len, 2)
+        padded_source_sentence_lst = pad_sequence(source_sent, max_seq_len, 2)
+        padded_target_sentence_lst = pad_sequence(target_sent, max_seq_len, 2)
         
         # Add padded tokens 
         feature_dict["source_tokens"] = padded_source_sentence_lst

@@ -5,13 +5,16 @@ from .encoder import TransformerEncoder
 from .decoder import TransformerDecoder
 
 
-def build_vocab(vocab_file, min_count=0):
+def build_vocab(vocab_file, speical_tokens, min_count=0):
     """Build vocabulary from file.
 
     Args:
       vocab_file: path  
     """
+    speical_tokens = ["[CLS]", "[UNK]", "[SEP]", "[PAD]"]
     vocab = set()
+    tok2id, id2tok = dict(), dict()
+    idx = 0
     with open(vocab_file, "r") as f:
         for line in f:
             if line == "\n":
@@ -19,7 +22,17 @@ def build_vocab(vocab_file, min_count=0):
             word, freq = line.strip().split("\t")
             if int(freq) >= min_count:
                 vocab.add(word)
-    return vocab
+                tok2id[word] = idx
+                id2tok[idx] = word
+                idx += 1
+
+    if speical_tokens:
+        for tok in speical_tokens:
+            vocab.add(word)
+            tok2id[word] = idx
+            id2tok[idx] = word
+            idx+=1
+    return vocab, (tok2id, id2tok)
 
 def check_k_exmaple_from_tensor(example_lst, y_pred_tensor, y_true_tensor, k_example=20):
     ### Convert to python ###
@@ -186,8 +199,6 @@ def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx, device):
     combined_mask = torch.maximum(dec_target_padding_mask, look_ahead_mask)
 
     return enc_pad_mask, combined_mask, dec_pad_mask
-
-
 
 
 def pad_sequence(sequence, max_seq_len, n_special_token=0):
