@@ -71,7 +71,6 @@ class TransformerEncoder(nn.Module):
         else:
             x += self.pos_encoding[:, :seq_len, :]
 
-
         if training is True:
             x = self.dropout(x)
 
