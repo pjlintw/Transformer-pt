@@ -77,7 +77,6 @@ def scaled_dot_product_attention(q, k, v, mask=None):
     # as (batch_size, num_head, head_dim, seq_len_k)
     transposed_k = k.permute(0,1,3,2)
 
-    
     # attention_score: shape (batch_size, num_head, seq_len_q, seq_len_k)
     attn_logit = torch.matmul(q, transposed_k)
 
@@ -85,8 +84,6 @@ def scaled_dot_product_attention(q, k, v, mask=None):
     head_dim = q.size()[-1]
     # head_dim = tf.cast(tf.shape(k)[-1], tf.float32)
     scaled_attn_logit = attn_logit / (head_dim **(1/2.0))
-
-    
     
     if mask is not None:
         scaled_attn_logit += (mask * -1e9)

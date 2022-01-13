@@ -9,9 +9,6 @@ import pickle
 import numpy as np
 from functools import partial
 
-import captum
-import spacy
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -22,9 +19,6 @@ import torchtext
 import torchtext.legacy.data
 from torchtext import vocab
 from torchtext.vocab import Vocab
-
-from captum.attr import LayerIntegratedGradients, TokenReferenceBase, visualization
-
 from datasets import ClassLabel, load_dataset, load_metric
 
 from models.rnn import LSTMEncoder,CustomLSTM
@@ -59,8 +53,7 @@ def get_args():
     parser.add_argument('--target_vocab', type=str, required=True)
     
     # Modeling generator
-    parser.add_argument('--tf_layers', type=int, default=2)
-    parser.add_argument('--tf_embedding_dims', type=int, default=64) # 256
+    parser.add_argument('--tf_layers', type=int, default=4)
     parser.add_argument('--tf_dims', type=int, default=128) # 512 
     parser.add_argument('--tf_heads', type=int, default=8)
     parser.add_argument('--tf_dropout_rate', type=float, default=0.1)
@@ -73,7 +66,7 @@ def get_args():
     parser.add_argument('--do_eval', type=bool, default=False)
     parser.add_argument('--do_predict', type=bool, default=False)
     parser.add_argument('--batch_size', type=int, default=64)
-    parser.add_argument('--mle_epochs', type=int, default=3)
+    parser.add_argument('--mle_epochs', type=int, default=10)
     parser.add_argument('--max_steps', type=int, default=50)
     parser.add_argument('--max_train_samples', type=int)
     parser.add_argument('--max_val_samples', type=int)
@@ -108,7 +101,9 @@ def compute_accuracy(real, pred, pad_idx):
     
 
 def train_generator_MLE(model, 
-                        dataset,
+                        train_dataset,
+                        eval_dataset,
+                        test_dataset,
                         opt, 
                         logging_steps=50, 
                         epochs=1,
@@ -119,19 +114,22 @@ def train_generator_MLE(model,
     # vocab_size = tokenizer_dict["vocab_size"] 
     # id2tok = tokenizer_dict["id2tok"] 
     # tok2id = tokenizer_dict["tok2id"] 
-    # unk_idx = tokenizer_dict["tok2id"]["[UNK]"]
+    src_pad_idx =tokenizer_dict["src_tok2id"]["[PAD]"]
+    SOS_IDX = tokenizer_dict["tgt_tok2id"]["[CLS]"]
+    EOS_IDX = tokenizer_dict["tgt_tok2id"]["[SEP]"]
     PAD_IDX = tokenizer_dict["tgt_tok2id"]["[PAD]"]
-
 
     # nn.NLLLoss: use log-softmax as input 
     # nn.CrossEntropyLoss: use logit as input
     loss_fn = nn.CrossEntropyLoss(ignore_index=PAD_IDX)
 
     for epoch in range(epochs):
-        print('epoch %d : ' % (epoch + 1))
+        msg = 'epoch %d : ' % (epoch + 1)
+        logging.info(msg)
+        print(msg)
         total_loss = 0
         total_accuracy = 0
-        for step, features_dict in enumerate(dataset):
+        for step, features_dict in enumerate(train_dataset):
             opt.zero_grad()
 
             # Encoder input: (batch_size, seq_len)
@@ -164,7 +162,6 @@ def train_generator_MLE(model,
             #torch.nn.utils.clip_grad_norm_(generator.parameters(), 0.5)
             opt.step()
 
-
             pred = logits.argmax(-1)
             acc = compute_accuracy(real=tgt_out,
                                    pred=pred,
@@ -182,6 +179,52 @@ def train_generator_MLE(model,
             # Decode batch
             # pred_sentences = decode_batch(gen_inp, id2tok, unk_idx)
             # print(pred_sentences)
+
+        # Save output file
+        # Save model
+        if (epoch+1) % 1 == 0:
+            if args.do_eval:
+                msg = f"### Evaluate ###"
+                logging.info(msg)
+                print(msg)
+                avg_loss, avg_acc = model.evaluate(eval_dataset, args, PAD_IDX, compute_accuracy)
+                msg = f"Evaluation Epoch: {epoch+1}, avg Loss: {avg_loss:.2f}, avg Accuracy: {avg_acc:.2f}"
+                logging.info(msg)
+                print(msg)
+
+            ### Perform prediction on test set ###
+            if args.do_predict:
+                output_file = get_output_dir(args.output_dir, f"test.epoch-{epoch+1}.pred")
+                wf = open(output_file, "w")
+                for step, features_dict in enumerate(test_dataset):
+                    src = features_dict["source_ids"]
+                    source_tokens = features_dict["source_tokens"]
+                    target_tokens = features_dict["target_tokens"]
+                    # (batch_size, seq_len)
+                    output = model.sample(inp=src,
+                                          max_len=20,
+                                          sos_idx=SOS_IDX,
+                                          eos_idx=EOS_IDX,
+                                          src_pad_idx=src_pad_idx,
+                                          tgt_pad_idx=PAD_IDX,
+                                          device=args.device,
+                                          decode_strategy="greedy")
+                    # print("output", output)
+                    preds = output.cpu().detach().numpy()
+                    for sent_ids, src_sent, tgt_sent in zip(preds, source_tokens, target_tokens):
+                        sent = " ".join([ tokenizer_dict["tgt_id2tok"][tok_id] for tok_id in sent_ids ])
+                        wf.write(f"{sent}\t{src_sent}\t{tgt_sent}\n")
+                wf.close()
+                msg = f"Saving the translation result of test set to: {output_file}"
+                logging.info(msg)
+                print(msg)
+
+                ### Saving model ###
+                pt_file_tf = get_output_dir(args.output_dir, f"ckpt/tf.epoch-{epoch+1}.pt")
+                torch.save(model, pt_file_tf)
+                msg = f"Saving model to: {pt_file_tf}"
+                logging.info(msg)
+                print(msg)
 
 
 def get_output_dir(output_dir, file):
@@ -241,7 +284,8 @@ def main():
         json.dump(args.__dict__, f, indent=2)
         logger.info(f"Saving hyperparameters to: {write_path}")
 
-
+    args.device = device
+    print(args.device)
     ########## Load dataset from script. ##########
     # 'wiki-table-questions.py'
     datasets = load_dataset(args.dataset_script)
@@ -275,7 +319,7 @@ def main():
     src_vocab_size = len(src_id2tok)
     tgt_vocab_size = len(tgt_id2tok)
 
-    if debugging:
+    if args.debugging:
         print("source ids [CLS], [UNK], [SEP], [PAD]", src_tok2id["[CLS]"],src_tok2id["[UNK]"],src_tok2id["[SEP]"],src_tok2id["[PAD]"])
         print("target ids [CLS], [UNK], [SEP], [PAD]", tgt_tok2id["[CLS]"],tgt_tok2id["[UNK]"],tgt_tok2id["[SEP]"],tgt_tok2id["[PAD]"])
 
@@ -411,7 +455,8 @@ def main():
         enc_padding_mask, combined_mask, dec_padding_mask = create_transformer_masks(batch_src_pt, 
                                                                                      batch_tgt_inp, 
                                                                                      src_pad_idx=src_tok2id["[PAD]"],
-                                                                                     tgt_pad_idx=tgt_tok2id["[PAD]"])
+                                                                                     tgt_pad_idx=tgt_tok2id["[PAD]"],
+                                                                                     device=args.device)
         #  Batch of token list: (batch_size, seq_len)
         features_dict["source_tokens"] = src_token_batch 
         features_dict["target_tokens"] =  tgt_token_batch
@@ -479,9 +524,11 @@ def main():
     
 
     train_generator_MLE(model=model,
-                        dataset=train_iter,
+                        train_dataset=train_iter,
+                        eval_dataset=eval_iter,
+                        test_dataset=test_iter,
                         opt=gen_optimizer,
-                        logging_steps=10,
+                        logging_steps=args.logging_steps,
                         epochs=args.mle_epochs,
                         tokenizer_dict=tokenizer_collector,
                         args=args)

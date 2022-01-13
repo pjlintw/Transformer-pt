@@ -3,8 +3,10 @@ from .utils import create_transformer_masks
 from .encoder import TransformerEncoder
 from .decoder import TransformerDecoder
 
+import math
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 class Transformer(nn.Module):
     def __init__(self, 
@@ -19,7 +21,7 @@ class Transformer(nn.Module):
                  shared_emb_layer=None, # Whether use embeeding layer from encoder
                  rate=0.1):
         super(Transformer, self).__init__()
-
+        self.d_model = d_model
         self.pad_idx = padding_idx
 
         # (vocab_size, emb_dim)
@@ -35,7 +37,7 @@ class Transformer(nn.Module):
             self.shared_emb_layer = self.embedding_layer
         else:
             self.shared_emb_layer = shared_emb_layer
-        print(self.shared_emb_layer)
+        # print(self.shared_emb_layer)
         self.decoder = TransformerDecoder(num_layers, d_model, num_head,
                                          intermediate_dim,
                                          target_vocab_size,
@@ -55,6 +57,7 @@ class Transformer(nn.Module):
         """
         # Mapping
         src = self.embedding_layer(src)
+        src = torch.mul(src, (self.d_model**(1/2)))
 
         # (batch_size, inp_seq_len, d_model)
         enc_out = self.encoder(src, training, enc_padding_mask, gpu=cuda) #.cuda()
@@ -77,12 +80,12 @@ class Transformer(nn.Module):
         return final_output, dec_attn
 
 
-    def sample(self, inp, max_len, temperature, training, sos_idx, eos_idx, cuda):
+    def sample(self, inp, max_len, sos_idx, eos_idx, src_pad_idx, tgt_pad_idx, device, temperature=None, decode_strategy="greedy"):
         """Forward propagate for transformer.
         
         Args:
-          inp 
-          max_len
+          inp:
+          max_len:
           temperature
           sos_idx
           eos_idx
@@ -93,7 +96,7 @@ class Transformer(nn.Module):
         if torch.is_tensor(inp):
             pass
         else:
-            inp = torch.tensor(inp)
+            inp = torch.tensor(inp, device=device)
 
         #if cuda:
         #    inp = inp.cuda()
@@ -105,45 +108,95 @@ class Transformer(nn.Module):
         # (batch_size, 1)
         # Create a tensor on CPU by default
         output = torch.tensor([sos_idx]*batch_size).unsqueeze(1)
-        if cuda:
-            output=output.cuda()
+        if device:
+            output=output.to(device)
         assert output.shape[-1] == 1 
         
         for i in range(max_len-1):
+            # print(output)
+
             # enc_pad_mask, combined_mask, dec_pad_mask
-            enc_padding_mask, combined_mask, dec_padding_mask = create_transformer_masks(inp, output, self.pad_idx,gpu=cuda)
+            enc_padding_mask, combined_mask, dec_padding_mask = create_transformer_masks(inp,
+                                                                                         output, 
+                                                                                         src_pad_idx=src_pad_idx,
+                                                                                         tgt_pad_idx=tgt_pad_idx,
+                                                                                         device=device)
             # predictions.shape == (batch_size, seq_len, vocab_size)
             predictions, _ = self.forward(inp,     # (bathc_size, 1)
                                           output,  # (batch_size, 1-TO-MAXLEN)
-                                          training,
+                                          False,
                                           enc_padding_mask,
                                           combined_mask,
                                           dec_padding_mask,
-                                          cuda=cuda)
-            
+                                          cuda=device)
             
             # Select the last word from the seq_len dimension
             # (batch_size, 1, vocab_size) to (batch_size, voacb_size) 
             predictions = predictions[: ,-1:, :].squeeze() 
             # print("preds", predictions.shape)
 
-            # (batch_size, 1)
-            #assert inp.shape[-1] = 1
-            gumbel_distribution = gumbel_softmax_sample(predictions, temperature,gpu=cuda)
-            # (batch_size, vocab_size)
-            # print("gumbel", gumbel_distribution.shape)
+            if decode_strategy == "greedy":
+                predicted_idx = torch.argmax(predictions, dim=-1).unsqueeze(1)
+                # print(predicted_idx.shape)
+                # print(predicted_idx)
+            elif decode_strategy == "gumbel":
+                # (batch_size, 1)
+                # assert inp.shape[-1] = 1
+                gumbel_distribution = gumbel_softmax_sample(predictions, temperature,gpu=cuda)
+                # (batch_size, vocab_size)
+                # print("gumbel", gumbel_distribution.shape)
 
-            # (batch_sizes) to (bathc_size, 1)
-            predicted_idx = torch.argmax(gumbel_distribution, dim=-1).unsqueeze(1)
-            
+                # (batch_sizes) to (bathc_size, 1)
+                predicted_idx = torch.argmax(gumbel_distribution, dim=-1).unsqueeze(1)
+
             # print("pred idx", predicted_idx.shape)
             output = torch.cat((output, predicted_idx), 1)
-            
             # Update along with col
             #sampled_ids[:,i] = predicted_idx.squeeze()
         #print(sampled_ids==output[:,1:])
         return output
 
+
+    def evaluate(self, dataset, args, pad_idx, acc_fn):
+        """Perform evaluate."""
+        self.eval()
+        
+        total_loss = 0
+        total_accuracy = 0
+        step = 0
+        loss_fn = nn.CrossEntropyLoss(ignore_index=pad_idx)
+        for features_dict in dataset:
+            # Encoder input: (batch_size, seq_len)
+            src = features_dict["source_ids"]
+            # Decoder input and target: (batch_size, seq_len-1)
+            tgt_inp = features_dict["target_input"]
+            tgt_out = features_dict["target_output"]
+            
+            enc_padding_mask = features_dict["enc_padding_mask"]
+            combined_mask = features_dict["combined_mask"]
+            dec_padding_mask =features_dict["dec_padding_mask"]
+            
+            logits, attn = self.forward(src=src,
+                                        tgt=tgt_inp,
+                                        training=False,
+                                        enc_padding_mask=enc_padding_mask,
+                                        look_ahead_mask=combined_mask,
+                                        dec_padding_mask=dec_padding_mask,
+                                        cuda=args.gpu)
+
+            two_d_logits = logits.reshape(-1, logits.shape[-1])
+            loss = loss_fn(two_d_logits, tgt_out.reshape(-1))
+
+            pred = logits.argmax(-1)
+            acc = acc_fn(real=tgt_out,
+                         pred=pred,
+                         pad_idx=pad_idx)
+            total_loss += loss.item()
+            total_accuracy += acc
+            step+= 1
+        avg_loss = total_loss/ step
+        avg_acc = total_accuracy / step
+        return avg_loss, avg_acc
 
 def sample_gumbel(shape, eps=1e-20, device=None):
     """Sample from Gumbel(0, 1)"""

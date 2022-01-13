@@ -47,6 +47,7 @@ def save_k_exmaple_from_tensor(write_file, example_lst, y_pred_tensor, y_true_te
             wf.write(f"{y_true}\t{y_pred:.2f}\t{sentence}\n")
     print("Save file to {}".format(write_file))
 
+
 def convert_tensor_to_tokens(tensor_inp, tok2id, id2tok, first_k_example=None):
     """Convert tensor into list of examples.
 
@@ -152,7 +153,7 @@ def create_look_ahead_mask(seq_len):
     return mask
 
 
-def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx):
+def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx, device):
     """Creating three masks for TransformerEncoder and -Decoder 
     Args:
         src: shape (batch_size, src_len)
@@ -170,9 +171,9 @@ def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx):
     # This padding mask is used to mask the encoder outputs.
     dec_pad_mask = create_padding_mask(src, src_pad_idx)
 
-    # if gpu:
-    #     look_ahead_mask = create_look_ahead_mask(tgt.shape[1]).cuda()
-    #     dec_target_padding_mask = create_padding_mask(tgt, pad_idx).cuda()
+    if device is not None:
+        look_ahead_mask = create_look_ahead_mask(tgt.shape[1]).to(device)
+        dec_target_padding_mask = create_padding_mask(tgt, tgt_pad_idx).to(device)
     # else:
     #      look_ahead_mask = create_look_ahead_mask(tgt.shape[1])
     #      dec_target_padding_mask = create_padding_mask(tgt, pad_idx)
@@ -180,8 +181,8 @@ def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx):
     # Used in the 1st attention block in the decoder.
     # It is used to pad and mask future tokens in the input received by
     # the decoder.
-    look_ahead_mask = create_look_ahead_mask(tgt.shape[1])
-    dec_target_padding_mask = create_padding_mask(tgt, tgt_pad_idx)
+    # look_ahead_mask = create_look_ahead_mask(tgt.shape[1])
+    # dec_target_padding_mask = create_padding_mask(tgt, tgt_pad_idx)
     combined_mask = torch.maximum(dec_target_padding_mask, look_ahead_mask)
 
     return enc_pad_mask, combined_mask, dec_pad_mask
