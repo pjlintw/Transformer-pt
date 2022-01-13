@@ -509,9 +509,9 @@ def main():
     train_iter = DataLoader(train_dataset, batch_size=args.batch_size,
                             shuffle=True, collate_fn=generate_batch_fn)
     eval_iter = DataLoader(eval_dataset, batch_size=args.batch_size,
-                           shuffle=True, collate_fn=generate_batch_fn)
+                           shuffle=False, collate_fn=generate_batch_fn)
     test_iter = DataLoader(test_dataset, batch_size=args.batch_size,
-                           shuffle=True, collate_fn=generate_batch_fn)
+                           shuffle=False, collate_fn=generate_batch_fn)
 
     
     ### train model ###

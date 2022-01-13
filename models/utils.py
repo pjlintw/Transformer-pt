@@ -189,6 +189,27 @@ def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx, device):
 
 
 
+
+def pad_sequence(sequence, max_seq_len, n_special_token=0):
+    sent_len = len(sequence)
+    max_seq_len = max_seq_len - n_special_token
+    max_sent_len = max_seq_len if sent_len >= max_seq_len else (sent_len)
+               
+    # Extend words list with special tokens
+    padded_sentence_lst = ["[CLS]"]+ sequence[:max_sent_len] + ["[SEP]"] 
+
+    # [CLS] + sentence + [SEP]
+    padded_len = len(padded_sentence_lst)
+            
+    # Add [PAD]
+    num_pad = max_seq_len+n_special_token - padded_len
+    padded_sentence_lst += ["[PAD]"] * num_pad
+
+    # print(padded_sentence_lst)
+    assert len(padded_sentence_lst) == (max_seq_len+n_special_token)
+    return padded_sentence_lst 
+    
+
 if __name__ == "__main__":
     x = torch.tensor([[7, 6, 1, 0, 0], [1, 2, 3, 0, 0], [2, 0, 0, 0, 0]])
     y = torch.tensor([[1, 2, 3, 0, 0], [1, 2, 3, 0, 0], [2, 0, 0, 0, 0]])   

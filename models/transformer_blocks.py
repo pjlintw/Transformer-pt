@@ -142,6 +142,7 @@ class MultiHeadAttention(nn.Module):
             attn_w: shape (batch_size, num_head, seq_len_q, seq_len_k)
         """
         batch_size = q.shape[0]
+        k_batch_size = k.shape[0]
 
         # map embeding dim to dim
         q = self.w_q(q) #.cuda()
@@ -150,8 +151,8 @@ class MultiHeadAttention(nn.Module):
 
         # shape (batch_size, num_head, seq_len, head_dim)
         q = self.split_head(q, batch_size)
-        k = self.split_head(k, batch_size)
-        v = self.split_head(v, batch_size)
+        k = self.split_head(k, k_batch_size)
+        v = self.split_head(v, k_batch_size)
 
         # scaled_attn: (batch_size, num_head, seq_len_q, head_dim_v)
         # attn_weight: (batch_size, num_head, seq_len_q, seq_len_k)
