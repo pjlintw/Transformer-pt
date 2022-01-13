@@ -294,7 +294,6 @@ class Transformer(nn.Module):
         return decooded_output, decoded_log_probs
 
 
-
     def evaluate(self, dataset, args, pad_idx, acc_fn):
         """Perform evaluate."""
         self.eval()

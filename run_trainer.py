@@ -191,7 +191,7 @@ def train_generator_MLE(model,
                 msg = f"Evaluation Epoch: {epoch+1}, avg Loss: {avg_loss:.2f}, avg Accuracy: {avg_acc:.2f}"
                 logging.info(msg)
                 print(msg)
-
+            # results/word/L-4_D-256_H-8/test.epoch-20.pred
             ### Perform prediction on test set ###
             if args.do_predict:
                 output_file = get_output_dir(args.output_dir, f"test.epoch-{epoch+1}.pred")
