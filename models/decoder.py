@@ -31,7 +31,6 @@ class TransformerDecLayer(nn.Module):
         if training is True:
             attn1 = self.dropout1(attn1)
         out1 = self.layernorm1(attn1 + x)
-
         attn2, attn_weights_block2 = self.mha2(k=enc_output, v=enc_output, q=out1, mask=padding_mask)
         if training is True:
             attn2 = self.dropout2(attn2)
@@ -79,12 +78,13 @@ class TransformerDecoder(nn.Module):
         attention_weights = dict()
 
         if gpu:
-            x=x.cuda()
+            x = x.to(gpu)
+
         x = self.embedding(x)
         x = torch.mul(x, (self.d_model**(1/2)))
 
         if gpu:
-            x += self.pos_encoding[:, :seq_len, :].cuda()
+            x += self.pos_encoding[:, :seq_len, :].to(gpu)
         else:
             x += self.pos_encoding[:, :seq_len, :]
     

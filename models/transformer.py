@@ -199,11 +199,13 @@ class Transformer(nn.Module):
             pass
         else:
             inp = torch.tensor(inp, device=device)
-    
+   
+        ### Repeat k times: [batch_size, seq_len] -> [batch_size*k, seq_leg] ###
         batch_size = inp.shape[0]
-
-        ### Initialize the log probs and decoded output. Both has the shape (batch_size*k, 1]. ###
-        decooded_output = torch.tensor([sos_idx]*(batch_size*k), device=device).unsqueeze(1)
+        inp = inp.repeat(1,k).view(batch_size*k, -1)
+        ### Repeat k times: [batch_size, seq_len] -> [batch_size*k, seq_leg] ###
+                ### Initialize the log probs and decoded output. Both has the shape (batch_size*k, 1]. ###
+        decoded_output = torch.tensor([sos_idx]*(batch_size*k), device=device).unsqueeze(1)
         decoded_log_probs = torch.zeros((batch_size*k,1), device=device)
 
         ### Beam search steps ###
@@ -219,7 +221,7 @@ class Transformer(nn.Module):
             ### 1. Inference k sample ###
             # Repeat the decode input k times as the new input
             # Inference first token based on [CLS]
-            # [batch_size*k, vocab_size] -> [batch_size*k, k]
+            # logits.shape == [batch_size*k, seq_len, vocab_size] -> [batch_size*k, k]
             logits, _ = self.forward(inp,
                                      decoded_output,
                                      False,
@@ -227,13 +229,17 @@ class Transformer(nn.Module):
                                      combined_mask,
                                      dec_padding_mask,
                                      cuda=device)
+            # Select the logits of last token
+            # [batch_size*k, seq_len, vocab_size] -> [batch_size*k, vocab_size]
+            logits = logits[:,-1:,:].squeeze()
+            log_probs = F.log_softmax(logits, dim=-1)
+
             # logits = torch.tensor([[1.,2.,3.,4.,5.]]).repeat(batch_size*k, 1)
             # print("Inference: \n ", logits)
             # print("Inference shape: \n", logits.shape)
-
             # both with shape [batch_size*k, k] -> [batch_size*k*k, 1]
-            k_lop_probs, k_indices = logits.topk(k)
-            k_lop_probs = k_lop_probs.view(-1,1)
+            k_log_probs, k_indices = log_probs.topk(k)
+            k_log_probs = k_log_probs.view(-1,1)
             k_indices = k_indices.view(batch_size,-1)
             
             ### Stack  and get the indices with maximum log prob in each k hypothesis. ###
@@ -242,7 +248,7 @@ class Transformer(nn.Module):
             # Therefore, we need duplicate the log_probs matrix k times
             # Reshape to [batch_size*k*k, 1]
             decoded_log_probs = decoded_log_probs.repeat(k, 1)
-            decoded_log_probs += k_lop_probs
+            decoded_log_probs += k_log_probs
             
             # print("decoded_log_probs shape", decoded_log_probs.shape)
             # [batch_size, k*k]
@@ -261,37 +267,33 @@ class Transformer(nn.Module):
             # make [b*k*k,1] -> [b*k, 1]
             # a. for decoded_log_probs. To decoded_log_probs with shape [batch_size*k, 1]
             decoded_log_probs = k_log_prob.view(-1, 1)
-            print("new",decoded_log_probs)
             
             # b. for k_indices
             idx_diff = (torch.arange((batch_size)) * (k*k)).view(-1,1)
             k_log_prob_indices = (k_log_prob_indices + idx_diff).view(-1)
             k_indices = torch.index_select(k_indices.view(-1,1), 0, k_log_prob_indices)
-            print("k ", k_indices)
-            print(k_indices.shape)
-            # c. for decooded_output
+            # c. for decoded_output
             # Make [batch_size*k,k, 1] first, then select
-            # print(decooded_output)
-            decooded_output = torch.index_select(decooded_output.repeat(k,1), 0, k_log_prob_indices)
-            #print(decooded_output)
+            # print(decoded_output)
+            decoded_output = torch.index_select(decoded_output.repeat(k,1), 0, k_log_prob_indices)
+            #print(decoded_output)
         
             # Cat [batch_size*k, current_seq_len] + [batch_size*k, 1] ->
-            decooded_output = torch.cat((decooded_output, k_indices), 1)
-            print("out",decooded_output)
-            print(decooded_output.shape)
+            decoded_output = torch.cat((decoded_output, k_indices), 1)
             #print("decoded log prob", decoded_log_probs)
-            #print("decoded output", decooded_output)
+            #print("decoded output", decoded_output)
             
             # If not reach max_len, then repeat k times. Otherwise jump
             # [batch_size, seq_len+1] -> [batch_size*k, seq_len+1]
-            if decooded_output.shape[1] == max_len:
+            if decoded_output.shape[1] == max_len:
                 idx_diff = (torch.arange((batch_size)) * (k)).view(-1,1)
                 _, largest_indices = decoded_log_probs.view(batch_size, -1).topk(1, dim=1)
                 largest_indices = (largest_indices+idx_diff).view(-1)
-                decooded_output = torch.index_select(decooded_output, 0, largest_indices)
-        # print(decooded_output)
-        # print(decooded_output.shape)
-        return decooded_output, decoded_log_probs
+                decoded_output = torch.index_select(decoded_output, 0, largest_indices)
+                                
+        # print(decoded_output)
+        # print(decoded_output.shape)
+        return decoded_output, decoded_log_probs
 
 
     def evaluate(self, dataset, args, pad_idx, acc_fn):
