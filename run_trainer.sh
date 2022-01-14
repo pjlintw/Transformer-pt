@@ -9,7 +9,7 @@ do
 		do
 			echo "Execute run_trainer.py layers=${num_layer}, dims=${dims}, heads=${num_head}"
 			python run_trainer.py \
-				--output_dir results/L-${num_layer}_D-${dims}_H-${num_head} \
+				--output_dir tmps/L-${num_layer}_D-${dims}_H-${num_head} \
 				--source_vocab data/de-en/source.vocab \
 				--target_vocab data/de-en/target.vocab \
 				--tf_layers $num_layer \

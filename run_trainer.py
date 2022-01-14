@@ -15,24 +15,16 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
-from datasets import ClassLabel, load_dataset, load_metric
+from datasets import load_dataset, load_metric
 
 from models.transformer import Transformer
 from models.utils import (create_transformer_masks, 
-    init_weights, 
-    prepare_discriminator_data,
     convert_tensor_to_tokens,
     save_k_exmaple_from_tensor,
     check_k_exmaple_from_tensor, 
     build_vocab,
     pad_sequence)
 from models.transformer_blocks import WarmupScheduler
-
-from pprint import pprint
-
-cuda_is_available = torch.cuda.is_available()
-device = torch.device("cuda:0" if cuda_is_available else "cpu")
-torch.manual_seed(13) 
 
 
 def get_args():
@@ -104,9 +96,6 @@ def train_generator_MLE(model,
                         args=None):
     """Pre-train the generator with MLE."""
     # Prepare for `decode_batch`
-    # vocab_size = tokenizer_dict["vocab_size"] 
-    # id2tok = tokenizer_dict["id2tok"] 
-    # tok2id = tokenizer_dict["tok2id"] 
     src_pad_idx =tokenizer_dict["src_tok2id"]["[PAD]"]
     SOS_IDX = tokenizer_dict["tgt_tok2id"]["[CLS]"]
     EOS_IDX = tokenizer_dict["tgt_tok2id"]["[SEP]"]
@@ -141,7 +130,7 @@ def train_generator_MLE(model,
                                  enc_padding_mask=enc_padding_mask,
                                  look_ahead_mask=combined_mask,
                                  dec_padding_mask=dec_padding_mask,
-                                 cuda=args.gpu)
+                                 device=args.device)
 
             # 2D (batch_size*(seq_len-1), tgt_vocab_size)
             two_d_logits = logits.reshape(-1, logits.shape[-1])
@@ -175,7 +164,7 @@ def train_generator_MLE(model,
 
         # Save output file
         # Save model
-        if (epoch+1) % 5 == 0:
+        if (epoch+1) % 1 == 0:
             ### Saving model ###
             pt_file_tf = get_output_dir(args.output_dir, f"ckpt/epoch-{epoch+1}.pt")
             torch.save(model, pt_file_tf)
@@ -218,6 +207,9 @@ def train_generator_MLE(model,
                 msg = f"Saving the translation result of test set to: {output_file}"
                 logging.info(msg)
                 print(msg)
+            print("Done!")
+            break
+        
 
 
 def get_output_dir(output_dir, file):
@@ -252,9 +244,12 @@ def decode_batch(inp, id2tok, unk_idx, batch=True):
 def main():
     # Argument parser
     args = get_args()
-    SEED = 49
+    SEED = 13
 
-    args.gpu = cuda_is_available
+    cuda_is_available = torch.cuda.is_available()
+    args.device = "cuda:0" if cuda_is_available else "cpu"
+    torch.manual_seed(SEED) 
+
     # Create output dir
     output_dir = args.output_dir
 
@@ -277,8 +272,6 @@ def main():
         json.dump(args.__dict__, f, indent=2)
         logger.info(f"Saving hyperparameters to: {write_path}")
 
-    args.device = device
-    print(args.device)
     ########## Load dataset from script. ##########
     # 'wiki-table-questions.py'
     datasets = load_dataset(args.dataset_script)
@@ -392,7 +385,7 @@ def main():
     
     ### Feature
     # `token_ids`, `labels` for training and loss computation
-    def generate_batch(data_batch, gpu):
+    def generate_batch(data_batch, device):
         """Package feature as mini-batch."""
         features_dict = dict()
 
@@ -433,10 +426,10 @@ def main():
         features_dict["combined_mask"] = combined_mask
         features_dict["dec_padding_mask"] = dec_padding_mask
 
-        if gpu:
+        if device:
             for k in features_dict:
                 if torch.is_tensor(features_dict[k]):
-                    features_dict[k] = features_dict[k].cuda()
+                    features_dict[k] = features_dict[k].to(device)
             
         return features_dict
 
@@ -452,16 +445,14 @@ def main():
                         padding_idx=src_tok2id["[PAD]"],
                         shared_emb_layer=args.tf_shared_emb_layer, # Whether use embeeding layer from encoder
                         rate=args.tf_dropout_rate)
-
-    if cuda_is_available:
-        model.to(device)
+    model.to(args.device)
 
     #model.apply(init_weights)
     logging.info(model.encoder)
     # discriminator = CustomLSTM(vocab_size=vocab_size)
     # match_network = CustomLSTM(vocab_size=vocab_size)
     
-    generate_batch_fn = partial(generate_batch, gpu=args.gpu)
+    generate_batch_fn = partial(generate_batch, device=args.device)
     ### Fetch dataset iterator
     train_iter = DataLoader(train_dataset, batch_size=args.batch_size,
                             shuffle=True, collate_fn=generate_batch_fn)

@@ -79,43 +79,6 @@ def convert_tensor_to_tokens(tensor_inp, tok2id, id2tok, first_k_example=None):
             break
     return examples
 
-def prepare_discriminator_data(pos_samples, neg_samples, pos_lengths, neg_lengths, gpu=False):
-    """Combine positive and negative examples into a mini-batch.
-    
-    Args:
-      pos_samples: (batch_size, seq_len)
-      neg_samples: (batch_size, seq_len)
-    
-    Returns: inp, target
-      inp: (pos_size + neg_size) x seq_len
-      target: pos_size + neg_size (boolean 1/0)
-    
-    Reference:
-      https://github.com/suragnair/seqGAN/blob/master/helpers.py
-    """
-    # concatenate along with the batch axis
-    inp = torch.cat((pos_samples, neg_samples), 0)
-    
-    # (batch*2, seq_len)
-    target = torch.ones(pos_samples.size()[0] + neg_samples.size()[0])
-    target[pos_samples.size()[0]:] = 0
-
-    # 
-    lengths = torch.cat((pos_lengths, neg_lengths), 0)
-
-    # shuffle
-    perm = torch.randperm(target.size()[0])
-    target = target[perm]
-    inp = inp[perm]
-    lengths = lengths[perm]
-
-    if gpu:
-        target=target.cuda()
-        inp=inp.cuda()
-
-    return inp, target, lengths
-
-
 
 def init_weights(m): 
     if type(m) == nn.Dropout:   
@@ -185,12 +148,8 @@ def create_transformer_masks(src, tgt, src_pad_idx, tgt_pad_idx, device):
     # This padding mask is used to mask the encoder outputs.
     dec_pad_mask = create_padding_mask(src, src_pad_idx)
 
-    if device is not None:
-        look_ahead_mask = create_look_ahead_mask(tgt.shape[1]).to(device)
-        dec_target_padding_mask = create_padding_mask(tgt, tgt_pad_idx).to(device)
-    # else:
-    #      look_ahead_mask = create_look_ahead_mask(tgt.shape[1])
-    #      dec_target_padding_mask = create_padding_mask(tgt, pad_idx)
+    look_ahead_mask = create_look_ahead_mask(tgt.shape[1]).to(device)
+    dec_target_padding_mask = create_padding_mask(tgt, tgt_pad_idx).to(device)
 
     # Used in the 1st attention block in the decoder.
     # It is used to pad and mask future tokens in the input received by
