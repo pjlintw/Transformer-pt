@@ -67,7 +67,7 @@ class TransformerEncoder(nn.Module):
         x = torch.mul(x, (self.d_model**(1/2)))
         #print(x.shape)
         if gpu:
-            x += self.pos_encoding[:, :seq_len, :] #.cuda()
+            x += self.pos_encoding[:, :seq_len, :].cuda()
         else:
             x += self.pos_encoding[:, :seq_len, :]
 

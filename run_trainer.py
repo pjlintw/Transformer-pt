@@ -15,13 +15,8 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
-import torchtext
-import torchtext.legacy.data
-from torchtext import vocab
-from torchtext.vocab import Vocab
 from datasets import ClassLabel, load_dataset, load_metric
 
-from models.rnn import LSTMEncoder,CustomLSTM
 from models.transformer import Transformer
 from models.utils import (create_transformer_masks, 
     init_weights, 
@@ -37,16 +32,7 @@ from pprint import pprint
 
 cuda_is_available = torch.cuda.is_available()
 device = torch.device("cuda:0" if cuda_is_available else "cpu")
-
-def str2bool(v):
-    if isinstance(v, bool):
-       return v
-    if v.lower() in ('yes', 'true', 't', 'y', '1'):
-        return True
-    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
-        return False
-    else:
-        raise argparse.ArgumentTypeError('Boolean value expected.')
+torch.manual_seed(13) 
 
 
 def get_args():
@@ -190,6 +176,13 @@ def train_generator_MLE(model,
         # Save output file
         # Save model
         if (epoch+1) % 5 == 0:
+            ### Saving model ###
+            pt_file_tf = get_output_dir(args.output_dir, f"ckpt/epoch-{epoch+1}.pt")
+            torch.save(model, pt_file_tf)
+            msg = f"Saving model to: {pt_file_tf}"
+            logging.info(msg)
+            print(msg)
+
             if args.do_eval:
                 msg = f"### Evaluate ###"
                 logging.info(msg)
@@ -198,7 +191,7 @@ def train_generator_MLE(model,
                 msg = f"Evaluation Epoch: {epoch+1}, avg Loss: {avg_loss:.2f}, avg Accuracy: {avg_acc:.2f}"
                 logging.info(msg)
                 print(msg)
-            # results/word/L-4_D-256_H-8/test.epoch-20.pred
+            
             ### Perform prediction on test set ###
             if args.do_predict:
                 output_file = get_output_dir(args.output_dir, f"test.epoch-{epoch+1}.pred")
@@ -223,13 +216,6 @@ def train_generator_MLE(model,
                         wf.write(f"{sent}\t{src_sent}\t{tgt_sent}\n")
                 wf.close()
                 msg = f"Saving the translation result of test set to: {output_file}"
-                logging.info(msg)
-                print(msg)
-
-                ### Saving model ###
-                pt_file_tf = get_output_dir(args.output_dir, f"ckpt/tf.epoch-{epoch+1}.pt")
-                torch.save(model, pt_file_tf)
-                msg = f"Saving model to: {pt_file_tf}"
                 logging.info(msg)
                 print(msg)
 
@@ -344,25 +330,6 @@ def main():
             [ '[what]',  '[CLS]','what', 'was', 'the', 'average', 'in', '2001', '[SEP]', '[PAD]']
 
         """
-        # def _pad_sequence(sequence, max_seq_len, n_special_token=0):
-        #     sent_len = len(sequence)
-        #     max_seq_len = max_seq_len - n_special_token
-        #     max_sent_len = max_seq_len if sent_len >= max_seq_len else (sent_len)
-               
-        #     # Extend words list with special tokens
-        #     padded_sentence_lst = ["[CLS]"]+ sequence[:max_sent_len] + ["[SEP]"] 
-
-        #     # [CLS] + sentence + [SEP]
-        #     padded_len = len(padded_sentence_lst)
-            
-        #     # Add [PAD]
-        #     num_pad = max_seq_len+n_special_token - padded_len
-        #     padded_sentence_lst += ["[PAD]"] * num_pad
-
-        #     #print(padded_sentence_lst)
-        #     assert len(padded_sentence_lst) == (max_seq_len+n_special_token)
-        #     return padded_sentence_lst
-
         feature_dict = dict()
         # token_ids = list()
     

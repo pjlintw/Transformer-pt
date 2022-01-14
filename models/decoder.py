@@ -78,13 +78,13 @@ class TransformerDecoder(nn.Module):
         attention_weights = dict()
 
         if gpu:
-            x = x.to(gpu)
+            x = x.cuda()
 
         x = self.embedding(x)
         x = torch.mul(x, (self.d_model**(1/2)))
 
         if gpu:
-            x += self.pos_encoding[:, :seq_len, :].to(gpu)
+            x += self.pos_encoding[:, :seq_len, :].cuda()
         else:
             x += self.pos_encoding[:, :seq_len, :]
     

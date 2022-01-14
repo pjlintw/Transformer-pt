@@ -15,6 +15,13 @@ def build_vocab(vocab_file, speical_tokens, min_count=0):
     vocab = set()
     tok2id, id2tok = dict(), dict()
     idx = 0
+    if speical_tokens:
+        for word in speical_tokens:
+            vocab.add(word)
+            tok2id[word] = idx
+            id2tok[idx] = word
+            idx+=1
+
     with open(vocab_file, "r") as f:
         for line in f:
             if line == "\n":
@@ -26,12 +33,6 @@ def build_vocab(vocab_file, speical_tokens, min_count=0):
                 id2tok[idx] = word
                 idx += 1
 
-    if speical_tokens:
-        for tok in speical_tokens:
-            vocab.add(word)
-            tok2id[word] = idx
-            id2tok[idx] = word
-            idx+=1
     return vocab, (tok2id, id2tok)
 
 def check_k_exmaple_from_tensor(example_lst, y_pred_tensor, y_true_tensor, k_example=20):
