@@ -437,11 +437,6 @@ def main():
             for k in features_dict:
                 if torch.is_tensor(features_dict[k]):
                     features_dict[k] = features_dict[k].cuda()
-            # features_dict["source_ids"] = features_dict["source_ids"].cuda()
-            # features_dict["target_ids"] = features_dict["target_ids"].cuda()
-            # features_dict["enc_padding_mask"] = features_dict["enc_padding_mask"].cuda()
-            # features_dict["combined_mask"] = features_dict["combined_mask"].cuda()
-            # features_dict["dec_padding_mask"] = features_dict["dec_padding_mask"].cuda()
             
         return features_dict
 
