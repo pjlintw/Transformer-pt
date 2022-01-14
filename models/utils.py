@@ -5,7 +5,7 @@ from .encoder import TransformerEncoder
 from .decoder import TransformerDecoder
 
 
-def build_vocab(vocab_file, speical_tokens, min_count=0):
+def build_vocab(vocab_file, special_tokens, min_count=0):
     """Build vocabulary from file.
 
     Args:

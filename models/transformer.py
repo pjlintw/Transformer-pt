@@ -49,12 +49,10 @@ class Transformer(nn.Module):
         
     def forward(self, src, tgt, training, enc_padding_mask,
                 look_ahead_mask, dec_padding_mask, cuda):
-
         """Forward propagate for transformer.
         
         Args:
           src: (batch_size, src_max_len)
-            
         """
         # Mapping
         src = self.embedding_layer(src)
@@ -201,18 +199,40 @@ class Transformer(nn.Module):
             inp = torch.tensor(inp, device=device)
    
         ### Repeat k times: [batch_size, seq_len] -> [batch_size*k, seq_leg] ###
-        batch_size = inp.shape[0]
-        inp = inp.repeat(1,k).view(batch_size*k, -1)
-        ### Repeat k times: [batch_size, seq_len] -> [batch_size*k, seq_leg] ###
-                ### Initialize the log probs and decoded output. Both has the shape (batch_size*k, 1]. ###
-        decoded_output = torch.tensor([sos_idx]*(batch_size*k), device=device).unsqueeze(1)
-        decoded_log_probs = torch.zeros((batch_size*k,1), device=device)
+        ### Initialize the log probs and decoded output. Both has the shape (batch_size, 1]. ###
+        batch_size = inp.shape[0]   
+        decoded_output = torch.tensor([sos_idx]*(batch_size), device=device).unsqueeze(1)
+        enc_padding_mask, combined_mask, dec_padding_mask = create_transformer_masks(inp,
+                                                                                     decoded_output,
+                                                                                     src_pad_idx=src_pad_idx,
+                                                                                     tgt_pad_idx=tgt_pad_idx,
+                                                                                     device=device)
+        logits, _ = self.forward(inp, decoded_output, False, enc_padding_mask, combined_mask,
+                                 dec_padding_mask, cuda=device)
+        # bath are [batch_size, vocab] -> [batch_size, k] 
+        log_probs = F.log_softmax(logits[:,-1:,:].squeeze(), dim=-1)
+        k_log_probs, k_indices = log_probs.topk(k, dim=1)
+        # print("k_log_probs outside of loop", k_log_probs)
+        # print("k_indieces outside of loop", k_indices)
+        # To [batch_size*k, 1]
+        k_indices = k_indices.view(-1,1)
+        # Initialize `decoded_output` [batch_size, 1] -> [batch_size*k, 1]
+        decoded_log_probs = k_log_probs.view(-1,1)
+        decoded_output = torch.cat((decoded_output.repeat(k, 1), k_indices), 1)
+        # print("first cat", decoded_output)
+        # print("added", decoded_log_probs)
 
+        ### Repeat k times: [batch_size, seq_len] -> [batch_size*k, seq_leg] ###
+        # inp = inp.repeat(k,1)
+        inp = inp.repeat(1,k).view(batch_size*k, -1)
+        # print("inp repeat k times at dim=1", inp)
+ 
+        n=1
         ### Beam search steps ###
         # [batch_size*k, seq_len] -> [batch_size*k*k, seq_len+1] -> [batch_size*k, seq_len+1]
         # [batch_size*k, current_seq_len].repeat(k,1) + [batch_size*k*k,1] -> [batch_size*k*k, 1]
-        for idx in range(0, max_len-1):
-            ### enc_pad_mask, combined_mask, dec_pad_mask
+        for idx in range(0, max_len-2):
+            # enc_pad_mask, combined_mask, dec_pad_mask
             enc_padding_mask, combined_mask, dec_padding_mask = create_transformer_masks(inp,
                                                                                          decoded_output,
                                                                                          src_pad_idx=src_pad_idx,
@@ -229,31 +249,38 @@ class Transformer(nn.Module):
                                      combined_mask,
                                      dec_padding_mask,
                                      cuda=device)
+            
             # Select the logits of last token
             # [batch_size*k, seq_len, vocab_size] -> [batch_size*k, vocab_size]
             logits = logits[:,-1:,:].squeeze()
             log_probs = F.log_softmax(logits, dim=-1)
 
-            # logits = torch.tensor([[1.,2.,3.,4.,5.]]).repeat(batch_size*k, 1)
-            # print("Inference: \n ", logits)
-            # print("Inference shape: \n", logits.shape)
-            # both with shape [batch_size*k, k] -> [batch_size*k*k, 1]
-            k_log_probs, k_indices = log_probs.topk(k)
+            # both with shape [batch_size*k, k]
+            k_log_probs, k_indices = log_probs.topk(k, dim=1)
+            # print("raw k_log_probs", k_log_probs)
+            # print("raw k_indieces", k_indices)
+
+            # To [batch_size*k*k, 1]
             k_log_probs = k_log_probs.view(-1,1)
-            k_indices = k_indices.view(batch_size,-1)
-            
+            k_indices = k_indices.view(batch_size,-1)        
+            # print("k_log_probs view in [batch*k*k, 1]", k_log_probs)
+            # print("k_indices view in [batch, k*k]", k_indices)
+
             ### Stack  and get the indices with maximum log prob in each k hypothesis. ###
             # expand to [b*k*k,1]
             # While decoding, we keep k*k hypothesis for an sample
             # Therefore, we need duplicate the log_probs matrix k times
-            # Reshape to [batch_size*k*k, 1]
-            decoded_log_probs = decoded_log_probs.repeat(k, 1)
+            # View in  [batch_size*k, 1]
+            decoded_log_probs = decoded_log_probs.repeat(1, k).view(-1,1)
+            # print("decoded_log_probs repeat k at dim=1", decoded_log_probs)
             decoded_log_probs += k_log_probs
+            # print("decoded_log_probs added by k_log_probs", decoded_log_probs)
             
             # print("decoded_log_probs shape", decoded_log_probs.shape)
             # [batch_size, k*k]
             decoded_log_probs = decoded_log_probs.view(batch_size, -1)
-        
+            # print("decoded_prob_probs view in [batch,k*k]", decoded_log_probs)
+
             # Argmax return the indices of k samples. 
             # (1) Slecting [batch_size, k] out of [batch_size, k*k]
             # (2) To make the indices become the indices of a (batch*k*k)-wise length
@@ -261,39 +288,51 @@ class Transformer(nn.Module):
             #largetest_log_prob_indices = decoded_log_probs.argmax(dim=-1) + idx_diff # k top
             # [batch_size, k*k] -> [batch_size, k]
             k_log_prob, k_log_prob_indices = decoded_log_probs.topk(k, dim=1) 
-            
+            # print("k_log_prob", k_log_prob)
+            # print("k_log_prob_indices", k_log_prob_indices)
+             
             # print(largetest_log_prob_indices)
             ### Select by `largetest_log_prob_indices` at dim=0 ###
             # make [b*k*k,1] -> [b*k, 1]
             # a. for decoded_log_probs. To decoded_log_probs with shape [batch_size*k, 1]
             decoded_log_probs = k_log_prob.view(-1, 1)
-            
+            # print("decoded log_probs view in [batch*k,1]", decoded_log_probs)
+
             # b. for k_indices
             idx_diff = (torch.arange((batch_size)) * (k*k)).view(-1,1)
             k_log_prob_indices = (k_log_prob_indices + idx_diff).view(-1)
             k_indices = torch.index_select(k_indices.view(-1,1), 0, k_log_prob_indices)
+            # print("k_log_prob_indices", k_log_prob_indices)
+            # print("k_indices", k_indices)
+            
             # c. for decoded_output
             # Make [batch_size*k,k, 1] first, then select
-            # print(decoded_output)
-            decoded_output = torch.index_select(decoded_output.repeat(k,1), 0, k_log_prob_indices)
-            #print(decoded_output)
-        
+            seq_len = decoded_output.shape[-1]
+            # print("decoded_output before", decoded_output)
+            decoded_output = decoded_output.repeat(1, k).view(batch_size*k*k, seq_len)
+            # print("decoded_output repeat k times in last dims and view in [batch*k*k, seq]", decoded_output)
+            decoded_output = torch.index_select(decoded_output, 0, k_log_prob_indices)
+            # print("decoded_output index_select with k_log_prob_indices", decoded_output)
             # Cat [batch_size*k, current_seq_len] + [batch_size*k, 1] ->
             decoded_output = torch.cat((decoded_output, k_indices), 1)
+            # print("decoded_output cat with k_indices", decoded_output)
+
+            if n == 100:
+                return
+            n+=1
             #print("decoded log prob", decoded_log_probs)
             #print("decoded output", decoded_output)
             
             # If not reach max_len, then repeat k times. Otherwise jump
             # [batch_size, seq_len+1] -> [batch_size*k, seq_len+1]
             if decoded_output.shape[1] == max_len:
+                batch_k_output = decoded_output
                 idx_diff = (torch.arange((batch_size)) * (k)).view(-1,1)
                 _, largest_indices = decoded_log_probs.view(batch_size, -1).topk(1, dim=1)
                 largest_indices = (largest_indices+idx_diff).view(-1)
                 decoded_output = torch.index_select(decoded_output, 0, largest_indices)
                                 
-        # print(decoded_output)
-        # print(decoded_output.shape)
-        return decoded_output, decoded_log_probs
+        return decoded_output, decoded_log_probs, batch_k_output
 
 
     def evaluate(self, dataset, args, pad_idx, acc_fn):
@@ -336,6 +375,7 @@ class Transformer(nn.Module):
         avg_loss = total_loss/ step
         avg_acc = total_accuracy / step
         return avg_loss, avg_acc
+
 
 def sample_gumbel(shape, eps=1e-20, device=None):
     """Sample from Gumbel(0, 1)"""

@@ -295,8 +295,8 @@ def main():
 
 
     ### Create vocabulary, token-to-index, index-to-token
-    src_vocab, (src_tok2id, src_id2tok) = build_vocab(args.source_vocab, speical_tokens=True)
-    tgt_vocab, (tgt_tok2id, tgt_id2tok) = build_vocab(args.target_vocab, speical_tokens=True)
+    src_vocab, (src_tok2id, src_id2tok) = build_vocab(args.source_vocab, special_tokens=True)
+    tgt_vocab, (tgt_tok2id, tgt_id2tok) = build_vocab(args.target_vocab, special_tokens=True)
     
     src_vocab_size = len(src_id2tok)
     tgt_vocab_size = len(tgt_id2tok)
