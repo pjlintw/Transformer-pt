@@ -286,7 +286,7 @@ def main():
     
 
     ########## Load the custom model, tokenizer and config ##########
-    def tokenize_fn(example, max_seq_len):
+    def tokenize_fn(example, max_seq_len, ):
         """Add special tokens to input sequence and padd the max lengths."""
         feature_dict = dict()
         # token_ids = list()

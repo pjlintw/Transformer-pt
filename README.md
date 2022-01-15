@@ -10,8 +10,6 @@ To reproduce the results, follow the steps below.
 * New Januray 15th, 2021: Transformer in Pytorch
 * New Januray 15th, 2021: Beam search decoding
 
-
-
 ## References for the Implementations
 
 For quickly checking the implemtations of Transformer, we provide the references for linkinkg the functionalities to specific file.
@@ -155,6 +153,33 @@ Try to move the dataset you would like to use to the other folder and modify the
 Or delete the relevant folder and files in the `.cache` for datasets. `cd ~/USERS_NAME/.cache/huggingface/datasets/` and `rm -r *`. This means that all the loading records will be removed and
  Hugging Face will create the `.arrows` files again, including the previous loading records. 
 
+### Subword Tokenizer
+
+To perform on subword-level translation, we provide subword tokenization based on `WordPiece`. The `run_tokenizer.py` script trains an `WordPiece` tokenizer on the `PHP.de-en.de` and `PHP.de-en.en` files. 
+
+Note that the tokenizer trainer are taking the sentecne file as input. Therefore you need the `PHP.de-en.de` and `PHP.de-en.en` file before training the subword tokenizer. 
+
+Once the files are ready, you can create the folder for subword files
+
+```
+cd data
+mkdir subword
+```
+
+and run:
+
+```python
+python run_tokenizer.py \
+	--output_dir subword \
+	--source_vocab de-en/PHP.de-en.de \
+	--target_vocab de-en/PHP.de-en.en
+```
+
+Similar to `data_preprocess.py`. This will generate the 
+`source.vocab`, `target.vocab` in subword-level under `--output_dir` folder but no data split and `tokenizer-de.json` and `tokenizer-en.json` files will be exported for tokenizer re-loading in the subword-level data script.
+
+If one wants train the transformer on subword tokenization, see the section: train on subword-level corpus.
+
 
 ## Transformer for German-English Translation
 
@@ -189,6 +214,22 @@ The arguments `--tf_layers`,  `--tf_dims`, `--tf_heads`, `--tf_dropout_rate`, `-
 Regarding the training arguments, the Transformer was trained with maximum log-likelihood with `--mle_epochs` epochs using `--batch_size` mini-batch. The trainer saves the checkpoint of the model every 5 epochs and the model will be automatically evaluated and inference on the test set if `--do_eval==True` and `--do_predict==True`.
 
 Note that all the output files, including the logger, hyperparameter, checkpoint and predictions will be saved in the `--output_dir`.
+
+
+### Train on subword-level corpus.
+
+It is necessary to provide the subword vocaublaries and data loading script. To do so, one need to specify the files to `--source_vocab`, `--target_vocab` and `--dataset_script`.
+
+For example, you can run with the command:
+
+```python
+python run_trainer.py \
+	--output_dir tmp \
+	--source_vocab data/de-en/subword/source.vocab \
+    --target_vocab data/de-en/subword/target.vocab \
+    --dataset_script php-de-en_subword.py
+```
+
 
 
 ### Hyperparameter search with Trainer script
