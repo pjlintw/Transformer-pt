@@ -48,7 +48,7 @@ class Transformer(nn.Module):
     
         
     def forward(self, src, tgt, training, enc_padding_mask,
-                look_ahead_mask, dec_padding_mask, cuda):
+                look_ahead_mask, dec_padding_mask, device):
         """Forward propagate for transformer.
         
         Args:
@@ -59,7 +59,7 @@ class Transformer(nn.Module):
         src = torch.mul(src, (self.d_model**(1/2)))
 
         # (batch_size, inp_seq_len, d_model)
-        enc_out = self.encoder(src, training, enc_padding_mask, gpu=cuda) #.cuda()
+        enc_out = self.encoder(src, training, enc_padding_mask, device=device) #.cuda()
 
         # if cuda:
         #     enc_out = enc_out.cuda()
@@ -71,7 +71,7 @@ class Transformer(nn.Module):
                                             training=training, 
                                             look_ahead_mask=look_ahead_mask,
                                             padding_mask=dec_padding_mask,
-                                            gpu=cuda)
+                                            device=device)
 
         # (batch_size, tgt_seq_len, target_vcoab_size)
         final_output = self.final_layer(dec_output)
@@ -127,7 +127,7 @@ class Transformer(nn.Module):
                                           enc_padding_mask,
                                           combined_mask,
                                           dec_padding_mask,
-                                          cuda=device)
+                                          device=device)
             
             # Select the last word from the seq_len dimension
             # (batch_size, 1, vocab_size) to (batch_size, voacb_size) 
@@ -141,7 +141,7 @@ class Transformer(nn.Module):
             elif decode_strategy == "gumbel":
                 # (batch_size, 1)
                 # assert inp.shape[-1] = 1
-                gumbel_distribution = gumbel_softmax_sample(predictions, temperature,gpu=cuda)
+                gumbel_distribution = gumbel_softmax_sample(predictions, temperature, device=device)
                 # (batch_size, vocab_size)
                 # print("gumbel", gumbel_distribution.shape)
 
@@ -208,7 +208,7 @@ class Transformer(nn.Module):
                                                                                      tgt_pad_idx=tgt_pad_idx,
                                                                                      device=device)
         logits, _ = self.forward(inp, decoded_output, False, enc_padding_mask, combined_mask,
-                                 dec_padding_mask, cuda=device)
+                                 dec_padding_mask, device=device)
         # bath are [batch_size, vocab] -> [batch_size, k] 
         log_probs = F.log_softmax(logits[:,-1:,:].squeeze(), dim=-1)
         k_log_probs, k_indices = log_probs.topk(k, dim=1)
@@ -248,7 +248,7 @@ class Transformer(nn.Module):
                                      enc_padding_mask,
                                      combined_mask,
                                      dec_padding_mask,
-                                     cuda=device)
+                                     device=device)
             
             # Select the logits of last token
             # [batch_size*k, seq_len, vocab_size] -> [batch_size*k, vocab_size]
@@ -299,7 +299,7 @@ class Transformer(nn.Module):
             # print("decoded log_probs view in [batch*k,1]", decoded_log_probs)
 
             # b. for k_indices
-            idx_diff = (torch.arange((batch_size)) * (k*k)).view(-1,1)
+            idx_diff = (torch.arange(batch_size, device=device) * (k*k)).view(-1,1)
             k_log_prob_indices = (k_log_prob_indices + idx_diff).view(-1)
             k_indices = torch.index_select(k_indices.view(-1,1), 0, k_log_prob_indices)
             # print("k_log_prob_indices", k_log_prob_indices)
@@ -327,7 +327,7 @@ class Transformer(nn.Module):
             # [batch_size, seq_len+1] -> [batch_size*k, seq_len+1]
             if decoded_output.shape[1] == max_len:
                 batch_k_output = decoded_output
-                idx_diff = (torch.arange((batch_size)) * (k)).view(-1,1)
+                idx_diff = (torch.arange((batch_size), device=device) * (k)).view(-1,1)
                 _, largest_indices = decoded_log_probs.view(batch_size, -1).topk(1, dim=1)
                 largest_indices = (largest_indices+idx_diff).view(-1)
                 decoded_output = torch.index_select(decoded_output, 0, largest_indices)
@@ -360,7 +360,7 @@ class Transformer(nn.Module):
                                         enc_padding_mask=enc_padding_mask,
                                         look_ahead_mask=combined_mask,
                                         dec_padding_mask=dec_padding_mask,
-                                        cuda=args.gpu)
+                                        device=args.device)
 
             two_d_logits = logits.reshape(-1, logits.shape[-1])
             loss = loss_fn(two_d_logits, tgt_out.reshape(-1))
@@ -379,20 +379,18 @@ class Transformer(nn.Module):
 
 def sample_gumbel(shape, eps=1e-20, device=None):
     """Sample from Gumbel(0, 1)"""
-    if device:
-        device="cuda"
     # The drawn nosie is created by default in CPU
     noise = torch.rand(shape, device=device)
     return -torch.log(-torch.log(noise+eps)+eps)
 
 
-def gumbel_softmax_sample(logits, temperature, gpu):
+def gumbel_softmax_sample(logits, temperature, device):
     """Sample from Gumbel softmax distribution.
     Reference:
         1. Gumbel distribution: https://en.wikipedia.org/wiki/Gumbel_distribution
         2. Inverse Tranform Sampling: https://en.wikipedia.org/wiki/Inverse_transform_sampling
     """
-    y = logits + sample_gumbel(shape=logits.shape, device=gpu)
+    y = logits + sample_gumbel(shape=logits.shape, device=device)
     return nn.functional.softmax(y/temperature, dim=-1)
 
 
