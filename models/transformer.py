@@ -1,4 +1,4 @@
-
+"""Implementation of Transformer."""
 from .utils import create_transformer_masks
 from .encoder import TransformerEncoder
 from .decoder import TransformerDecoder
@@ -61,8 +61,6 @@ class Transformer(nn.Module):
         # (batch_size, inp_seq_len, d_model)
         enc_out = self.encoder(src, training, enc_padding_mask, gpu=cuda) #.cuda()
 
-        # if cuda:
-        #     enc_out = enc_out.cuda()
         # print("type of decoder input", type(tgt))
         # print("decoder input", tgt)
         # (batch_size, tgt_seq_len, d_model)
@@ -96,9 +94,6 @@ class Transformer(nn.Module):
             pass
         else:
             inp = torch.tensor(inp, device=device)
-
-        #if cuda:
-        #    inp = inp.cuda()
 
         # Gumbel-Softmax tricks
         batch_size = inp.shape[0]
@@ -152,7 +147,6 @@ class Transformer(nn.Module):
             output = torch.cat((output, predicted_idx), 1)
             # Update along with col
             #sampled_ids[:,i] = predicted_idx.squeeze()
-        #print(sampled_ids==output[:,1:])
         return output
     
 
@@ -379,8 +373,7 @@ class Transformer(nn.Module):
 
 def sample_gumbel(shape, eps=1e-20, device=None):
     """Sample from Gumbel(0, 1)"""
-    if device:
-        device="cuda"
+    
     # The drawn nosie is created by default in CPU
     noise = torch.rand(shape, device=device)
     return -torch.log(-torch.log(noise+eps)+eps)
