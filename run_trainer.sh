@@ -21,10 +21,7 @@ do
 				--do_train True \
 				--do_eval True \
 				--do_predict True \
-				--mle_epochs 30 \
-				--logging_first_step True \
-				--logging_steps 10 \
-				--debugging True
+				--mle_epochs 30
 		 done
 	done
 done
