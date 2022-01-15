@@ -224,8 +224,8 @@ For example, you can run with the command:
 
 ```python
 python run_trainer.py \
-	--output_dir tmp \
-	--source_vocab data/de-en/subword/source.vocab \
+    --output_dir tmp \
+    --source_vocab data/de-en/subword/source.vocab \
     --target_vocab data/de-en/subword/target.vocab \
     --dataset_script php-de-en_subword.py
 ```
