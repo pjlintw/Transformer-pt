@@ -8,6 +8,8 @@ We use `PHP German-English` dataset which contains `11k` non-duplicated German-E
 To reproduce the results, follow the steps below.
 
 * New Januray 15th, 2021: Transformer in Pytorch
+* New Januray 15th, 2021: Beam search decoding
+
 
 
 ## References for the Implementations
@@ -49,7 +51,7 @@ The figure below uses a `results/word/L-4_D-128_H-8` as example and explains the
 results/word/L-4_D-128_H-8
 |--ckpt
 |  └-- epoch-#N.pt     # Checkpoint of Transformer saved at N-th epoch
-|-- example.log  	   # Log file
+|-- example.log        # Log file
 |-- hyparams.txt       # Hyperparameters for modeling and training
 └── test.epoch-#N.pred # Prediction on test set at the N-th epoch
 ```
