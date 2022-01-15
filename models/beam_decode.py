@@ -3,6 +3,7 @@
 import torch
 
 def beam_decode(inp, k, max_len, sos_idx, eos_idx, src_pad_idx, tgt_pad_idx, device):
+    
     """Beam-search decoding.
 
     Args:

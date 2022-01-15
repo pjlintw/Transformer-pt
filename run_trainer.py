@@ -1,4 +1,4 @@
-"""Train conditional text GANs with trainer."""
+"""Train the Transformer with trainer."""
 import os
 import argparse
 import logging
@@ -31,25 +31,24 @@ def get_args():
     """Parse arguments."""
     parser = argparse.ArgumentParser(description="")
     # Model
-    parser.add_argument('--model_name_or_path', type=str, default="textgan")
     parser.add_argument('--output_dir', type=str, default='tmp/')
-    parser.add_argument('--max_seq_length', type=int, default=40)
+    parser.add_argument('--max_seq_length', type=int, default=20)
     parser.add_argument('--source_vocab', type=str, required=True)
     parser.add_argument('--target_vocab', type=str, required=True)
     
-    # Modeling generator
+    # Modeling Transformer
     parser.add_argument('--tf_layers', type=int, default=4)
-    parser.add_argument('--tf_dims', type=int, default=128) # 512 
+    parser.add_argument('--tf_dims', type=int, default=128) 
     parser.add_argument('--tf_heads', type=int, default=8)
     parser.add_argument('--tf_dropout_rate', type=float, default=0.1)
     parser.add_argument('--tf_shared_emb_layer', type=bool, default=False)
     parser.add_argument('--tf_learning_rate', type=float, default=1e-2)
 
     # Training
-    parser.add_argument('--dataset_script', type=str)
+    parser.add_argument('--dataset_script', type=str, required=True)
     parser.add_argument('--do_train', type=bool, default=True)
-    parser.add_argument('--do_eval', type=bool, default=False)
-    parser.add_argument('--do_predict', type=bool, default=False)
+    parser.add_argument('--do_eval', type=bool, default=True)
+    parser.add_argument('--do_predict', type=bool, default=True)
     parser.add_argument('--batch_size', type=int, default=64)
     parser.add_argument('--mle_epochs', type=int, default=10)
     parser.add_argument('--max_steps', type=int, default=50)
@@ -57,11 +56,7 @@ def get_args():
     parser.add_argument('--max_val_samples', type=int)
     parser.add_argument('--max_test_samples', type=int)
 
-    parser.add_argument('--logging_first_step', default=True, required=False)
     parser.add_argument('--logging_steps', type=int, default=10)
-    parser.add_argument('--eval_steps', type=int, default=500)
-    parser.add_argument('--gpu_no', type=int, default=None)
-
     # Debugging
     parser.add_argument('--debugging', type=bool, default=False, 
                         help="If debugging. Small batch and sentence length will be used \
@@ -69,12 +64,8 @@ def get_args():
     return parser.parse_args()
 
 
-
 def compute_accuracy(real, pred, pad_idx):
-    """Compute accuracy
-    
-    acc
-    """
+    """Compute accuracy."""
     # Non-pad is True and pad is False
     mask = ~real.eq(pad_idx)
     num_predictions = mask.sum()
@@ -141,7 +132,7 @@ def train_generator_MLE(model,
             # `tgt_out` is (batch_size * (seq_seq-1))
             loss = loss_fn(two_d_logits, tgt_out.reshape(-1))
             loss.backward()
-            #torch.nn.utils.clip_grad_norm_(generator.parameters(), 0.5)
+            # torch.nn.utils.clip_grad_norm_(generator.parameters(), 0.5)
             opt.step()
 
             pred = logits.argmax(-1)
@@ -164,7 +155,7 @@ def train_generator_MLE(model,
 
         # Save output file
         # Save model
-        if (epoch+1) % 1 == 0:
+        if (epoch+1) % 5 == 0:
             ### Saving model ###
             pt_file_tf = get_output_dir(args.output_dir, f"ckpt/epoch-{epoch+1}.pt")
             torch.save(model, pt_file_tf)
@@ -206,10 +197,7 @@ def train_generator_MLE(model,
                 wf.close()
                 msg = f"Saving the translation result of test set to: {output_file}"
                 logging.info(msg)
-                print(msg)
-            print("Done!")
-            break
-        
+                print(msg)            
 
 
 def get_output_dir(output_dir, file):
@@ -231,7 +219,7 @@ def decode_batch(inp, id2tok, unk_idx, batch=True):
       inp: (batch_size, seq_max_len)
       id2tok: dictionary.
       unk_idx: int.
-      batch: bool
+      batch: bool.
     """
     batch_example = list()
     if batch:
@@ -258,7 +246,6 @@ def main():
     build_dirs(output_dir, logger)
     build_dirs(pathlib.Path(output_dir, "ckpt"), logger)
     
-
     log_file = get_output_dir(output_dir, 'example.log')
     logging.basicConfig(filename=log_file,
                         filemode="w",
@@ -278,14 +265,6 @@ def main():
     logger.info("Loading Datasets")
     # print(datasets)
     
-    ### Access column names and features ###
-    if args.do_train:
-        column_names = datasets["train"].column_names
-        features = datasets["train"].features
-    else:
-        column_names = datasets["validation"].column_names
-        features = datasets["validation"].features
-
 
     ### Create vocabulary, token-to-index, index-to-token
     src_vocab, (src_tok2id, src_id2tok) = build_vocab(args.source_vocab, special_tokens=True)
@@ -308,21 +287,7 @@ def main():
 
     ########## Load the custom model, tokenizer and config ##########
     def tokenize_fn(example, max_seq_len):
-        """Add special tokens to input sequence and padd the max lengths.
-        
-        Args:
-          Examples: dict of features:
-                    {"id": [ 'what', 'was', 'the', 'average', 'in', '2001'],
-                     "source": [],
-                     "target": []}
-        
-        Variables:
-          tokens:  
-            [ '[CLS]','what', 'was', 'the', 'average', 'in', '2001', '[SEP]', '[PAD]']
-          condition_tokens:
-            [ '[what]',  '[CLS]','what', 'was', 'the', 'average', 'in', '2001', '[SEP]', '[PAD]']
-
-        """
+        """Add special tokens to input sequence and padd the max lengths."""
         feature_dict = dict()
         # token_ids = list()
     
@@ -383,7 +348,7 @@ def main():
         )
 
     
-    ### Feature
+    ### Feature ###
     # `token_ids`, `labels` for training and loss computation
     def generate_batch(data_batch, device):
         """Package feature as mini-batch."""
@@ -449,8 +414,6 @@ def main():
 
     #model.apply(init_weights)
     logging.info(model.encoder)
-    # discriminator = CustomLSTM(vocab_size=vocab_size)
-    # match_network = CustomLSTM(vocab_size=vocab_size)
     
     generate_batch_fn = partial(generate_batch, device=args.device)
     ### Fetch dataset iterator
@@ -463,7 +426,7 @@ def main():
 
     
     ### train model ###
-    print("train the model")
+    print("train the Transformer")
     gen_optimizer = optim.Adam(model.parameters(), lr=0, betas=(0.9,0.98), eps=1e-9)
     gen_optimizer = WarmupScheduler(model_size=args.tf_dims,
                                     factor=2,

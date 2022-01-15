@@ -1,4 +1,4 @@
-"""Extract POS tags and split dataset."""
+"""Extract German-English sentences and generate splits."""
 import os
 import argparse
 import random
@@ -108,7 +108,7 @@ def build_examples(source_file, target_file):
             examples.append(example)
             checkSet.update([src_sent])
     print("Number of source sentences:", len(src_lst))
-    print("Number of sentence pairs after duplicated removal:", len(examples))
+    print("Number of sentence pairs after duplications removal:", len(examples))
     return examples
 
 

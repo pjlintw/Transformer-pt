@@ -1,4 +1,4 @@
-"""Dataset loading script for WikiTableQuestions sparated by tab."""
+"""Dataset loading script for PHP De-En corpus sparated by tab."""
 import datasets
 
 logger = datasets.logging.get_logger(__name__)

@@ -103,6 +103,7 @@ def init_weights(m):
     except:
         print(m, "no bias")
 
+
 def create_padding_mask(seq, pad_idx):
     """Creating tensor for masking pad tokens of scaled dot-product logits
     Args:
