@@ -1,0 +1,640 @@
+04:06:46, 683 __main__ INFO Namespace(batch_size=64, dataset_script='php-de-en.py', debugging=True, do_eval=True, do_predict=True, do_train=True, eval_steps=500, gpu=True, gpu_no=None, logging_first_step='True', logging_steps=10, max_seq_length=20, max_steps=50, max_test_samples=None, max_train_samples=None, max_val_samples=None, mle_epochs=30, model_name_or_path='textgan', output_dir='results/L-4_D-128_H-8', source_vocab='data/de-en/source.vocab', target_vocab='data/de-en/target.vocab', tf_dims=128, tf_dropout_rate=0.1, tf_heads=8, tf_layers=4, tf_learning_rate=0.01, tf_shared_emb_layer=False)
+04:06:46, 683 __main__ INFO Saving hyperparameters to: results/L-4_D-128_H-8/hyparams.txt
+04:06:46, 819 datasets.builder WARNING Reusing dataset php_de_en (/home/CE/pinjie/.cache/huggingface/datasets/php_de_en/PHPDeEn/0.0.0/78820f3745e00bb4a9fe7816fbbb6a63a1a8ec59722a8d9120d28cb2ebd8d403)
+04:06:46, 836 __main__ INFO Loading Datasets
+04:06:47, 68 datasets.arrow_dataset WARNING Loading cached processed dataset at /home/CE/pinjie/.cache/huggingface/datasets/php_de_en/PHPDeEn/0.0.0/78820f3745e00bb4a9fe7816fbbb6a63a1a8ec59722a8d9120d28cb2ebd8d403/cache-cd909dba37dbb428.arrow
+04:06:47, 258 datasets.arrow_dataset WARNING Loading cached processed dataset at /home/CE/pinjie/.cache/huggingface/datasets/php_de_en/PHPDeEn/0.0.0/78820f3745e00bb4a9fe7816fbbb6a63a1a8ec59722a8d9120d28cb2ebd8d403/cache-818ae1624fce8150.arrow
+04:06:47, 445 datasets.arrow_dataset WARNING Loading cached processed dataset at /home/CE/pinjie/.cache/huggingface/datasets/php_de_en/PHPDeEn/0.0.0/78820f3745e00bb4a9fe7816fbbb6a63a1a8ec59722a8d9120d28cb2ebd8d403/cache-ac2f163e49ab91a2.arrow
+04:06:50, 968 root INFO TransformerEncoder(
+  (enc_layers): ModuleList(
+    (0): TransformerEncLayer(
+      (mha): MultiHeadAttention(
+        (w_q): Linear(in_features=128, out_features=128, bias=True)
+        (w_k): Linear(in_features=128, out_features=128, bias=True)
+        (w_v): Linear(in_features=128, out_features=128, bias=True)
+      )
+      (ffn): FeedForwardBlock(
+        (dense1): Linear(in_features=128, out_features=512, bias=True)
+        (relu): ReLU()
+        (dense2): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (layernorm1): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (layernorm2): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (dropout2): Dropout(p=0.1, inplace=False)
+    )
+    (1): TransformerEncLayer(
+      (mha): MultiHeadAttention(
+        (w_q): Linear(in_features=128, out_features=128, bias=True)
+        (w_k): Linear(in_features=128, out_features=128, bias=True)
+        (w_v): Linear(in_features=128, out_features=128, bias=True)
+      )
+      (ffn): FeedForwardBlock(
+        (dense1): Linear(in_features=128, out_features=512, bias=True)
+        (relu): ReLU()
+        (dense2): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (layernorm1): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (layernorm2): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (dropout2): Dropout(p=0.1, inplace=False)
+    )
+    (2): TransformerEncLayer(
+      (mha): MultiHeadAttention(
+        (w_q): Linear(in_features=128, out_features=128, bias=True)
+        (w_k): Linear(in_features=128, out_features=128, bias=True)
+        (w_v): Linear(in_features=128, out_features=128, bias=True)
+      )
+      (ffn): FeedForwardBlock(
+        (dense1): Linear(in_features=128, out_features=512, bias=True)
+        (relu): ReLU()
+        (dense2): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (layernorm1): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (layernorm2): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (dropout2): Dropout(p=0.1, inplace=False)
+    )
+    (3): TransformerEncLayer(
+      (mha): MultiHeadAttention(
+        (w_q): Linear(in_features=128, out_features=128, bias=True)
+        (w_k): Linear(in_features=128, out_features=128, bias=True)
+        (w_v): Linear(in_features=128, out_features=128, bias=True)
+      )
+      (ffn): FeedForwardBlock(
+        (dense1): Linear(in_features=128, out_features=512, bias=True)
+        (relu): ReLU()
+        (dense2): Linear(in_features=512, out_features=128, bias=True)
+      )
+      (layernorm1): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (layernorm2): LayerNorm((128,), eps=1e-06, elementwise_affine=True)
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (dropout2): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+04:06:50, 975 root INFO epoch 1 : 
+04:06:51, 162 root INFO Model: generator, Step: 0, Loss: 9.48, Accuracy: 0.00
+04:06:52, 84 root INFO Model: generator, Step: 10, Loss: 9.45, Accuracy: 0.00
+04:06:53, 16 root INFO Model: generator, Step: 20, Loss: 9.36, Accuracy: 0.00
+04:06:54, 40 root INFO Model: generator, Step: 30, Loss: 9.21, Accuracy: 0.00
+04:06:54, 954 root INFO Model: generator, Step: 40, Loss: 9.07, Accuracy: 0.01
+04:06:55, 772 root INFO Reach max steps, Model: generator, Step: 50, Loss: 8.89
+04:06:55, 854 root INFO Model: generator, Step: 50, Loss: 8.89, Accuracy: 0.07
+04:06:56, 733 root INFO Model: generator, Step: 60, Loss: 8.76, Accuracy: 0.08
+04:06:57, 681 root INFO Model: generator, Step: 70, Loss: 8.71, Accuracy: 0.07
+04:06:58, 516 root INFO Model: generator, Step: 80, Loss: 8.49, Accuracy: 0.08
+04:06:59, 550 root INFO Model: generator, Step: 90, Loss: 8.45, Accuracy: 0.08
+04:07:00, 398 root INFO Model: generator, Step: 100, Loss: 8.37, Accuracy: 0.07
+04:07:01, 297 root INFO Model: generator, Step: 110, Loss: 8.13, Accuracy: 0.07
+04:07:02, 279 root INFO Model: generator, Step: 120, Loss: 8.05, Accuracy: 0.08
+04:07:03, 183 root INFO Model: generator, Step: 130, Loss: 7.95, Accuracy: 0.07
+04:07:04, 164 root INFO Model: generator, Step: 140, Loss: 7.75, Accuracy: 0.08
+04:07:05, 24 root INFO Model: generator, Step: 150, Loss: 7.61, Accuracy: 0.08
+04:07:05, 197 root INFO epoch 2 : 
+04:07:05, 297 root INFO Model: generator, Step: 0, Loss: 7.59, Accuracy: 0.08
+04:07:06, 135 root INFO Model: generator, Step: 10, Loss: 7.61, Accuracy: 0.08
+04:07:07, 53 root INFO Model: generator, Step: 20, Loss: 7.36, Accuracy: 0.08
+04:07:08, 116 root INFO Model: generator, Step: 30, Loss: 7.02, Accuracy: 0.10
+04:07:08, 957 root INFO Model: generator, Step: 40, Loss: 6.94, Accuracy: 0.11
+04:07:09, 775 root INFO Reach max steps, Model: generator, Step: 50, Loss: 6.78
+04:07:09, 880 root INFO Model: generator, Step: 50, Loss: 6.72, Accuracy: 0.11
+04:07:10, 846 root INFO Model: generator, Step: 60, Loss: 6.63, Accuracy: 0.12
+04:07:11, 903 root INFO Model: generator, Step: 70, Loss: 6.56, Accuracy: 0.12
+04:07:12, 830 root INFO Model: generator, Step: 80, Loss: 6.22, Accuracy: 0.15
+04:07:13, 759 root INFO Model: generator, Step: 90, Loss: 6.28, Accuracy: 0.12
+04:07:14, 632 root INFO Model: generator, Step: 100, Loss: 6.02, Accuracy: 0.17
+04:07:15, 551 root INFO Model: generator, Step: 110, Loss: 6.20, Accuracy: 0.14
+04:07:16, 467 root INFO Model: generator, Step: 120, Loss: 5.92, Accuracy: 0.15
+04:07:17, 434 root INFO Model: generator, Step: 130, Loss: 5.86, Accuracy: 0.19
+04:07:18, 541 root INFO Model: generator, Step: 140, Loss: 5.94, Accuracy: 0.14
+04:07:19, 584 root INFO Model: generator, Step: 150, Loss: 6.02, Accuracy: 0.14
+04:07:19, 751 root INFO epoch 3 : 
+04:07:19, 836 root INFO Model: generator, Step: 0, Loss: 5.77, Accuracy: 0.15
+04:07:20, 751 root INFO Model: generator, Step: 10, Loss: 5.84, Accuracy: 0.18
+04:07:21, 770 root INFO Model: generator, Step: 20, Loss: 5.72, Accuracy: 0.18
+04:07:22, 653 root INFO Model: generator, Step: 30, Loss: 5.57, Accuracy: 0.21
+04:07:23, 548 root INFO Model: generator, Step: 40, Loss: 5.58, Accuracy: 0.20
+04:07:24, 423 root INFO Reach max steps, Model: generator, Step: 50, Loss: 5.70
+04:07:24, 503 root INFO Model: generator, Step: 50, Loss: 5.65, Accuracy: 0.20
+04:07:25, 387 root INFO Model: generator, Step: 60, Loss: 5.44, Accuracy: 0.22
+04:07:26, 292 root INFO Model: generator, Step: 70, Loss: 5.43, Accuracy: 0.22
+04:07:27, 464 root INFO Model: generator, Step: 80, Loss: 5.51, Accuracy: 0.20
+04:07:28, 416 root INFO Model: generator, Step: 90, Loss: 5.48, Accuracy: 0.22
+04:07:29, 353 root INFO Model: generator, Step: 100, Loss: 5.27, Accuracy: 0.22
+04:07:30, 378 root INFO Model: generator, Step: 110, Loss: 5.41, Accuracy: 0.19
+04:07:31, 294 root INFO Model: generator, Step: 120, Loss: 5.33, Accuracy: 0.20
+04:07:32, 351 root INFO Model: generator, Step: 130, Loss: 5.33, Accuracy: 0.22
+04:07:33, 196 root INFO Model: generator, Step: 140, Loss: 5.44, Accuracy: 0.22
+04:07:34, 119 root INFO Model: generator, Step: 150, Loss: 5.43, Accuracy: 0.21
+04:07:34, 307 root INFO epoch 4 : 
+04:07:34, 389 root INFO Model: generator, Step: 0, Loss: 5.30, Accuracy: 0.23
+04:07:35, 365 root INFO Model: generator, Step: 10, Loss: 5.29, Accuracy: 0.22
+04:07:36, 443 root INFO Model: generator, Step: 20, Loss: 5.26, Accuracy: 0.22
+04:07:37, 422 root INFO Model: generator, Step: 30, Loss: 5.03, Accuracy: 0.24
+04:07:38, 324 root INFO Model: generator, Step: 40, Loss: 5.14, Accuracy: 0.24
+04:07:39, 198 root INFO Reach max steps, Model: generator, Step: 50, Loss: 5.12
+04:07:39, 307 root INFO Model: generator, Step: 50, Loss: 4.95, Accuracy: 0.27
+04:07:40, 313 root INFO Model: generator, Step: 60, Loss: 4.92, Accuracy: 0.28
+04:07:41, 171 root INFO Model: generator, Step: 70, Loss: 5.17, Accuracy: 0.22
+04:07:42, 34 root INFO Model: generator, Step: 80, Loss: 5.06, Accuracy: 0.24
+04:07:42, 913 root INFO Model: generator, Step: 90, Loss: 4.94, Accuracy: 0.25
+04:07:43, 860 root INFO Model: generator, Step: 100, Loss: 5.07, Accuracy: 0.24
+04:07:44, 748 root INFO Model: generator, Step: 110, Loss: 5.06, Accuracy: 0.27
+04:07:45, 682 root INFO Model: generator, Step: 120, Loss: 5.29, Accuracy: 0.22
+04:07:46, 802 root INFO Model: generator, Step: 130, Loss: 4.95, Accuracy: 0.26
+04:07:47, 688 root INFO Model: generator, Step: 140, Loss: 4.96, Accuracy: 0.27
+04:07:48, 640 root INFO Model: generator, Step: 150, Loss: 5.44, Accuracy: 0.20
+04:07:48, 831 root INFO epoch 5 : 
+04:07:48, 930 root INFO Model: generator, Step: 0, Loss: 4.60, Accuracy: 0.31
+04:07:49, 823 root INFO Model: generator, Step: 10, Loss: 4.99, Accuracy: 0.26
+04:07:50, 835 root INFO Model: generator, Step: 20, Loss: 4.79, Accuracy: 0.29
+04:07:51, 849 root INFO Model: generator, Step: 30, Loss: 4.91, Accuracy: 0.25
+04:07:52, 784 root INFO Model: generator, Step: 40, Loss: 4.62, Accuracy: 0.29
+04:07:53, 565 root INFO Reach max steps, Model: generator, Step: 50, Loss: 4.76
+04:07:53, 658 root INFO Model: generator, Step: 50, Loss: 4.71, Accuracy: 0.28
+04:07:54, 582 root INFO Model: generator, Step: 60, Loss: 4.62, Accuracy: 0.29
+04:07:55, 537 root INFO Model: generator, Step: 70, Loss: 4.75, Accuracy: 0.26
+04:07:56, 460 root INFO Model: generator, Step: 80, Loss: 4.88, Accuracy: 0.27
+04:07:57, 404 root INFO Model: generator, Step: 90, Loss: 4.65, Accuracy: 0.29
+04:07:58, 339 root INFO Model: generator, Step: 100, Loss: 4.91, Accuracy: 0.27
+04:07:59, 352 root INFO Model: generator, Step: 110, Loss: 4.61, Accuracy: 0.30
+04:08:00, 309 root INFO Model: generator, Step: 120, Loss: 4.88, Accuracy: 0.25
+04:08:01, 237 root INFO Model: generator, Step: 130, Loss: 4.56, Accuracy: 0.30
+04:08:02, 121 root INFO Model: generator, Step: 140, Loss: 4.59, Accuracy: 0.29
+04:08:03, 74 root INFO Model: generator, Step: 150, Loss: 4.88, Accuracy: 0.24
+04:08:03, 369 root INFO Saving model to: results/L-4_D-128_H-8/ckpt/epoch-5.pt
+04:08:03, 369 root INFO ### Evaluate ###
+04:08:04, 227 root INFO Evaluation Epoch: 5, avg Loss: 4.71, avg Accuracy: 0.30
+04:08:12, 94 root INFO Saving the translation result of test set to: results/L-4_D-128_H-8/test.epoch-5.pred
+04:08:12, 94 root INFO epoch 6 : 
+04:08:12, 238 root INFO Model: generator, Step: 0, Loss: 4.41, Accuracy: 0.31
+04:08:13, 145 root INFO Model: generator, Step: 10, Loss: 4.40, Accuracy: 0.31
+04:08:14, 96 root INFO Model: generator, Step: 20, Loss: 4.36, Accuracy: 0.32
+04:08:15, 9 root INFO Model: generator, Step: 30, Loss: 4.64, Accuracy: 0.28
+04:08:15, 948 root INFO Model: generator, Step: 40, Loss: 4.54, Accuracy: 0.27
+04:08:16, 675 root INFO Reach max steps, Model: generator, Step: 50, Loss: 4.40
+04:08:16, 764 root INFO Model: generator, Step: 50, Loss: 4.19, Accuracy: 0.34
+04:08:17, 790 root INFO Model: generator, Step: 60, Loss: 4.61, Accuracy: 0.27
+04:08:18, 776 root INFO Model: generator, Step: 70, Loss: 4.20, Accuracy: 0.32
+04:08:19, 900 root INFO Model: generator, Step: 80, Loss: 4.36, Accuracy: 0.29
+04:08:20, 947 root INFO Model: generator, Step: 90, Loss: 4.28, Accuracy: 0.34
+04:08:21, 951 root INFO Model: generator, Step: 100, Loss: 4.44, Accuracy: 0.31
+04:08:22, 830 root INFO Model: generator, Step: 110, Loss: 4.43, Accuracy: 0.31
+04:08:23, 735 root INFO Model: generator, Step: 120, Loss: 4.12, Accuracy: 0.34
+04:08:24, 641 root INFO Model: generator, Step: 130, Loss: 4.55, Accuracy: 0.30
+04:08:25, 514 root INFO Model: generator, Step: 140, Loss: 4.27, Accuracy: 0.32
+04:08:26, 475 root INFO Model: generator, Step: 150, Loss: 4.39, Accuracy: 0.30
+04:08:26, 652 root INFO epoch 7 : 
+04:08:26, 771 root INFO Model: generator, Step: 0, Loss: 3.92, Accuracy: 0.35
+04:08:27, 637 root INFO Model: generator, Step: 10, Loss: 4.03, Accuracy: 0.33
+04:08:28, 504 root INFO Model: generator, Step: 20, Loss: 4.01, Accuracy: 0.36
+04:08:29, 402 root INFO Model: generator, Step: 30, Loss: 4.23, Accuracy: 0.32
+04:08:30, 266 root INFO Model: generator, Step: 40, Loss: 4.06, Accuracy: 0.34
+04:08:31, 167 root INFO Reach max steps, Model: generator, Step: 50, Loss: 4.36
+04:08:31, 268 root INFO Model: generator, Step: 50, Loss: 3.91, Accuracy: 0.35
+04:08:32, 128 root INFO Model: generator, Step: 60, Loss: 4.24, Accuracy: 0.31
+04:08:33, 75 root INFO Model: generator, Step: 70, Loss: 4.07, Accuracy: 0.33
+04:08:34, 8 root INFO Model: generator, Step: 80, Loss: 3.99, Accuracy: 0.34
+04:08:34, 881 root INFO Model: generator, Step: 90, Loss: 4.19, Accuracy: 0.32
+04:08:35, 911 root INFO Model: generator, Step: 100, Loss: 4.00, Accuracy: 0.34
+04:08:36, 820 root INFO Model: generator, Step: 110, Loss: 3.82, Accuracy: 0.36
+04:08:37, 821 root INFO Model: generator, Step: 120, Loss: 3.71, Accuracy: 0.38
+04:08:38, 809 root INFO Model: generator, Step: 130, Loss: 4.20, Accuracy: 0.34
+04:08:39, 846 root INFO Model: generator, Step: 140, Loss: 3.93, Accuracy: 0.34
+04:08:40, 740 root INFO Model: generator, Step: 150, Loss: 3.73, Accuracy: 0.38
+04:08:40, 908 root INFO epoch 8 : 
+04:08:40, 987 root INFO Model: generator, Step: 0, Loss: 3.67, Accuracy: 0.37
+04:08:41, 962 root INFO Model: generator, Step: 10, Loss: 3.60, Accuracy: 0.37
+04:08:42, 783 root INFO Model: generator, Step: 20, Loss: 3.64, Accuracy: 0.37
+04:08:43, 617 root INFO Model: generator, Step: 30, Loss: 3.87, Accuracy: 0.35
+04:08:44, 548 root INFO Model: generator, Step: 40, Loss: 3.73, Accuracy: 0.35
+04:08:45, 336 root INFO Reach max steps, Model: generator, Step: 50, Loss: 3.45
+04:08:45, 427 root INFO Model: generator, Step: 50, Loss: 3.84, Accuracy: 0.36
+04:08:46, 309 root INFO Model: generator, Step: 60, Loss: 3.58, Accuracy: 0.38
+04:08:47, 211 root INFO Model: generator, Step: 70, Loss: 3.48, Accuracy: 0.42
+04:08:48, 447 root INFO Model: generator, Step: 80, Loss: 3.82, Accuracy: 0.35
+04:08:49, 361 root INFO Model: generator, Step: 90, Loss: 3.73, Accuracy: 0.36
+04:08:50, 424 root INFO Model: generator, Step: 100, Loss: 3.71, Accuracy: 0.37
+04:08:51, 399 root INFO Model: generator, Step: 110, Loss: 3.69, Accuracy: 0.39
+04:08:52, 326 root INFO Model: generator, Step: 120, Loss: 3.52, Accuracy: 0.40
+04:08:53, 235 root INFO Model: generator, Step: 130, Loss: 3.73, Accuracy: 0.37
+04:08:54, 84 root INFO Model: generator, Step: 140, Loss: 3.78, Accuracy: 0.37
+04:08:54, 958 root INFO Model: generator, Step: 150, Loss: 3.90, Accuracy: 0.33
+04:08:55, 149 root INFO epoch 9 : 
+04:08:55, 246 root INFO Model: generator, Step: 0, Loss: 3.37, Accuracy: 0.41
+04:08:56, 67 root INFO Model: generator, Step: 10, Loss: 3.33, Accuracy: 0.39
+04:08:56, 994 root INFO Model: generator, Step: 20, Loss: 3.35, Accuracy: 0.37
+04:08:57, 885 root INFO Model: generator, Step: 30, Loss: 3.29, Accuracy: 0.42
+04:08:58, 804 root INFO Model: generator, Step: 40, Loss: 3.55, Accuracy: 0.39
+04:08:59, 697 root INFO Reach max steps, Model: generator, Step: 50, Loss: 3.67
+04:08:59, 832 root INFO Model: generator, Step: 50, Loss: 3.36, Accuracy: 0.41
+04:09:00, 908 root INFO Model: generator, Step: 60, Loss: 3.22, Accuracy: 0.43
+04:09:01, 817 root INFO Model: generator, Step: 70, Loss: 3.42, Accuracy: 0.39
+04:09:02, 775 root INFO Model: generator, Step: 80, Loss: 3.39, Accuracy: 0.40
+04:09:03, 827 root INFO Model: generator, Step: 90, Loss: 3.55, Accuracy: 0.35
+04:09:04, 702 root INFO Model: generator, Step: 100, Loss: 3.62, Accuracy: 0.37
+04:09:05, 602 root INFO Model: generator, Step: 110, Loss: 3.51, Accuracy: 0.39
+04:09:06, 545 root INFO Model: generator, Step: 120, Loss: 3.64, Accuracy: 0.37
+04:09:07, 527 root INFO Model: generator, Step: 130, Loss: 3.38, Accuracy: 0.40
+04:09:08, 606 root INFO Model: generator, Step: 140, Loss: 3.53, Accuracy: 0.38
+04:09:09, 548 root INFO Model: generator, Step: 150, Loss: 3.40, Accuracy: 0.40
+04:09:09, 724 root INFO epoch 10 : 
+04:09:09, 812 root INFO Model: generator, Step: 0, Loss: 3.00, Accuracy: 0.43
+04:09:10, 732 root INFO Model: generator, Step: 10, Loss: 2.69, Accuracy: 0.49
+04:09:11, 612 root INFO Model: generator, Step: 20, Loss: 2.77, Accuracy: 0.50
+04:09:12, 484 root INFO Model: generator, Step: 30, Loss: 3.18, Accuracy: 0.41
+04:09:13, 367 root INFO Model: generator, Step: 40, Loss: 2.84, Accuracy: 0.47
+04:09:14, 235 root INFO Reach max steps, Model: generator, Step: 50, Loss: 3.19
+04:09:14, 333 root INFO Model: generator, Step: 50, Loss: 3.20, Accuracy: 0.42
+04:09:15, 247 root INFO Model: generator, Step: 60, Loss: 3.03, Accuracy: 0.44
+04:09:16, 248 root INFO Model: generator, Step: 70, Loss: 3.01, Accuracy: 0.47
+04:09:17, 252 root INFO Model: generator, Step: 80, Loss: 3.19, Accuracy: 0.41
+04:09:18, 92 root INFO Model: generator, Step: 90, Loss: 3.24, Accuracy: 0.40
+04:09:19, 57 root INFO Model: generator, Step: 100, Loss: 3.14, Accuracy: 0.42
+04:09:19, 898 root INFO Model: generator, Step: 110, Loss: 3.02, Accuracy: 0.45
+04:09:20, 881 root INFO Model: generator, Step: 120, Loss: 3.24, Accuracy: 0.42
+04:09:21, 873 root INFO Model: generator, Step: 130, Loss: 3.10, Accuracy: 0.43
+04:09:22, 843 root INFO Model: generator, Step: 140, Loss: 3.33, Accuracy: 0.39
+04:09:23, 845 root INFO Model: generator, Step: 150, Loss: 3.05, Accuracy: 0.44
+04:09:24, 83 root INFO Saving model to: results/L-4_D-128_H-8/ckpt/epoch-10.pt
+04:09:24, 83 root INFO ### Evaluate ###
+04:09:24, 993 root INFO Evaluation Epoch: 10, avg Loss: 4.18, avg Accuracy: 0.37
+04:09:33, 263 root INFO Saving the translation result of test set to: results/L-4_D-128_H-8/test.epoch-10.pred
+04:09:33, 263 root INFO epoch 11 : 
+04:09:33, 364 root INFO Model: generator, Step: 0, Loss: 2.70, Accuracy: 0.50
+04:09:34, 180 root INFO Model: generator, Step: 10, Loss: 2.49, Accuracy: 0.49
+04:09:35, 171 root INFO Model: generator, Step: 20, Loss: 2.62, Accuracy: 0.49
+04:09:36, 76 root INFO Model: generator, Step: 30, Loss: 2.69, Accuracy: 0.47
+04:09:36, 988 root INFO Model: generator, Step: 40, Loss: 3.05, Accuracy: 0.42
+04:09:37, 757 root INFO Reach max steps, Model: generator, Step: 50, Loss: 2.87
+04:09:37, 840 root INFO Model: generator, Step: 50, Loss: 2.75, Accuracy: 0.46
+04:09:38, 662 root INFO Model: generator, Step: 60, Loss: 2.38, Accuracy: 0.54
+04:09:39, 656 root INFO Model: generator, Step: 70, Loss: 3.01, Accuracy: 0.43
+04:09:40, 586 root INFO Model: generator, Step: 80, Loss: 2.87, Accuracy: 0.45
+04:09:41, 460 root INFO Model: generator, Step: 90, Loss: 2.57, Accuracy: 0.49
+04:09:42, 494 root INFO Model: generator, Step: 100, Loss: 2.98, Accuracy: 0.43
+04:09:43, 554 root INFO Model: generator, Step: 110, Loss: 2.97, Accuracy: 0.44
+04:09:44, 499 root INFO Model: generator, Step: 120, Loss: 2.68, Accuracy: 0.48
+04:09:45, 434 root INFO Model: generator, Step: 130, Loss: 3.01, Accuracy: 0.44
+04:09:46, 452 root INFO Model: generator, Step: 140, Loss: 3.08, Accuracy: 0.44
+04:09:47, 362 root INFO Model: generator, Step: 150, Loss: 2.66, Accuracy: 0.49
+04:09:47, 542 root INFO epoch 12 : 
+04:09:47, 648 root INFO Model: generator, Step: 0, Loss: 2.49, Accuracy: 0.51
+04:09:48, 574 root INFO Model: generator, Step: 10, Loss: 2.17, Accuracy: 0.56
+04:09:49, 539 root INFO Model: generator, Step: 20, Loss: 2.41, Accuracy: 0.50
+04:09:50, 479 root INFO Model: generator, Step: 30, Loss: 2.43, Accuracy: 0.48
+04:09:51, 483 root INFO Model: generator, Step: 40, Loss: 2.30, Accuracy: 0.53
+04:09:52, 303 root INFO Reach max steps, Model: generator, Step: 50, Loss: 2.37
+04:09:52, 426 root INFO Model: generator, Step: 50, Loss: 2.52, Accuracy: 0.48
+04:09:53, 298 root INFO Model: generator, Step: 60, Loss: 2.48, Accuracy: 0.51
+04:09:54, 230 root INFO Model: generator, Step: 70, Loss: 2.65, Accuracy: 0.47
+04:09:55, 294 root INFO Model: generator, Step: 80, Loss: 2.48, Accuracy: 0.50
+04:09:56, 162 root INFO Model: generator, Step: 90, Loss: 2.77, Accuracy: 0.47
+04:09:57, 78 root INFO Model: generator, Step: 100, Loss: 2.52, Accuracy: 0.49
+04:09:58, 218 root INFO Model: generator, Step: 110, Loss: 2.74, Accuracy: 0.46
+04:09:59, 61 root INFO Model: generator, Step: 120, Loss: 2.73, Accuracy: 0.45
+04:10:00, 50 root INFO Model: generator, Step: 130, Loss: 2.58, Accuracy: 0.47
+04:10:00, 979 root INFO Model: generator, Step: 140, Loss: 2.84, Accuracy: 0.45
+04:10:01, 867 root INFO Model: generator, Step: 150, Loss: 2.78, Accuracy: 0.46
+04:10:02, 16 root INFO epoch 13 : 
+04:10:02, 100 root INFO Model: generator, Step: 0, Loss: 1.96, Accuracy: 0.57
+04:10:02, 995 root INFO Model: generator, Step: 10, Loss: 1.83, Accuracy: 0.62
+04:10:04, 45 root INFO Model: generator, Step: 20, Loss: 2.14, Accuracy: 0.55
+04:10:05, 6 root INFO Model: generator, Step: 30, Loss: 2.15, Accuracy: 0.55
+04:10:05, 843 root INFO Model: generator, Step: 40, Loss: 2.20, Accuracy: 0.53
+04:10:06, 699 root INFO Reach max steps, Model: generator, Step: 50, Loss: 2.12
+04:10:06, 779 root INFO Model: generator, Step: 50, Loss: 2.15, Accuracy: 0.55
+04:10:07, 646 root INFO Model: generator, Step: 60, Loss: 2.06, Accuracy: 0.58
+04:10:08, 593 root INFO Model: generator, Step: 70, Loss: 2.19, Accuracy: 0.53
+04:10:09, 465 root INFO Model: generator, Step: 80, Loss: 2.12, Accuracy: 0.57
+04:10:10, 421 root INFO Model: generator, Step: 90, Loss: 2.19, Accuracy: 0.55
+04:10:11, 382 root INFO Model: generator, Step: 100, Loss: 2.53, Accuracy: 0.47
+04:10:12, 342 root INFO Model: generator, Step: 110, Loss: 2.05, Accuracy: 0.56
+04:10:13, 262 root INFO Model: generator, Step: 120, Loss: 2.17, Accuracy: 0.53
+04:10:14, 168 root INFO Model: generator, Step: 130, Loss: 2.34, Accuracy: 0.51
+04:10:15, 166 root INFO Model: generator, Step: 140, Loss: 2.30, Accuracy: 0.53
+04:10:16, 82 root INFO Model: generator, Step: 150, Loss: 2.25, Accuracy: 0.54
+04:10:16, 290 root INFO epoch 14 : 
+04:10:16, 379 root INFO Model: generator, Step: 0, Loss: 2.03, Accuracy: 0.55
+04:10:17, 261 root INFO Model: generator, Step: 10, Loss: 1.67, Accuracy: 0.62
+04:10:18, 195 root INFO Model: generator, Step: 20, Loss: 1.83, Accuracy: 0.58
+04:10:19, 74 root INFO Model: generator, Step: 30, Loss: 1.88, Accuracy: 0.58
+04:10:20, 53 root INFO Model: generator, Step: 40, Loss: 1.69, Accuracy: 0.64
+04:10:20, 849 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.87
+04:10:20, 930 root INFO Model: generator, Step: 50, Loss: 1.79, Accuracy: 0.60
+04:10:21, 771 root INFO Model: generator, Step: 60, Loss: 1.88, Accuracy: 0.58
+04:10:22, 825 root INFO Model: generator, Step: 70, Loss: 1.96, Accuracy: 0.57
+04:10:23, 636 root INFO Model: generator, Step: 80, Loss: 2.12, Accuracy: 0.54
+04:10:24, 632 root INFO Model: generator, Step: 90, Loss: 1.88, Accuracy: 0.58
+04:10:25, 435 root INFO Model: generator, Step: 100, Loss: 1.97, Accuracy: 0.56
+04:10:26, 209 root INFO Model: generator, Step: 110, Loss: 2.09, Accuracy: 0.53
+04:10:27, 30 root INFO Model: generator, Step: 120, Loss: 2.17, Accuracy: 0.52
+04:10:28, 43 root INFO Model: generator, Step: 130, Loss: 2.19, Accuracy: 0.54
+04:10:29, 53 root INFO Model: generator, Step: 140, Loss: 2.52, Accuracy: 0.48
+04:10:29, 863 root INFO Model: generator, Step: 150, Loss: 2.33, Accuracy: 0.50
+04:10:30, 32 root INFO epoch 15 : 
+04:10:30, 149 root INFO Model: generator, Step: 0, Loss: 1.52, Accuracy: 0.65
+04:10:31, 61 root INFO Model: generator, Step: 10, Loss: 1.54, Accuracy: 0.65
+04:10:32, 5 root INFO Model: generator, Step: 20, Loss: 1.48, Accuracy: 0.66
+04:10:32, 865 root INFO Model: generator, Step: 30, Loss: 1.69, Accuracy: 0.62
+04:10:33, 795 root INFO Model: generator, Step: 40, Loss: 1.48, Accuracy: 0.65
+04:10:34, 622 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.66
+04:10:34, 700 root INFO Model: generator, Step: 50, Loss: 1.71, Accuracy: 0.60
+04:10:35, 548 root INFO Model: generator, Step: 60, Loss: 1.78, Accuracy: 0.59
+04:10:36, 517 root INFO Model: generator, Step: 70, Loss: 1.86, Accuracy: 0.58
+04:10:37, 618 root INFO Model: generator, Step: 80, Loss: 1.86, Accuracy: 0.58
+04:10:38, 644 root INFO Model: generator, Step: 90, Loss: 1.85, Accuracy: 0.58
+04:10:39, 446 root INFO Model: generator, Step: 100, Loss: 1.95, Accuracy: 0.57
+04:10:40, 461 root INFO Model: generator, Step: 110, Loss: 1.99, Accuracy: 0.55
+04:10:41, 520 root INFO Model: generator, Step: 120, Loss: 1.96, Accuracy: 0.58
+04:10:42, 471 root INFO Model: generator, Step: 130, Loss: 2.06, Accuracy: 0.53
+04:10:43, 339 root INFO Model: generator, Step: 140, Loss: 2.15, Accuracy: 0.54
+04:10:44, 236 root INFO Model: generator, Step: 150, Loss: 1.89, Accuracy: 0.59
+04:10:44, 549 root INFO Saving model to: results/L-4_D-128_H-8/ckpt/epoch-15.pt
+04:10:44, 550 root INFO ### Evaluate ###
+04:10:45, 449 root INFO Evaluation Epoch: 15, avg Loss: 4.53, avg Accuracy: 0.37
+04:10:52, 738 root INFO Saving the translation result of test set to: results/L-4_D-128_H-8/test.epoch-15.pred
+04:10:52, 738 root INFO epoch 16 : 
+04:10:52, 876 root INFO Model: generator, Step: 0, Loss: 1.37, Accuracy: 0.70
+04:10:53, 880 root INFO Model: generator, Step: 10, Loss: 1.21, Accuracy: 0.72
+04:10:54, 800 root INFO Model: generator, Step: 20, Loss: 1.37, Accuracy: 0.68
+04:10:55, 670 root INFO Model: generator, Step: 30, Loss: 1.39, Accuracy: 0.69
+04:10:56, 650 root INFO Model: generator, Step: 40, Loss: 1.35, Accuracy: 0.68
+04:10:57, 455 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.40
+04:10:57, 555 root INFO Model: generator, Step: 50, Loss: 1.37, Accuracy: 0.68
+04:10:58, 441 root INFO Model: generator, Step: 60, Loss: 1.69, Accuracy: 0.59
+04:10:59, 324 root INFO Model: generator, Step: 70, Loss: 1.59, Accuracy: 0.66
+04:11:00, 133 root INFO Model: generator, Step: 80, Loss: 1.71, Accuracy: 0.60
+04:11:01, 46 root INFO Model: generator, Step: 90, Loss: 1.63, Accuracy: 0.61
+04:11:01, 997 root INFO Model: generator, Step: 100, Loss: 1.54, Accuracy: 0.65
+04:11:02, 936 root INFO Model: generator, Step: 110, Loss: 1.68, Accuracy: 0.60
+04:11:03, 829 root INFO Model: generator, Step: 120, Loss: 1.65, Accuracy: 0.62
+04:11:04, 687 root INFO Model: generator, Step: 130, Loss: 1.95, Accuracy: 0.57
+04:11:05, 620 root INFO Model: generator, Step: 140, Loss: 1.60, Accuracy: 0.62
+04:11:06, 493 root INFO Model: generator, Step: 150, Loss: 1.79, Accuracy: 0.61
+04:11:06, 654 root INFO epoch 17 : 
+04:11:06, 728 root INFO Model: generator, Step: 0, Loss: 0.98, Accuracy: 0.78
+04:11:07, 550 root INFO Model: generator, Step: 10, Loss: 1.33, Accuracy: 0.68
+04:11:08, 508 root INFO Model: generator, Step: 20, Loss: 1.06, Accuracy: 0.73
+04:11:09, 435 root INFO Model: generator, Step: 30, Loss: 1.23, Accuracy: 0.68
+04:11:10, 364 root INFO Model: generator, Step: 40, Loss: 1.34, Accuracy: 0.68
+04:11:11, 276 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.26
+04:11:11, 392 root INFO Model: generator, Step: 50, Loss: 1.23, Accuracy: 0.69
+04:11:12, 236 root INFO Model: generator, Step: 60, Loss: 1.35, Accuracy: 0.65
+04:11:13, 166 root INFO Model: generator, Step: 70, Loss: 1.38, Accuracy: 0.66
+04:11:14, 49 root INFO Model: generator, Step: 80, Loss: 1.58, Accuracy: 0.62
+04:11:15, 45 root INFO Model: generator, Step: 90, Loss: 1.49, Accuracy: 0.63
+04:11:15, 944 root INFO Model: generator, Step: 100, Loss: 1.57, Accuracy: 0.61
+04:11:16, 826 root INFO Model: generator, Step: 110, Loss: 1.68, Accuracy: 0.59
+04:11:17, 690 root INFO Model: generator, Step: 120, Loss: 1.62, Accuracy: 0.62
+04:11:18, 624 root INFO Model: generator, Step: 130, Loss: 1.92, Accuracy: 0.53
+04:11:19, 566 root INFO Model: generator, Step: 140, Loss: 1.69, Accuracy: 0.61
+04:11:20, 415 root INFO Model: generator, Step: 150, Loss: 1.60, Accuracy: 0.62
+04:11:20, 578 root INFO epoch 18 : 
+04:11:20, 687 root INFO Model: generator, Step: 0, Loss: 1.01, Accuracy: 0.74
+04:11:21, 618 root INFO Model: generator, Step: 10, Loss: 1.10, Accuracy: 0.72
+04:11:22, 466 root INFO Model: generator, Step: 20, Loss: 1.08, Accuracy: 0.73
+04:11:23, 447 root INFO Model: generator, Step: 30, Loss: 1.07, Accuracy: 0.73
+04:11:24, 283 root INFO Model: generator, Step: 40, Loss: 1.10, Accuracy: 0.73
+04:11:25, 53 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.14
+04:11:25, 143 root INFO Model: generator, Step: 50, Loss: 1.08, Accuracy: 0.72
+04:11:26, 183 root INFO Model: generator, Step: 60, Loss: 1.35, Accuracy: 0.65
+04:11:27, 177 root INFO Model: generator, Step: 70, Loss: 1.41, Accuracy: 0.64
+04:11:28, 65 root INFO Model: generator, Step: 80, Loss: 1.26, Accuracy: 0.69
+04:11:28, 924 root INFO Model: generator, Step: 90, Loss: 1.46, Accuracy: 0.64
+04:11:30, 120 root INFO Model: generator, Step: 100, Loss: 1.50, Accuracy: 0.64
+04:11:31, 7 root INFO Model: generator, Step: 110, Loss: 1.36, Accuracy: 0.66
+04:11:32, 34 root INFO Model: generator, Step: 120, Loss: 1.45, Accuracy: 0.64
+04:11:32, 931 root INFO Model: generator, Step: 130, Loss: 1.60, Accuracy: 0.62
+04:11:33, 814 root INFO Model: generator, Step: 140, Loss: 1.74, Accuracy: 0.58
+04:11:34, 705 root INFO Model: generator, Step: 150, Loss: 1.77, Accuracy: 0.57
+04:11:34, 906 root INFO epoch 19 : 
+04:11:34, 996 root INFO Model: generator, Step: 0, Loss: 1.03, Accuracy: 0.75
+04:11:35, 943 root INFO Model: generator, Step: 10, Loss: 0.95, Accuracy: 0.75
+04:11:36, 885 root INFO Model: generator, Step: 20, Loss: 0.97, Accuracy: 0.76
+04:11:37, 792 root INFO Model: generator, Step: 30, Loss: 1.04, Accuracy: 0.72
+04:11:38, 842 root INFO Model: generator, Step: 40, Loss: 1.16, Accuracy: 0.72
+04:11:39, 694 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.21
+04:11:39, 773 root INFO Model: generator, Step: 50, Loss: 1.27, Accuracy: 0.69
+04:11:40, 664 root INFO Model: generator, Step: 60, Loss: 1.16, Accuracy: 0.69
+04:11:41, 719 root INFO Model: generator, Step: 70, Loss: 1.26, Accuracy: 0.67
+04:11:42, 625 root INFO Model: generator, Step: 80, Loss: 1.17, Accuracy: 0.70
+04:11:43, 567 root INFO Model: generator, Step: 90, Loss: 1.39, Accuracy: 0.64
+04:11:44, 447 root INFO Model: generator, Step: 100, Loss: 1.44, Accuracy: 0.64
+04:11:45, 386 root INFO Model: generator, Step: 110, Loss: 1.41, Accuracy: 0.65
+04:11:46, 284 root INFO Model: generator, Step: 120, Loss: 1.61, Accuracy: 0.59
+04:11:47, 223 root INFO Model: generator, Step: 130, Loss: 1.64, Accuracy: 0.59
+04:11:48, 252 root INFO Model: generator, Step: 140, Loss: 1.54, Accuracy: 0.62
+04:11:49, 113 root INFO Model: generator, Step: 150, Loss: 1.49, Accuracy: 0.63
+04:11:49, 316 root INFO epoch 20 : 
+04:11:49, 434 root INFO Model: generator, Step: 0, Loss: 0.89, Accuracy: 0.76
+04:11:50, 310 root INFO Model: generator, Step: 10, Loss: 0.95, Accuracy: 0.75
+04:11:51, 178 root INFO Model: generator, Step: 20, Loss: 0.97, Accuracy: 0.75
+04:11:52, 117 root INFO Model: generator, Step: 30, Loss: 1.12, Accuracy: 0.72
+04:11:53, 51 root INFO Model: generator, Step: 40, Loss: 1.12, Accuracy: 0.73
+04:11:53, 839 root INFO Reach max steps, Model: generator, Step: 50, Loss: 1.09
+04:11:53, 922 root INFO Model: generator, Step: 50, Loss: 1.17, Accuracy: 0.69
+04:11:54, 844 root INFO Model: generator, Step: 60, Loss: 1.06, Accuracy: 0.73
+04:11:55, 774 root INFO Model: generator, Step: 70, Loss: 1.20, Accuracy: 0.70
+04:11:56, 820 root INFO Model: generator, Step: 80, Loss: 1.23, Accuracy: 0.67
+04:11:57, 786 root INFO Model: generator, Step: 90, Loss: 1.31, Accuracy: 0.66
+04:11:58, 707 root INFO Model: generator, Step: 100, Loss: 1.29, Accuracy: 0.65
+04:11:59, 706 root INFO Model: generator, Step: 110, Loss: 1.30, Accuracy: 0.66
+04:12:00, 588 root INFO Model: generator, Step: 120, Loss: 1.49, Accuracy: 0.64
+04:12:01, 549 root INFO Model: generator, Step: 130, Loss: 1.37, Accuracy: 0.64
+04:12:02, 497 root INFO Model: generator, Step: 140, Loss: 1.34, Accuracy: 0.66
+04:12:03, 384 root INFO Model: generator, Step: 150, Loss: 1.64, Accuracy: 0.60
+04:12:03, 663 root INFO Saving model to: results/L-4_D-128_H-8/ckpt/epoch-20.pt
+04:12:03, 663 root INFO ### Evaluate ###
+04:12:04, 463 root INFO Evaluation Epoch: 20, avg Loss: 5.08, avg Accuracy: 0.37
+04:12:12, 451 root INFO Saving the translation result of test set to: results/L-4_D-128_H-8/test.epoch-20.pred
+04:12:12, 451 root INFO epoch 21 : 
+04:12:12, 552 root INFO Model: generator, Step: 0, Loss: 0.90, Accuracy: 0.76
+04:12:13, 365 root INFO Model: generator, Step: 10, Loss: 0.79, Accuracy: 0.79
+04:12:14, 204 root INFO Model: generator, Step: 20, Loss: 0.90, Accuracy: 0.75
+04:12:15, 181 root INFO Model: generator, Step: 30, Loss: 1.00, Accuracy: 0.72
+04:12:16, 175 root INFO Model: generator, Step: 40, Loss: 1.21, Accuracy: 0.70
+04:12:17, 50 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.90
+04:12:17, 132 root INFO Model: generator, Step: 50, Loss: 0.88, Accuracy: 0.75
+04:12:18, 89 root INFO Model: generator, Step: 60, Loss: 1.12, Accuracy: 0.70
+04:12:19, 86 root INFO Model: generator, Step: 70, Loss: 1.23, Accuracy: 0.68
+04:12:20, 13 root INFO Model: generator, Step: 80, Loss: 1.23, Accuracy: 0.69
+04:12:21, 2 root INFO Model: generator, Step: 90, Loss: 1.37, Accuracy: 0.64
+04:12:21, 937 root INFO Model: generator, Step: 100, Loss: 1.32, Accuracy: 0.68
+04:12:23, 37 root INFO Model: generator, Step: 110, Loss: 1.41, Accuracy: 0.62
+04:12:24, 154 root INFO Model: generator, Step: 120, Loss: 1.44, Accuracy: 0.62
+04:12:25, 132 root INFO Model: generator, Step: 130, Loss: 1.40, Accuracy: 0.63
+04:12:26, 37 root INFO Model: generator, Step: 140, Loss: 1.59, Accuracy: 0.62
+04:12:26, 882 root INFO Model: generator, Step: 150, Loss: 1.63, Accuracy: 0.60
+04:12:27, 63 root INFO epoch 22 : 
+04:12:27, 157 root INFO Model: generator, Step: 0, Loss: 0.70, Accuracy: 0.82
+04:12:27, 996 root INFO Model: generator, Step: 10, Loss: 0.91, Accuracy: 0.76
+04:12:28, 808 root INFO Model: generator, Step: 20, Loss: 0.81, Accuracy: 0.79
+04:12:29, 665 root INFO Model: generator, Step: 30, Loss: 0.88, Accuracy: 0.75
+04:12:30, 577 root INFO Model: generator, Step: 40, Loss: 0.92, Accuracy: 0.73
+04:12:31, 384 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.96
+04:12:31, 492 root INFO Model: generator, Step: 50, Loss: 1.13, Accuracy: 0.70
+04:12:32, 405 root INFO Model: generator, Step: 60, Loss: 0.97, Accuracy: 0.74
+04:12:33, 373 root INFO Model: generator, Step: 70, Loss: 1.11, Accuracy: 0.71
+04:12:34, 302 root INFO Model: generator, Step: 80, Loss: 1.18, Accuracy: 0.68
+04:12:35, 199 root INFO Model: generator, Step: 90, Loss: 1.41, Accuracy: 0.66
+04:12:36, 125 root INFO Model: generator, Step: 100, Loss: 1.23, Accuracy: 0.66
+04:12:37, 39 root INFO Model: generator, Step: 110, Loss: 1.42, Accuracy: 0.62
+04:12:37, 953 root INFO Model: generator, Step: 120, Loss: 1.48, Accuracy: 0.61
+04:12:39, 41 root INFO Model: generator, Step: 130, Loss: 1.48, Accuracy: 0.64
+04:12:39, 902 root INFO Model: generator, Step: 140, Loss: 1.68, Accuracy: 0.59
+04:12:40, 802 root INFO Model: generator, Step: 150, Loss: 1.46, Accuracy: 0.63
+04:12:41, 52 root INFO epoch 23 : 
+04:12:41, 158 root INFO Model: generator, Step: 0, Loss: 0.78, Accuracy: 0.79
+04:12:41, 963 root INFO Model: generator, Step: 10, Loss: 0.92, Accuracy: 0.75
+04:12:42, 883 root INFO Model: generator, Step: 20, Loss: 0.93, Accuracy: 0.74
+04:12:43, 819 root INFO Model: generator, Step: 30, Loss: 0.94, Accuracy: 0.75
+04:12:44, 756 root INFO Model: generator, Step: 40, Loss: 0.88, Accuracy: 0.75
+04:12:45, 687 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.98
+04:12:45, 778 root INFO Model: generator, Step: 50, Loss: 1.08, Accuracy: 0.70
+04:12:46, 758 root INFO Model: generator, Step: 60, Loss: 1.18, Accuracy: 0.70
+04:12:47, 758 root INFO Model: generator, Step: 70, Loss: 1.22, Accuracy: 0.68
+04:12:48, 691 root INFO Model: generator, Step: 80, Loss: 1.32, Accuracy: 0.66
+04:12:49, 524 root INFO Model: generator, Step: 90, Loss: 1.30, Accuracy: 0.67
+04:12:50, 381 root INFO Model: generator, Step: 100, Loss: 1.40, Accuracy: 0.65
+04:12:51, 259 root INFO Model: generator, Step: 110, Loss: 1.37, Accuracy: 0.65
+04:12:52, 95 root INFO Model: generator, Step: 120, Loss: 1.32, Accuracy: 0.66
+04:12:53, 130 root INFO Model: generator, Step: 130, Loss: 1.47, Accuracy: 0.62
+04:12:53, 962 root INFO Model: generator, Step: 140, Loss: 1.46, Accuracy: 0.64
+04:12:54, 881 root INFO Model: generator, Step: 150, Loss: 1.62, Accuracy: 0.59
+04:12:55, 29 root INFO epoch 24 : 
+04:12:55, 117 root INFO Model: generator, Step: 0, Loss: 1.03, Accuracy: 0.72
+04:12:56, 122 root INFO Model: generator, Step: 10, Loss: 0.96, Accuracy: 0.74
+04:12:57, 23 root INFO Model: generator, Step: 20, Loss: 0.89, Accuracy: 0.75
+04:12:58, 19 root INFO Model: generator, Step: 30, Loss: 0.98, Accuracy: 0.74
+04:12:59, 85 root INFO Model: generator, Step: 40, Loss: 1.09, Accuracy: 0.72
+04:13:00, 2 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.93
+04:13:00, 76 root INFO Model: generator, Step: 50, Loss: 0.98, Accuracy: 0.74
+04:13:01, 12 root INFO Model: generator, Step: 60, Loss: 1.04, Accuracy: 0.72
+04:13:01, 958 root INFO Model: generator, Step: 70, Loss: 1.10, Accuracy: 0.71
+04:13:02, 843 root INFO Model: generator, Step: 80, Loss: 1.26, Accuracy: 0.66
+04:13:03, 806 root INFO Model: generator, Step: 90, Loss: 1.17, Accuracy: 0.69
+04:13:04, 783 root INFO Model: generator, Step: 100, Loss: 1.08, Accuracy: 0.71
+04:13:05, 677 root INFO Model: generator, Step: 110, Loss: 1.38, Accuracy: 0.61
+04:13:06, 543 root INFO Model: generator, Step: 120, Loss: 1.42, Accuracy: 0.62
+04:13:07, 409 root INFO Model: generator, Step: 130, Loss: 1.54, Accuracy: 0.63
+04:13:08, 291 root INFO Model: generator, Step: 140, Loss: 1.46, Accuracy: 0.62
+04:13:09, 334 root INFO Model: generator, Step: 150, Loss: 1.44, Accuracy: 0.64
+04:13:09, 557 root INFO epoch 25 : 
+04:13:09, 653 root INFO Model: generator, Step: 0, Loss: 0.92, Accuracy: 0.74
+04:13:10, 571 root INFO Model: generator, Step: 10, Loss: 0.74, Accuracy: 0.79
+04:13:11, 555 root INFO Model: generator, Step: 20, Loss: 0.94, Accuracy: 0.76
+04:13:12, 415 root INFO Model: generator, Step: 30, Loss: 0.83, Accuracy: 0.77
+04:13:13, 389 root INFO Model: generator, Step: 40, Loss: 1.03, Accuracy: 0.70
+04:13:14, 235 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.94
+04:13:14, 330 root INFO Model: generator, Step: 50, Loss: 1.02, Accuracy: 0.73
+04:13:15, 290 root INFO Model: generator, Step: 60, Loss: 1.10, Accuracy: 0.70
+04:13:16, 295 root INFO Model: generator, Step: 70, Loss: 1.05, Accuracy: 0.71
+04:13:17, 328 root INFO Model: generator, Step: 80, Loss: 1.12, Accuracy: 0.69
+04:13:18, 376 root INFO Model: generator, Step: 90, Loss: 1.31, Accuracy: 0.66
+04:13:19, 325 root INFO Model: generator, Step: 100, Loss: 1.38, Accuracy: 0.62
+04:13:20, 283 root INFO Model: generator, Step: 110, Loss: 1.28, Accuracy: 0.66
+04:13:21, 201 root INFO Model: generator, Step: 120, Loss: 1.41, Accuracy: 0.61
+04:13:22, 140 root INFO Model: generator, Step: 130, Loss: 1.67, Accuracy: 0.58
+04:13:23, 145 root INFO Model: generator, Step: 140, Loss: 1.59, Accuracy: 0.60
+04:13:24, 182 root INFO Model: generator, Step: 150, Loss: 1.58, Accuracy: 0.59
+04:13:24, 470 root INFO Saving model to: results/L-4_D-128_H-8/ckpt/epoch-25.pt
+04:13:24, 470 root INFO ### Evaluate ###
+04:13:25, 467 root INFO Evaluation Epoch: 25, avg Loss: 5.41, avg Accuracy: 0.36
+04:13:32, 713 root INFO Saving the translation result of test set to: results/L-4_D-128_H-8/test.epoch-25.pred
+04:13:32, 714 root INFO epoch 26 : 
+04:13:32, 837 root INFO Model: generator, Step: 0, Loss: 0.96, Accuracy: 0.74
+04:13:33, 862 root INFO Model: generator, Step: 10, Loss: 0.99, Accuracy: 0.72
+04:13:34, 735 root INFO Model: generator, Step: 20, Loss: 0.96, Accuracy: 0.73
+04:13:35, 672 root INFO Model: generator, Step: 30, Loss: 0.86, Accuracy: 0.76
+04:13:36, 503 root INFO Model: generator, Step: 40, Loss: 0.98, Accuracy: 0.73
+04:13:37, 383 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.90
+04:13:37, 486 root INFO Model: generator, Step: 50, Loss: 1.12, Accuracy: 0.70
+04:13:38, 467 root INFO Model: generator, Step: 60, Loss: 1.03, Accuracy: 0.72
+04:13:39, 425 root INFO Model: generator, Step: 70, Loss: 1.06, Accuracy: 0.71
+04:13:40, 295 root INFO Model: generator, Step: 80, Loss: 1.35, Accuracy: 0.63
+04:13:41, 299 root INFO Model: generator, Step: 90, Loss: 1.22, Accuracy: 0.68
+04:13:42, 205 root INFO Model: generator, Step: 100, Loss: 1.37, Accuracy: 0.64
+04:13:43, 132 root INFO Model: generator, Step: 110, Loss: 1.58, Accuracy: 0.60
+04:13:44, 103 root INFO Model: generator, Step: 120, Loss: 1.45, Accuracy: 0.64
+04:13:44, 957 root INFO Model: generator, Step: 130, Loss: 1.50, Accuracy: 0.63
+04:13:46, 37 root INFO Model: generator, Step: 140, Loss: 1.56, Accuracy: 0.60
+04:13:46, 921 root INFO Model: generator, Step: 150, Loss: 1.36, Accuracy: 0.66
+04:13:47, 90 root INFO epoch 27 : 
+04:13:47, 165 root INFO Model: generator, Step: 0, Loss: 0.87, Accuracy: 0.74
+04:13:48, 165 root INFO Model: generator, Step: 10, Loss: 0.98, Accuracy: 0.73
+04:13:49, 30 root INFO Model: generator, Step: 20, Loss: 0.85, Accuracy: 0.77
+04:13:50, 20 root INFO Model: generator, Step: 30, Loss: 0.89, Accuracy: 0.76
+04:13:50, 984 root INFO Model: generator, Step: 40, Loss: 0.96, Accuracy: 0.74
+04:13:51, 776 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.90
+04:13:51, 863 root INFO Model: generator, Step: 50, Loss: 1.05, Accuracy: 0.71
+04:13:52, 735 root INFO Model: generator, Step: 60, Loss: 1.05, Accuracy: 0.71
+04:13:53, 668 root INFO Model: generator, Step: 70, Loss: 1.08, Accuracy: 0.71
+04:13:54, 651 root INFO Model: generator, Step: 80, Loss: 1.16, Accuracy: 0.69
+04:13:55, 512 root INFO Model: generator, Step: 90, Loss: 1.15, Accuracy: 0.69
+04:13:56, 548 root INFO Model: generator, Step: 100, Loss: 1.41, Accuracy: 0.65
+04:13:57, 571 root INFO Model: generator, Step: 110, Loss: 1.28, Accuracy: 0.68
+04:13:58, 542 root INFO Model: generator, Step: 120, Loss: 1.27, Accuracy: 0.66
+04:13:59, 492 root INFO Model: generator, Step: 130, Loss: 1.39, Accuracy: 0.65
+04:14:00, 384 root INFO Model: generator, Step: 140, Loss: 1.51, Accuracy: 0.62
+04:14:01, 337 root INFO Model: generator, Step: 150, Loss: 1.53, Accuracy: 0.64
+04:14:01, 560 root INFO epoch 28 : 
+04:14:01, 717 root INFO Model: generator, Step: 0, Loss: 0.87, Accuracy: 0.77
+04:14:02, 617 root INFO Model: generator, Step: 10, Loss: 0.87, Accuracy: 0.75
+04:14:03, 631 root INFO Model: generator, Step: 20, Loss: 0.78, Accuracy: 0.78
+04:14:04, 499 root INFO Model: generator, Step: 30, Loss: 0.92, Accuracy: 0.75
+04:14:05, 545 root INFO Model: generator, Step: 40, Loss: 0.96, Accuracy: 0.75
+04:14:06, 331 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.87
+04:14:06, 419 root INFO Model: generator, Step: 50, Loss: 0.88, Accuracy: 0.75
+04:14:07, 277 root INFO Model: generator, Step: 60, Loss: 0.98, Accuracy: 0.73
+04:14:08, 212 root INFO Model: generator, Step: 70, Loss: 0.99, Accuracy: 0.73
+04:14:09, 135 root INFO Model: generator, Step: 80, Loss: 1.08, Accuracy: 0.71
+04:14:10, 79 root INFO Model: generator, Step: 90, Loss: 1.06, Accuracy: 0.70
+04:14:11, 92 root INFO Model: generator, Step: 100, Loss: 1.24, Accuracy: 0.66
+04:14:12, 2 root INFO Model: generator, Step: 110, Loss: 1.26, Accuracy: 0.66
+04:14:12, 952 root INFO Model: generator, Step: 120, Loss: 1.24, Accuracy: 0.67
+04:14:13, 857 root INFO Model: generator, Step: 130, Loss: 1.36, Accuracy: 0.65
+04:14:14, 764 root INFO Model: generator, Step: 140, Loss: 1.51, Accuracy: 0.63
+04:14:15, 611 root INFO Model: generator, Step: 150, Loss: 1.35, Accuracy: 0.64
+04:14:15, 775 root INFO epoch 29 : 
+04:14:15, 855 root INFO Model: generator, Step: 0, Loss: 0.83, Accuracy: 0.78
+04:14:16, 736 root INFO Model: generator, Step: 10, Loss: 0.92, Accuracy: 0.74
+04:14:17, 720 root INFO Model: generator, Step: 20, Loss: 0.82, Accuracy: 0.77
+04:14:18, 627 root INFO Model: generator, Step: 30, Loss: 0.87, Accuracy: 0.76
+04:14:19, 454 root INFO Model: generator, Step: 40, Loss: 0.78, Accuracy: 0.78
+04:14:20, 182 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.87
+04:14:20, 262 root INFO Model: generator, Step: 50, Loss: 0.88, Accuracy: 0.75
+04:14:21, 226 root INFO Model: generator, Step: 60, Loss: 0.97, Accuracy: 0.75
+04:14:22, 109 root INFO Model: generator, Step: 70, Loss: 1.01, Accuracy: 0.72
+04:14:22, 978 root INFO Model: generator, Step: 80, Loss: 0.92, Accuracy: 0.75
+04:14:23, 978 root INFO Model: generator, Step: 90, Loss: 1.09, Accuracy: 0.70
+04:14:24, 958 root INFO Model: generator, Step: 100, Loss: 1.17, Accuracy: 0.66
+04:14:25, 808 root INFO Model: generator, Step: 110, Loss: 1.16, Accuracy: 0.69
+04:14:26, 744 root INFO Model: generator, Step: 120, Loss: 1.08, Accuracy: 0.69
+04:14:27, 663 root INFO Model: generator, Step: 130, Loss: 1.14, Accuracy: 0.70
+04:14:28, 590 root INFO Model: generator, Step: 140, Loss: 1.22, Accuracy: 0.68
+04:14:29, 421 root INFO Model: generator, Step: 150, Loss: 1.36, Accuracy: 0.64
+04:14:29, 623 root INFO epoch 30 : 
+04:14:29, 734 root INFO Model: generator, Step: 0, Loss: 0.68, Accuracy: 0.81
+04:14:30, 697 root INFO Model: generator, Step: 10, Loss: 0.71, Accuracy: 0.79
+04:14:31, 728 root INFO Model: generator, Step: 20, Loss: 0.68, Accuracy: 0.82
+04:14:32, 666 root INFO Model: generator, Step: 30, Loss: 0.80, Accuracy: 0.76
+04:14:33, 598 root INFO Model: generator, Step: 40, Loss: 0.75, Accuracy: 0.79
+04:14:34, 413 root INFO Reach max steps, Model: generator, Step: 50, Loss: 0.88
+04:14:34, 554 root INFO Model: generator, Step: 50, Loss: 0.86, Accuracy: 0.75
+04:14:35, 425 root INFO Model: generator, Step: 60, Loss: 0.91, Accuracy: 0.74
+04:14:36, 217 root INFO Model: generator, Step: 70, Loss: 0.79, Accuracy: 0.79
+04:14:37, 140 root INFO Model: generator, Step: 80, Loss: 0.92, Accuracy: 0.74
+04:14:38, 29 root INFO Model: generator, Step: 90, Loss: 0.90, Accuracy: 0.75
+04:14:38, 881 root INFO Model: generator, Step: 100, Loss: 1.08, Accuracy: 0.70
+04:14:39, 883 root INFO Model: generator, Step: 110, Loss: 0.84, Accuracy: 0.77
+04:14:40, 904 root INFO Model: generator, Step: 120, Loss: 1.11, Accuracy: 0.70
+04:14:41, 778 root INFO Model: generator, Step: 130, Loss: 1.02, Accuracy: 0.72
+04:14:42, 669 root INFO Model: generator, Step: 140, Loss: 1.23, Accuracy: 0.67
+04:14:43, 651 root INFO Model: generator, Step: 150, Loss: 1.12, Accuracy: 0.71
+04:14:44, 12 root INFO Saving model to: results/L-4_D-128_H-8/ckpt/epoch-30.pt
+04:14:44, 13 root INFO ### Evaluate ###
+04:14:44, 824 root INFO Evaluation Epoch: 30, avg Loss: 5.58, avg Accuracy: 0.37
+04:14:52, 676 root INFO Saving the translation result of test set to: results/L-4_D-128_H-8/test.epoch-30.pred
