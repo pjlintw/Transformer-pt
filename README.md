@@ -110,11 +110,11 @@ The file `sample.tsv` contain all extracted examples and the splits: `sample.tra
 
 ```python
 python data_preprocess.py \
-  --source_file de-en/PHP.de-en.de \
-  --target_file de-en/PHP.de-en.de \
-  --output_dir de-en \
-  --eval_samples 1000 \
-  --test_samples 1000
+    --source_file de-en/PHP.de-en.de \
+    --target_file de-en/PHP.de-en.en \
+    --output_dir de-en \
+    --eval_samples 1000 \
+    --test_samples 1000
 ```
 
 These output files for building datasets will be under the path `--output_dir`. You will get the result.

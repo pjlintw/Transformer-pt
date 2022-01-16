@@ -5,10 +5,10 @@
 die	4812
 $	4376
 der	3929
-``	3475
+``	3490
 /	3290
 ;	3005
-''	2933
+''	2916
 und	2526
 sie	2265
 ist	1986
@@ -35,7 +35,7 @@ nicht	961
 auf	952
 des	947
 diese	903
-'	881
+'	882
 beispiel	871
 als	826
 siehe	808
@@ -374,6 +374,7 @@ nun	52
 länge	52
 angeben	52
 default	52
+n	52
 offset	52
 list	51
 element	51
@@ -385,7 +386,6 @@ stellen	51
 vorhanden	51
 viele	51
 erlaubt	51
-n	51
 tag	50
 ausgeben	50
 farbe	50
@@ -4638,7 +4638,6 @@ kommando-history	3
 m_pi	3
 gemischtes	3
 24	3
-,1	3
 udm_errno	3
 sleepycat	3
 prozent-zeichen	3
@@ -6082,6 +6081,7 @@ openssl_x509_read	2
 userdata	2
 43-1.	2
 variablenbezeichner	2
+'',1	2
 db3	2
 ldap_delete	2
 resultieren	2
@@ -14974,7 +14974,6 @@ existierten	1
 importierten	1
 baz	1
 verursachte	1
-'n	1
 import_request_variables	1
 e-commerce	1
 onlineprogramme	1
@@ -16112,6 +16111,7 @@ unixodbc	1
 'something	1
 somewhere	1
 .utoronto.ca	1
+,1	1
 lesbarkeit	1
 problemlos	1
 datenbank-speicherung	1
