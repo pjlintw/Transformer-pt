@@ -22,13 +22,11 @@ class TransformerEncLayer(nn.Module):
         
         # (batch_size, src_seq_len, d_model)
         attn_out, attn_weight  = self.mha(x,x,x,mask)
-        if training is True:
-            atten_out = self.dropout1(attn_out)
+        atten_out = self.dropout1(attn_out)
         out1 = self.layernorm1(x + attn_out)
         
         ffn_out = self.ffn(out1)
-        if training is True:
-            ffn_out = self.dropout2(ffn_out)
+        ffn_out = self.dropout2(ffn_out)
         out2 = self.layernorm2(out1 + ffn_out)
         return out2
     
@@ -66,9 +64,7 @@ class TransformerEncoder(nn.Module):
         #print("source length", seq_len)
         x = torch.mul(x, (self.d_model**(1/2)))    
         x += self.pos_encoding[:, :seq_len, :].to(device)
-
-        if training is True:
-            x = self.dropout(x)
+        x = self.dropout(x)
 
         for i in range(self.num_layers):
             x = self.enc_layers[i](x, training, mask)

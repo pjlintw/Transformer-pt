@@ -28,18 +28,15 @@ class TransformerDecLayer(nn.Module):
         # enc_output: (batch_size, src_seq_len, d_model)
 
         attn1, attn_weights_block1 = self.mha1(x,x,x, look_ahead_mask)
-        if training is True:
-            attn1 = self.dropout1(attn1)
+        attn1 = self.dropout1(attn1)
         out1 = self.layernorm1(attn1 + x)
+        
         attn2, attn_weights_block2 = self.mha2(k=enc_output, v=enc_output, q=out1, mask=padding_mask)
-        if training is True:
-            attn2 = self.dropout2(attn2)
+        attn2 = self.dropout2(attn2)
         out2 = self.layernorm2(attn2 + out1)
         
-
         ffn_out = self.ffn(out2)
-        if training is True:
-            ffn_out = self.dropout3(ffn_out)
+        ffn_out = self.dropout3(ffn_out)
         out3 = self.layernorm3(ffn_out + out2)
 
         return out3, attn_weights_block1, attn_weights_block2
@@ -58,8 +55,7 @@ class TransformerDecoder(nn.Module):
         self.num_layers = num_layers
 
         if shared_emb_layer is None or shared_emb_layer is False:
-            self.embedding = nn.Embedding(target_vocab_size, d_model)
-            
+            self.embedding = nn.Embedding(target_vocab_size, d_model)    
         else:
             self.embedding = shared_emb_layer
           
@@ -81,8 +77,7 @@ class TransformerDecoder(nn.Module):
         x = torch.mul(x, (self.d_model**(1/2)))
         x += self.pos_encoding[:, :seq_len, :].to(device)
     
-        if training is True:
-            x = self.dropout(x)
+        x = self.dropout(x)
 
         for i in range(self.num_layers):
             x, block1, block2 = self.dec_layers[i](x, enc_output, training,
