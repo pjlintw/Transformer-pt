@@ -34,19 +34,16 @@ def main():
     model = torch.load(ckpt)
     model.eval()
     model.to(device)
-
-    inp = ["diese funktion ersetzt die funktion pg_lounlink ( ) .", "dies wird nur zu problemen führen .", "es gibt 4 möglichkeiten , eine dba datenbank zu öffnen :",
-          "siehe auch odbc_commit ( ) und odbc_rollback ( ) .", "diese funktion wurde in 4.0 hinzugefügt ."]
+    
+    inp = ["verwenden sie diese funktion nicht .", "copy ( )"]
     print(inp)
-    # inp = ["gutes design des datenbankschemas , und die applikation wird mit ihren größten befürchtungen fertig .", 
-    #       "gutes design des datenbankschemas , und die applikation wird mit ihren größten befürchtungen fertig ."]
     inp = [ pad_sequence(e.split(), 20, 2) for e in inp]
     to_id_fn = lambda x : [ src_tok2id[tok] for tok in x]
     inp_id = [ to_id_fn(sent) for sent in inp]
     inp_id = torch.tensor(inp_id).to(device)
-    
+
     out = model.beam_decode(inp_id,
-                            k=4,
+                            k=3,
                             max_len=20,
                             sos_idx=tgt_tok2id["[CLS]"],
                             eos_idx=tgt_tok2id["[SEP]"],
@@ -56,14 +53,9 @@ def main():
       
     decoded_out = out[0].cpu().detach().numpy()
     log = out[1]
-    # print(log)
     for sent_lst in decoded_out:
         print(" ".join([ tgt_id2tok[tok] for tok in sent_lst]))
     
-    # print("batch k")
-    # batch_k = out[2].cpu().detach().numpy()
-    # for sent_lst in batch_k:
-        # print(" ".join([ tgt_id2tok[tok] for tok in sent_lst]))
 
 
 if __name__ == "__main__":

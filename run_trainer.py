@@ -155,7 +155,7 @@ def train_generator_MLE(model,
 
         # Save output file
         # Save model
-        if (epoch+1) % 5 == 0:
+        if (epoch+1) % 1 == 0:
             ### Saving model ###
             pt_file_tf = get_output_dir(args.output_dir, f"ckpt/epoch-{epoch+1}.pt")
             torch.save(model, pt_file_tf)
